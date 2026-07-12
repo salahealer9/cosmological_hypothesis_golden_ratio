@@ -1,0 +1,22 @@
+
+=== planck_lcdm_camb ===
+Traceback (most recent call last):
+  File "/home/salahealer/cosmological_hypothesis_golden_ratio/scripts/run_chain_posterior_transform.py", line 377, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/salahealer/cosmological_hypothesis_golden_ratio/scripts/run_chain_posterior_transform.py", line 296, in main
+    x_gate = convergence(chains, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/salahealer/cosmological_hypothesis_golden_ratio/scripts/run_chain_posterior_transform.py", line 196, in convergence
+    rminus1 = float(samples.getGelmanRubin())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/salahealer/book4/venv/lib/python3.11/site-packages/getdist/chains.py", line 1486, in getGelmanRubin
+    return np.max(self.getGelmanRubinEigenvalues(nparam, chainlist))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/salahealer/book4/venv/lib/python3.11/site-packages/getdist/chains.py", line 1457, in getGelmanRubinEigenvalues
+    chainlist = self.getSeparateChains()
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/salahealer/book4/venv/lib/python3.11/site-packages/getdist/chains.py", line 1524, in getSeparateChains
+    loglikes=self.loglikes[off1:off2],
+             ~~~~~~~~~~~~~^^^^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable

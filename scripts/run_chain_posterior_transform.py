@@ -3,6 +3,9 @@
 
 Commit this script before running it. Posterior summaries are emitted only after
 all frozen derived-X convergence checks pass.
+
+Implementation revision 2 fixes GetDist chain separation by preserving the
+released minuslogpost arrays and enforces an all-datasets gate before output.
 """
 from __future__ import annotations
 
@@ -62,7 +65,7 @@ def chain_files(stem: str) -> list[Path]:
 def load_chain(path: Path) -> dict:
     names = read_header(path)
     index = {name: position for position, name in enumerate(names)}
-    required = ("weight", "H0", "ombh2", "omch2", "tau")
+    required = ("weight", "minuslogpost", "H0", "ombh2", "omch2", "tau")
     missing = [name for name in required if name not in index]
     if missing:
         raise RuntimeError(f"{path}: missing {missing}")
@@ -79,7 +82,9 @@ def load_chain(path: Path) -> dict:
         raise RuntimeError(f"{path}: non-integer weights")
     return {
         "source": str(path), "rows": len(data), "weight": weights,
-        "integer_weight": integer_weights, "H0": data[:, index["H0"]],
+        "integer_weight": integer_weights,
+        "minuslogpost": data[:, index["minuslogpost"]],
+        "H0": data[:, index["H0"]],
         "ombh2": data[:, index["ombh2"]],
         "omch2": data[:, index["omch2"]], "tau": data[:, index["tau"]],
     }
@@ -188,9 +193,14 @@ def convergence(chains: list[dict], config: dict) -> dict:
     integer_weights = [
         chain["integer_weight"][retained(chain, fraction)] for chain in chains
     ]
+    loglikes = [
+        chain["minuslogpost"][retained(chain, fraction)] for chain in chains
+    ]
     gd_chains.print_load_details = False
     samples = MCSamples(
-        samples=[x[:, None] for x in xs], weights=weights,
+        samples=[x[:, None] for x in xs],
+        weights=weights,
+        loglikes=loglikes,
         names=["X"], labels=["X"], sampler="mcmc", ignore_rows=0,
     )
     rminus1 = float(samples.getGelmanRubin())
@@ -258,12 +268,72 @@ def save_arrays(stem: str, chains: list[dict]) -> list[str]:
         path = DERIVED / f"{stem}.{number}.npz"
         np.savez_compressed(
             path, source=np.array(chain["source"]), weight=chain["weight"],
-            integer_weight=chain["integer_weight"], H0=chain["H0"],
+            integer_weight=chain["integer_weight"],
+            minuslogpost=chain["minuslogpost"], H0=chain["H0"],
             ombh2=chain["ombh2"], omch2=chain["omch2"], tau=chain["tau"],
             **{name: chain[name] for name in FIELDS},
         )
         paths.append(str(path))
     return paths
+
+
+def posterior_record(
+    key: str,
+    stem: str,
+    chains: list[dict],
+    config: dict,
+    probabilities: list[float],
+) -> dict:
+    """Build target-bearing outputs only after every dataset gate passes."""
+    primary_fraction = float(
+        config["ingestion"]["primary_ignore_rows_fraction"]
+    )
+    x_values, weights = pool(chains, "X", primary_fraction)
+    target = float(config["dimensionless_age"]["target_value"])
+    fractions = sorted(set([
+        primary_fraction,
+        *map(float, config["ingestion"]["burnin_sensitivity_fractions"]),
+    ]))
+
+    record = {
+        "dataset_key": key,
+        "stem": stem,
+        "role": config["chains"][key]["role"],
+        "posterior_summary": {
+            "X": weighted_summary(x_values, weights, probabilities),
+            "Phi_target": compare_target(
+                x_values, weights, target, probabilities
+            ),
+            "burnin_sensitivity_X": {
+                f"{fraction:.2f}": weighted_summary(
+                    *pool(chains, "X", fraction), probabilities
+                )
+                for fraction in fractions
+            },
+            "per_chain_X": [
+                weighted_summary(
+                    chain["X"][retained(chain, primary_fraction)],
+                    chain["weight"][retained(chain, primary_fraction)],
+                    probabilities,
+                )
+                for chain in chains
+            ],
+        },
+        "negative_controls": {
+            item["name"]: compare_target(
+                x_values, weights, float(item["value"]), probabilities
+            )
+            for item in config["posterior_outputs"]["negative_controls"]
+        },
+    }
+    approximation, approximation_weights = pool(
+        chains, "X_minus_matter_lambda", primary_fraction
+    )
+    record["matter_lambda_crosscheck"] = weighted_summary(
+        approximation, approximation_weights, probabilities
+    )
+    record["derived_files"] = save_arrays(stem, chains)
+    return record
 
 
 def main() -> int:
@@ -274,15 +344,16 @@ def main() -> int:
     with LOCK.open("rb") as handle:
         config = tomllib.load(handle)
 
-    OUT.mkdir(parents=True)
     probabilities = [
-        float(value) for value in config["posterior_outputs"]["weighted_quantiles"]
+        float(value)
+        for value in config["posterior_outputs"]["weighted_quantiles"]
     ]
-    primary_fraction = float(config["ingestion"]["primary_ignore_rows_fraction"])
-    results = []
-    overall_pass = True
+    transformed_datasets = []
+    gate_records = []
     started = time.perf_counter()
 
+    # Stage 1: transform and evaluate every frozen technical/convergence gate.
+    # No posterior target summary or derived file is written in this stage.
     for key, stem in DATASETS:
         paths = chain_files(stem)
         if len(paths) != 4:
@@ -295,71 +366,64 @@ def main() -> int:
         validation = technical_validation(chains, config)
         x_gate = convergence(chains, config)
         passed = validation["pass"] and x_gate["pass"]
-        record = {
-            "dataset_key": key, "stem": stem,
+        gate_records.append({
+            "dataset_key": key,
+            "stem": stem,
             "role": config["chains"][key]["role"],
             "technical_validation": validation,
             "derived_X_convergence": x_gate,
             "transform_seconds": sum(chain["seconds"] for chain in chains),
             "pass": passed,
+        })
+        transformed_datasets.append((key, stem, chains))
+
+    all_gates_pass = all(record["pass"] for record in gate_records)
+
+    if not all_gates_pass:
+        # Technical-only failure record. It contains no posterior target values.
+        OUT.mkdir(parents=True)
+        failure = {
+            "phase": "chain-only posterior transformation technical gate",
+            "lock": str(LOCK),
+            "datasets": gate_records,
+            "wall_seconds": time.perf_counter() - started,
+            "overall_pass": False,
+            "posterior_target_output_released": False,
         }
+        output = OUT / "technical_gate_failure.json"
+        output.write_text(
+            json.dumps(failure, indent=2, sort_keys=True) + "\n"
+        )
+        print("\nAt least one derived-X gate failed.")
+        print("No posterior target summary or derived arrays were written.")
+        print(f"Technical output: {output}")
+        return 1
 
-        if passed:
-            x_values, weights = pool(chains, "X", primary_fraction)
-            target = float(config["dimensionless_age"]["target_value"])
-            fractions = sorted(set([
-                primary_fraction,
-                *map(float, config["ingestion"]["burnin_sensitivity_fractions"]),
-            ]))
-            record["posterior_summary"] = {
-                "X": weighted_summary(x_values, weights, probabilities),
-                "Phi_target": compare_target(
-                    x_values, weights, target, probabilities
-                ),
-                "burnin_sensitivity_X": {
-                    f"{fraction:.2f}": weighted_summary(
-                        *pool(chains, "X", fraction), probabilities
-                    )
-                    for fraction in fractions
-                },
-                "per_chain_X": [
-                    weighted_summary(
-                        chain["X"][retained(chain, primary_fraction)],
-                        chain["weight"][retained(chain, primary_fraction)],
-                        probabilities,
-                    )
-                    for chain in chains
-                ],
-            }
-            record["negative_controls"] = {
-                item["name"]: compare_target(
-                    x_values, weights, float(item["value"]), probabilities
-                )
-                for item in config["posterior_outputs"]["negative_controls"]
-            }
-            approximation, approximation_weights = pool(
-                chains, "X_minus_matter_lambda", primary_fraction
-            )
-            record["matter_lambda_crosscheck"] = weighted_summary(
-                approximation, approximation_weights, probabilities
-            )
-            record["derived_files"] = save_arrays(stem, chains)
-        else:
-            overall_pass = False
-
+    # Stage 2: every dataset passed, so target-bearing summaries may be built.
+    OUT.mkdir(parents=True)
+    results = []
+    for gate_record, (key, stem, chains) in zip(
+        gate_records, transformed_datasets, strict=True
+    ):
+        record = dict(gate_record)
+        record.update(
+            posterior_record(key, stem, chains, config, probabilities)
+        )
         results.append(record)
 
-    overall_pass = overall_pass and all(item["pass"] for item in results)
     report = {
         "phase": "chain-only posterior transformation",
         "lock": str(LOCK),
         "software": {
-            "camb": version("camb"), "arviz": version("arviz"),
-            "getdist": version("getdist"), "numpy": version("numpy"),
+            "camb": version("camb"),
+            "arviz": version("arviz"),
+            "getdist": version("getdist"),
+            "numpy": version("numpy"),
         },
         "datasets": results,
         "wall_seconds": time.perf_counter() - started,
-        "overall_pass": overall_pass,
+        "overall_pass": True,
+        "posterior_target_output_released": True,
         "interpretation_boundary": (
             "Descriptive M0 posterior analysis only; this does not replace "
             "the frozen held-out predictive or evidence calculations."
@@ -367,10 +431,10 @@ def main() -> int:
     }
     output = OUT / "summary.json"
     output.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n")
-    print(f"\nOverall pass: {overall_pass}")
+    print("\nOverall pass: True")
     print(f"Output: {output}")
     print(f"Wall seconds: {report['wall_seconds']:.2f}")
-    return 0 if overall_pass else 1
+    return 0
 
 
 if __name__ == "__main__":
