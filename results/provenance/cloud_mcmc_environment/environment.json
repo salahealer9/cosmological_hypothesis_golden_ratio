@@ -1,0 +1,28 @@
+{
+  "act_lite_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+  "cobaya_packages_path": "/opt/cobaya-packages-act-dr6",
+  "finished_utc": "2026-07-12T20:11:01+00:00",
+  "hostname": "earthgrid-python",
+  "likelihood_data_downloaded": false,
+  "likelihood_evaluated": false,
+  "logical_cpus": 8,
+  "mcmc_started": false,
+  "mpi_ranks_verified": 4,
+  "packages": {
+    "arviz": "0.23.4",
+    "camb": "1.5.0",
+    "cobaya": "3.5.4",
+    "getdist": "1.7.7",
+    "mpi4py": "4.1.2",
+    "packaging": "26.2",
+    "pip": "26.1.2",
+    "setuptools": "66.1.1",
+    "wheel": "0.47.0"
+  },
+  "platform": "Linux-6.1.0-50-cloud-amd64-x86_64-with-glibc2.36",
+  "purpose": "ACT DR6 MCMC-extension software bootstrap",
+  "python": "3.11.2",
+  "repository_commit": "956986c86f103a91f5ce970b5afd744e34ef44bf",
+  "started_utc": "2026-07-12T20:09:24+00:00",
+  "target_statistic_computed": false
+}

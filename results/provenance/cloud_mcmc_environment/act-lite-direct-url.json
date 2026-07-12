@@ -1,0 +1,12 @@
+{
+  "direct_url": {
+    "url": "https://github.com/ACTCollaboration/DR6-ACT-lite.git",
+    "vcs_info": {
+      "commit_id": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+      "requested_revision": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+      "vcs": "git"
+    }
+  },
+  "distribution": "ACT-DR6-CMBonly",
+  "version": "1.0.0"
+}

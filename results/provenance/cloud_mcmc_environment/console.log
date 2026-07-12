@@ -1,0 +1,557 @@
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]
+Get:7 https://cli.github.com/packages stable InRelease [3917 B]
+Hit:8 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable InRelease
+Hit:3 https://deb.debian.org/debian bookworm InRelease
+Hit:4 https://deb.debian.org/debian bookworm-updates InRelease
+Hit:5 https://deb.debian.org/debian bookworm-backports InRelease
+Hit:6 https://deb.debian.org/debian-security bookworm-security InRelease
+Hit:9 https://packages.cloud.google.com/apt cloud-sdk-bookworm InRelease
+Hit:10 https://packages.cloud.google.com/apt google-cloud-ops-agent-bookworm-2 InRelease
+Fetched 3917 B in 3s (1251 B/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+build-essential is already the newest version (12.9).
+build-essential set to manually installed.
+ca-certificates is already the newest version (20230311+deb12u1).
+curl is already the newest version (7.88.1-10+deb12u15).
+git is already the newest version (1:2.39.5-0+deb12u3).
+The following additional packages will be installed:
+  autoconf automake autotools-dev gfortran-12 ibverbs-providers
+  libcaf-openmpi-3 libcoarrays-dev libcoarrays-openmpi-dev libevent-dev
+  libevent-extra-2.1-7 libevent-openssl-2.1-7 libevent-pthreads-2.1-7
+  libfabric1 libgfortran-12-dev libgfortran5 libhwloc-dev libhwloc-plugins
+  libhwloc15 libibverbs-dev libibverbs1 libjs-jquery-ui libltdl-dev libmunge2
+  libnl-3-dev libnl-route-3-200 libnl-route-3-dev libnuma-dev libopenmpi3
+  libpkgconf3 libpmix-dev libpmix2 libpsm-infinipath1 libpsm2-2 librdmacm1
+  libtool libucx0 libxnvctrl0 m4 ocl-icd-libopencl1 openmpi-common pkgconf
+  pkgconf-bin
+Suggested packages:
+  autoconf-archive gnu-standards autoconf-doc gettext gfortran-multilib
+  gfortran-doc gfortran-12-multilib gfortran-12-doc libhwloc-contrib-plugins
+  libjs-jquery-ui-docs libtool-doc openmpi-doc gcj-jdk m4-doc opencl-icd
+  python3-braceexpand
+The following NEW packages will be installed:
+  autoconf automake autotools-dev gfortran gfortran-12 ibverbs-providers
+  libcaf-openmpi-3 libcoarrays-dev libcoarrays-openmpi-dev libevent-dev
+  libevent-extra-2.1-7 libevent-openssl-2.1-7 libevent-pthreads-2.1-7
+  libfabric1 libgfortran-12-dev libgfortran5 libhwloc-dev libhwloc-plugins
+  libhwloc15 libibverbs-dev libibverbs1 libjs-jquery-ui libltdl-dev libmunge2
+  libnl-3-dev libnl-route-3-200 libnl-route-3-dev libnuma-dev libopenmpi-dev
+  libopenmpi3 libpkgconf3 libpmix-dev libpmix2 libpsm-infinipath1 libpsm2-2
+  librdmacm1 libtool libucx0 libxnvctrl0 m4 ocl-icd-libopencl1 openmpi-bin
+  openmpi-common pkg-config pkgconf pkgconf-bin rsync
+0 upgraded, 47 newly installed, 0 to remove and 7 not upgraded.
+Need to get 25.1 MB of archives.
+After this operation, 108 MB of additional disk space will be used.
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 https://deb.debian.org/debian bookworm/main amd64 rsync amd64 3.2.7-1+deb12u6 [425 kB]
+Get:3 https://deb.debian.org/debian bookworm/main amd64 m4 amd64 1.4.19-3 [287 kB]
+Get:4 https://deb.debian.org/debian bookworm/main amd64 autoconf all 2.71-3 [332 kB]
+Get:5 https://deb.debian.org/debian bookworm/main amd64 autotools-dev all 20220109.1 [51.6 kB]
+Get:6 https://deb.debian.org/debian bookworm/main amd64 automake all 1:1.16.5-1.3 [823 kB]
+Get:7 https://deb.debian.org/debian bookworm/main amd64 libgfortran5 amd64 12.2.0-14+deb12u1 [793 kB]
+Get:8 https://deb.debian.org/debian bookworm/main amd64 libgfortran-12-dev amd64 12.2.0-14+deb12u1 [834 kB]
+Get:9 https://deb.debian.org/debian bookworm/main amd64 gfortran-12 amd64 12.2.0-14+deb12u1 [10.2 MB]
+Get:10 https://deb.debian.org/debian bookworm/main amd64 gfortran amd64 4:12.2.0-3 [1428 B]
+Get:11 https://deb.debian.org/debian bookworm/main amd64 libnl-route-3-200 amd64 3.7.0-0.2+b1 [185 kB]
+Get:12 https://deb.debian.org/debian bookworm/main amd64 libibverbs1 amd64 44.0-2 [60.7 kB]
+Get:13 https://deb.debian.org/debian bookworm/main amd64 ibverbs-providers amd64 44.0-2 [335 kB]
+Get:14 https://deb.debian.org/debian bookworm/main amd64 libevent-pthreads-2.1-7 amd64 2.1.12-stable-8 [53.6 kB]
+Get:15 https://deb.debian.org/debian bookworm/main amd64 libpsm-infinipath1 amd64 3.3+20.604758e7-6.2 [168 kB]
+Get:16 https://deb.debian.org/debian bookworm/main amd64 libpsm2-2 amd64 11.2.185-2 [180 kB]
+Get:17 https://deb.debian.org/debian bookworm/main amd64 librdmacm1 amd64 44.0-2 [68.6 kB]
+Get:18 https://deb.debian.org/debian bookworm/main amd64 libfabric1 amd64 1.17.0-3 [627 kB]
+Get:19 https://deb.debian.org/debian bookworm/main amd64 libhwloc15 amd64 2.9.0-1 [154 kB]
+Get:20 https://deb.debian.org/debian bookworm/main amd64 libmunge2 amd64 0.5.15-2+deb12u1 [19.7 kB]
+Get:21 https://deb.debian.org/debian bookworm/main amd64 libxnvctrl0 amd64 525.85.05-3~deb12u1 [13.5 kB]
+Get:22 https://deb.debian.org/debian bookworm/main amd64 ocl-icd-libopencl1 amd64 2.3.1-1 [43.0 kB]
+Get:23 https://deb.debian.org/debian bookworm/main amd64 libhwloc-plugins amd64 2.9.0-1 [17.5 kB]
+Get:24 https://deb.debian.org/debian bookworm/main amd64 libpmix2 amd64 4.2.2-1+deb12u1 [622 kB]
+Get:25 https://deb.debian.org/debian bookworm/main amd64 libucx0 amd64 1.13.1-1 [860 kB]
+Get:26 https://deb.debian.org/debian bookworm/main amd64 libopenmpi3 amd64 4.1.4-3+b1 [2422 kB]
+Get:27 https://deb.debian.org/debian bookworm/main amd64 libcaf-openmpi-3 amd64 2.10.1-1+b1 [37.1 kB]
+Get:28 https://deb.debian.org/debian bookworm/main amd64 libcoarrays-dev amd64 2.10.1-1+b1 [37.2 kB]
+Get:29 https://deb.debian.org/debian bookworm/main amd64 openmpi-common all 4.1.4-3 [167 kB]
+Get:30 https://deb.debian.org/debian bookworm/main amd64 openmpi-bin amd64 4.1.4-3+b1 [226 kB]
+Get:31 https://deb.debian.org/debian bookworm/main amd64 libcoarrays-openmpi-dev amd64 2.10.1-1+b1 [463 kB]
+Get:32 https://deb.debian.org/debian bookworm/main amd64 libevent-extra-2.1-7 amd64 2.1.12-stable-8 [107 kB]
+Get:33 https://deb.debian.org/debian bookworm/main amd64 libevent-openssl-2.1-7 amd64 2.1.12-stable-8 [60.6 kB]
+Get:34 https://deb.debian.org/debian bookworm/main amd64 libevent-dev amd64 2.1.12-stable-8 [305 kB]
+Get:35 https://deb.debian.org/debian bookworm/main amd64 libnuma-dev amd64 2.0.16-1 [35.0 kB]
+Get:36 https://deb.debian.org/debian bookworm/main amd64 libltdl-dev amd64 2.4.7-7~deb12u1 [164 kB]
+Get:37 https://deb.debian.org/debian bookworm/main amd64 libhwloc-dev amd64 2.9.0-1 [241 kB]
+Get:38 https://deb.debian.org/debian bookworm/main amd64 libnl-3-dev amd64 3.7.0-0.2+b1 [104 kB]
+Get:39 https://deb.debian.org/debian bookworm/main amd64 libnl-route-3-dev amd64 3.7.0-0.2+b1 [203 kB]
+Get:40 https://deb.debian.org/debian bookworm/main amd64 libibverbs-dev amd64 44.0-2 [633 kB]
+Get:41 https://deb.debian.org/debian bookworm/main amd64 libjs-jquery-ui all 1.13.2+dfsg-1 [250 kB]
+Get:42 https://deb.debian.org/debian bookworm/main amd64 libpmix-dev amd64 4.2.2-1+deb12u1 [902 kB]
+Get:43 https://deb.debian.org/debian bookworm/main amd64 libopenmpi-dev amd64 4.1.4-3+b1 [970 kB]
+Get:44 https://deb.debian.org/debian bookworm/main amd64 libpkgconf3 amd64 1.8.1-1 [36.1 kB]
+Get:45 https://deb.debian.org/debian bookworm/main amd64 libtool all 2.4.7-7~deb12u1 [517 kB]
+Get:46 https://deb.debian.org/debian bookworm/main amd64 pkgconf-bin amd64 1.8.1-1 [29.5 kB]
+Get:47 https://deb.debian.org/debian bookworm/main amd64 pkgconf amd64 1.8.1-1 [25.9 kB]
+Get:48 https://deb.debian.org/debian bookworm/main amd64 pkg-config amd64 1.8.1-1 [13.7 kB]
+Fetched 25.1 MB in 30s (823 kB/s)
+Selecting previously unselected package rsync.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 140470 files and directories currently installed.)
+Preparing to unpack .../00-rsync_3.2.7-1+deb12u6_amd64.deb ...
+Unpacking rsync (3.2.7-1+deb12u6) ...
+Selecting previously unselected package m4.
+Preparing to unpack .../01-m4_1.4.19-3_amd64.deb ...
+Unpacking m4 (1.4.19-3) ...
+Selecting previously unselected package autoconf.
+Preparing to unpack .../02-autoconf_2.71-3_all.deb ...
+Unpacking autoconf (2.71-3) ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../03-autotools-dev_20220109.1_all.deb ...
+Unpacking autotools-dev (20220109.1) ...
+Selecting previously unselected package automake.
+Preparing to unpack .../04-automake_1%3a1.16.5-1.3_all.deb ...
+Unpacking automake (1:1.16.5-1.3) ...
+Selecting previously unselected package libgfortran5:amd64.
+Preparing to unpack .../05-libgfortran5_12.2.0-14+deb12u1_amd64.deb ...
+Unpacking libgfortran5:amd64 (12.2.0-14+deb12u1) ...
+Selecting previously unselected package libgfortran-12-dev:amd64.
+Preparing to unpack .../06-libgfortran-12-dev_12.2.0-14+deb12u1_amd64.deb ...
+Unpacking libgfortran-12-dev:amd64 (12.2.0-14+deb12u1) ...
+Selecting previously unselected package gfortran-12.
+Preparing to unpack .../07-gfortran-12_12.2.0-14+deb12u1_amd64.deb ...
+Unpacking gfortran-12 (12.2.0-14+deb12u1) ...
+Selecting previously unselected package gfortran.
+Preparing to unpack .../08-gfortran_4%3a12.2.0-3_amd64.deb ...
+Unpacking gfortran (4:12.2.0-3) ...
+Selecting previously unselected package libnl-route-3-200:amd64.
+Preparing to unpack .../09-libnl-route-3-200_3.7.0-0.2+b1_amd64.deb ...
+Unpacking libnl-route-3-200:amd64 (3.7.0-0.2+b1) ...
+Selecting previously unselected package libibverbs1:amd64.
+Preparing to unpack .../10-libibverbs1_44.0-2_amd64.deb ...
+Unpacking libibverbs1:amd64 (44.0-2) ...
+Selecting previously unselected package ibverbs-providers:amd64.
+Preparing to unpack .../11-ibverbs-providers_44.0-2_amd64.deb ...
+Unpacking ibverbs-providers:amd64 (44.0-2) ...
+Selecting previously unselected package libevent-pthreads-2.1-7:amd64.
+Preparing to unpack .../12-libevent-pthreads-2.1-7_2.1.12-stable-8_amd64.deb ...
+Unpacking libevent-pthreads-2.1-7:amd64 (2.1.12-stable-8) ...
+Selecting previously unselected package libpsm-infinipath1.
+Preparing to unpack .../13-libpsm-infinipath1_3.3+20.604758e7-6.2_amd64.deb ...
+Unpacking libpsm-infinipath1 (3.3+20.604758e7-6.2) ...
+Selecting previously unselected package libpsm2-2.
+Preparing to unpack .../14-libpsm2-2_11.2.185-2_amd64.deb ...
+Unpacking libpsm2-2 (11.2.185-2) ...
+Selecting previously unselected package librdmacm1:amd64.
+Preparing to unpack .../15-librdmacm1_44.0-2_amd64.deb ...
+Unpacking librdmacm1:amd64 (44.0-2) ...
+Selecting previously unselected package libfabric1:amd64.
+Preparing to unpack .../16-libfabric1_1.17.0-3_amd64.deb ...
+Unpacking libfabric1:amd64 (1.17.0-3) ...
+Selecting previously unselected package libhwloc15:amd64.
+Preparing to unpack .../17-libhwloc15_2.9.0-1_amd64.deb ...
+Unpacking libhwloc15:amd64 (2.9.0-1) ...
+Selecting previously unselected package libmunge2.
+Preparing to unpack .../18-libmunge2_0.5.15-2+deb12u1_amd64.deb ...
+Unpacking libmunge2 (0.5.15-2+deb12u1) ...
+Selecting previously unselected package libxnvctrl0:amd64.
+Preparing to unpack .../19-libxnvctrl0_525.85.05-3~deb12u1_amd64.deb ...
+Unpacking libxnvctrl0:amd64 (525.85.05-3~deb12u1) ...
+Selecting previously unselected package ocl-icd-libopencl1:amd64.
+Preparing to unpack .../20-ocl-icd-libopencl1_2.3.1-1_amd64.deb ...
+Unpacking ocl-icd-libopencl1:amd64 (2.3.1-1) ...
+Selecting previously unselected package libhwloc-plugins:amd64.
+Preparing to unpack .../21-libhwloc-plugins_2.9.0-1_amd64.deb ...
+Unpacking libhwloc-plugins:amd64 (2.9.0-1) ...
+Selecting previously unselected package libpmix2:amd64.
+Preparing to unpack .../22-libpmix2_4.2.2-1+deb12u1_amd64.deb ...
+Unpacking libpmix2:amd64 (4.2.2-1+deb12u1) ...
+Selecting previously unselected package libucx0:amd64.
+Preparing to unpack .../23-libucx0_1.13.1-1_amd64.deb ...
+Unpacking libucx0:amd64 (1.13.1-1) ...
+Selecting previously unselected package libopenmpi3:amd64.
+Preparing to unpack .../24-libopenmpi3_4.1.4-3+b1_amd64.deb ...
+Unpacking libopenmpi3:amd64 (4.1.4-3+b1) ...
+Selecting previously unselected package libcaf-openmpi-3:amd64.
+Preparing to unpack .../25-libcaf-openmpi-3_2.10.1-1+b1_amd64.deb ...
+Unpacking libcaf-openmpi-3:amd64 (2.10.1-1+b1) ...
+Selecting previously unselected package libcoarrays-dev:amd64.
+Preparing to unpack .../26-libcoarrays-dev_2.10.1-1+b1_amd64.deb ...
+Unpacking libcoarrays-dev:amd64 (2.10.1-1+b1) ...
+Selecting previously unselected package openmpi-common.
+Preparing to unpack .../27-openmpi-common_4.1.4-3_all.deb ...
+Unpacking openmpi-common (4.1.4-3) ...
+Selecting previously unselected package openmpi-bin.
+Preparing to unpack .../28-openmpi-bin_4.1.4-3+b1_amd64.deb ...
+Unpacking openmpi-bin (4.1.4-3+b1) ...
+Selecting previously unselected package libcoarrays-openmpi-dev:amd64.
+Preparing to unpack .../29-libcoarrays-openmpi-dev_2.10.1-1+b1_amd64.deb ...
+Unpacking libcoarrays-openmpi-dev:amd64 (2.10.1-1+b1) ...
+Selecting previously unselected package libevent-extra-2.1-7:amd64.
+Preparing to unpack .../30-libevent-extra-2.1-7_2.1.12-stable-8_amd64.deb ...
+Unpacking libevent-extra-2.1-7:amd64 (2.1.12-stable-8) ...
+Selecting previously unselected package libevent-openssl-2.1-7:amd64.
+Preparing to unpack .../31-libevent-openssl-2.1-7_2.1.12-stable-8_amd64.deb ...
+Unpacking libevent-openssl-2.1-7:amd64 (2.1.12-stable-8) ...
+Selecting previously unselected package libevent-dev.
+Preparing to unpack .../32-libevent-dev_2.1.12-stable-8_amd64.deb ...
+Unpacking libevent-dev (2.1.12-stable-8) ...
+Selecting previously unselected package libnuma-dev:amd64.
+Preparing to unpack .../33-libnuma-dev_2.0.16-1_amd64.deb ...
+Unpacking libnuma-dev:amd64 (2.0.16-1) ...
+Selecting previously unselected package libltdl-dev:amd64.
+Preparing to unpack .../34-libltdl-dev_2.4.7-7~deb12u1_amd64.deb ...
+Unpacking libltdl-dev:amd64 (2.4.7-7~deb12u1) ...
+Selecting previously unselected package libhwloc-dev:amd64.
+Preparing to unpack .../35-libhwloc-dev_2.9.0-1_amd64.deb ...
+Unpacking libhwloc-dev:amd64 (2.9.0-1) ...
+Selecting previously unselected package libnl-3-dev:amd64.
+Preparing to unpack .../36-libnl-3-dev_3.7.0-0.2+b1_amd64.deb ...
+Unpacking libnl-3-dev:amd64 (3.7.0-0.2+b1) ...
+Selecting previously unselected package libnl-route-3-dev:amd64.
+Preparing to unpack .../37-libnl-route-3-dev_3.7.0-0.2+b1_amd64.deb ...
+Unpacking libnl-route-3-dev:amd64 (3.7.0-0.2+b1) ...
+Selecting previously unselected package libibverbs-dev:amd64.
+Preparing to unpack .../38-libibverbs-dev_44.0-2_amd64.deb ...
+Unpacking libibverbs-dev:amd64 (44.0-2) ...
+Selecting previously unselected package libjs-jquery-ui.
+Preparing to unpack .../39-libjs-jquery-ui_1.13.2+dfsg-1_all.deb ...
+Unpacking libjs-jquery-ui (1.13.2+dfsg-1) ...
+Selecting previously unselected package libpmix-dev:amd64.
+Preparing to unpack .../40-libpmix-dev_4.2.2-1+deb12u1_amd64.deb ...
+Unpacking libpmix-dev:amd64 (4.2.2-1+deb12u1) ...
+Selecting previously unselected package libopenmpi-dev:amd64.
+Preparing to unpack .../41-libopenmpi-dev_4.1.4-3+b1_amd64.deb ...
+Unpacking libopenmpi-dev:amd64 (4.1.4-3+b1) ...
+Selecting previously unselected package libpkgconf3:amd64.
+Preparing to unpack .../42-libpkgconf3_1.8.1-1_amd64.deb ...
+Unpacking libpkgconf3:amd64 (1.8.1-1) ...
+Selecting previously unselected package libtool.
+Preparing to unpack .../43-libtool_2.4.7-7~deb12u1_all.deb ...
+Unpacking libtool (2.4.7-7~deb12u1) ...
+Selecting previously unselected package pkgconf-bin.
+Preparing to unpack .../44-pkgconf-bin_1.8.1-1_amd64.deb ...
+Unpacking pkgconf-bin (1.8.1-1) ...
+Selecting previously unselected package pkgconf:amd64.
+Preparing to unpack .../45-pkgconf_1.8.1-1_amd64.deb ...
+Unpacking pkgconf:amd64 (1.8.1-1) ...
+Selecting previously unselected package pkg-config:amd64.
+Preparing to unpack .../46-pkg-config_1.8.1-1_amd64.deb ...
+Unpacking pkg-config:amd64 (1.8.1-1) ...
+Setting up libevent-extra-2.1-7:amd64 (2.1.12-stable-8) ...
+Setting up libevent-openssl-2.1-7:amd64 (2.1.12-stable-8) ...
+Setting up m4 (1.4.19-3) ...
+Setting up libnuma-dev:amd64 (2.0.16-1) ...
+Setting up libnl-route-3-200:amd64 (3.7.0-0.2+b1) ...
+Setting up libxnvctrl0:amd64 (525.85.05-3~deb12u1) ...
+Setting up autotools-dev (20220109.1) ...
+Setting up libpkgconf3:amd64 (1.8.1-1) ...
+Setting up libjs-jquery-ui (1.13.2+dfsg-1) ...
+Setting up libmunge2 (0.5.15-2+deb12u1) ...
+Setting up libhwloc15:amd64 (2.9.0-1) ...
+Setting up pkgconf-bin (1.8.1-1) ...
+Setting up libgfortran5:amd64 (12.2.0-14+deb12u1) ...
+Setting up autoconf (2.71-3) ...
+Setting up libnl-3-dev:amd64 (3.7.0-0.2+b1) ...
+Setting up ocl-icd-libopencl1:amd64 (2.3.1-1) ...
+Setting up libpsm2-2 (11.2.185-2) ...
+Setting up openmpi-common (4.1.4-3) ...
+Setting up libpsm-infinipath1 (3.3+20.604758e7-6.2) ...
+update-alternatives: using /usr/lib/libpsm1/libpsm_infinipath.so.1.16 to provide /usr/lib/x86_64-linux-gnu/libpsm_infinipath.so.1 (libpsm_infinipath.so.1) in auto mode
+Setting up rsync (3.2.7-1+deb12u6) ...
+rsync.service is a disabled or a static unit, not starting it.
+Setting up libevent-pthreads-2.1-7:amd64 (2.1.12-stable-8) ...
+Setting up automake (1:1.16.5-1.3) ...
+update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode
+Setting up libibverbs1:amd64 (44.0-2) ...
+Setting up ibverbs-providers:amd64 (44.0-2) ...
+Setting up libtool (2.4.7-7~deb12u1) ...
+Setting up libgfortran-12-dev:amd64 (12.2.0-14+deb12u1) ...
+Setting up libhwloc-plugins:amd64 (2.9.0-1) ...
+Setting up pkgconf:amd64 (1.8.1-1) ...
+Setting up libnl-route-3-dev:amd64 (3.7.0-0.2+b1) ...
+Setting up libltdl-dev:amd64 (2.4.7-7~deb12u1) ...
+Setting up gfortran-12 (12.2.0-14+deb12u1) ...
+Setting up libevent-dev (2.1.12-stable-8) ...
+Setting up pkg-config:amd64 (1.8.1-1) ...
+Setting up libhwloc-dev:amd64 (2.9.0-1) ...
+Setting up librdmacm1:amd64 (44.0-2) ...
+Setting up libucx0:amd64 (1.13.1-1) ...
+Setting up libpmix2:amd64 (4.2.2-1+deb12u1) ...
+Setting up libibverbs-dev:amd64 (44.0-2) ...
+Setting up gfortran (4:12.2.0-3) ...
+update-alternatives: using /usr/bin/gfortran to provide /usr/bin/f95 (f95) in auto mode
+update-alternatives: using /usr/bin/gfortran to provide /usr/bin/f77 (f77) in auto mode
+Setting up libpmix-dev:amd64 (4.2.2-1+deb12u1) ...
+Setting up libfabric1:amd64 (1.17.0-3) ...
+Setting up libcoarrays-dev:amd64 (2.10.1-1+b1) ...
+Setting up libopenmpi3:amd64 (4.1.4-3+b1) ...
+Setting up libcaf-openmpi-3:amd64 (2.10.1-1+b1) ...
+Setting up openmpi-bin (4.1.4-3+b1) ...
+update-alternatives: using /usr/bin/mpirun.openmpi to provide /usr/bin/mpirun (mpirun) in auto mode
+update-alternatives: using /usr/bin/mpicc.openmpi to provide /usr/bin/mpicc (mpi) in auto mode
+Setting up libcoarrays-openmpi-dev:amd64 (2.10.1-1+b1) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/open-coarrays/openmpi/bin/caf to provide /usr/bin/caf.openmpi (caf-openmpi) in auto mode
+update-alternatives: using /usr/bin/caf.openmpi to provide /usr/bin/caf (caf) in auto mode
+Setting up libopenmpi-dev:amd64 (4.1.4-3+b1) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openmpi/include to provide /usr/include/x86_64-linux-gnu/mpi (mpi-x86_64-linux-gnu) in auto mode
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+Requirement already satisfied: pip in ./.venv-mcmc/lib/python3.11/site-packages (23.0.1)
+Collecting pip
+  Downloading pip-26.1.2-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 20.0 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-26.1.2
+Requirement already satisfied: setuptools<82 in ./.venv-mcmc/lib/python3.11/site-packages (66.1.1)
+Collecting wheel
+  Downloading wheel-0.47.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting packaging
+  Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+Downloading wheel-0.47.0-py3-none-any.whl (32 kB)
+Downloading packaging-26.2-py3-none-any.whl (100 kB)
+Installing collected packages: packaging, wheel
+
+Successfully installed packaging-26.2 wheel-0.47.0
+Collecting cobaya==3.5.4
+  Downloading cobaya-3.5.4.tar.gz (460 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting getdist==1.7.7
+  Downloading getdist-1.7.7-py3-none-any.whl.metadata (13 kB)
+Collecting arviz==0.23.4
+  Downloading arviz-0.23.4-py3-none-any.whl.metadata (9.1 kB)
+Collecting mpi4py==4.1.2
+  Downloading mpi4py-4.1.2-cp311-cp311-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (16 kB)
+Collecting numpy>=1.17.0 (from cobaya==3.5.4)
+  Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting scipy>=1.5 (from cobaya==3.5.4)
+  Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting pandas>=1.0.1 (from cobaya==3.5.4)
+  Downloading pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting PyYAML>=5.1 (from cobaya==3.5.4)
+  Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting requests>=2.18 (from cobaya==3.5.4)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting py-bobyqa>=1.4 (from cobaya==3.5.4)
+  Downloading Py_BOBYQA-1.5.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting fuzzywuzzy>=0.17 (from cobaya==3.5.4)
+  Downloading fuzzywuzzy-0.18.0-py2.py3-none-any.whl.metadata (4.9 kB)
+Requirement already satisfied: packaging in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya==3.5.4) (26.2)
+Collecting tqdm (from cobaya==3.5.4)
+  Downloading tqdm-4.68.4-py3-none-any.whl.metadata (57 kB)
+Collecting portalocker>=2.3.0 (from cobaya==3.5.4)
+  Downloading portalocker-3.2.0-py3-none-any.whl.metadata (8.7 kB)
+Collecting dill>=0.3.3 (from cobaya==3.5.4)
+  Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting matplotlib!=3.5.0,>=2.2.0 (from getdist==1.7.7)
+  Downloading matplotlib-3.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+Requirement already satisfied: setuptools>=60.0.0 in ./.venv-mcmc/lib/python3.11/site-packages (from arviz==0.23.4) (66.1.1)
+Collecting xarray>=2023.7.0 (from arviz==0.23.4)
+  Downloading xarray-2026.7.0-py3-none-any.whl.metadata (12 kB)
+Collecting h5netcdf>=1.0.2 (from arviz==0.23.4)
+  Downloading h5netcdf-1.8.1-py3-none-any.whl.metadata (15 kB)
+Collecting h5py (from arviz==0.23.4)
+  Downloading h5py-3.16.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting typing_extensions>=4.1.0 (from arviz==0.23.4)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting xarray-einstats>=0.3 (from arviz==0.23.4)
+  Downloading xarray_einstats-0.9.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting platformdirs (from arviz==0.23.4)
+  Downloading platformdirs-4.10.0-py3-none-any.whl.metadata (5.5 kB)
+Collecting contourpy>=1.0.1 (from matplotlib!=3.5.0,>=2.2.0->getdist==1.7.7)
+  Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib!=3.5.0,>=2.2.0->getdist==1.7.7)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib!=3.5.0,>=2.2.0->getdist==1.7.7)
+  Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib!=3.5.0,>=2.2.0->getdist==1.7.7)
+  Downloading kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+Collecting pillow>=9 (from matplotlib!=3.5.0,>=2.2.0->getdist==1.7.7)
+  Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting pyparsing>=3 (from matplotlib!=3.5.0,>=2.2.0->getdist==1.7.7)
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting python-dateutil>=2.7 (from matplotlib!=3.5.0,>=2.2.0->getdist==1.7.7)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib!=3.5.0,>=2.2.0->getdist==1.7.7)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.18->cobaya==3.5.4)
+  Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+Collecting idna<4,>=2.5 (from requests>=2.18->cobaya==3.5.4)
+  Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+Collecting urllib3<3,>=1.26 (from requests>=2.18->cobaya==3.5.4)
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2023.5.7 (from requests>=2.18->cobaya==3.5.4)
+  Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+Downloading getdist-1.7.7-py3-none-any.whl (835 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 836.0/836.0 kB 17.0 MB/s  0:00:00
+Downloading arviz-0.23.4-py3-none-any.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 30.7 MB/s  0:00:00
+Downloading mpi4py-4.1.2-cp311-cp311-manylinux1_x86_64.manylinux_2_5_x86_64.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 40.1 MB/s  0:00:00
+Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+Downloading fuzzywuzzy-0.18.0-py2.py3-none-any.whl (18 kB)
+Downloading h5netcdf-1.8.1-py3-none-any.whl (62 kB)
+Downloading matplotlib-3.11.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 84.3 MB/s  0:00:00
+Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.63.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 112.9 MB/s  0:00:00
+Downloading kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 54.3 MB/s  0:00:00
+Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 127.5 MB/s  0:00:00
+Downloading pandas-3.0.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 131.5 MB/s  0:00:00
+Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 117.2 MB/s  0:00:00
+Downloading portalocker-3.2.0-py3-none-any.whl (22 kB)
+Downloading Py_BOBYQA-1.5.0-py3-none-any.whl (57 kB)
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 59.5 MB/s  0:00:00
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+Downloading idna-3.18-py3-none-any.whl (65 kB)
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 126.6 MB/s  0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading xarray-2026.7.0-py3-none-any.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 72.2 MB/s  0:00:00
+Downloading xarray_einstats-0.9.1-py3-none-any.whl (39 kB)
+Downloading h5py-3.16.0-cp311-cp311-manylinux_2_28_x86_64.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 135.6 MB/s  0:00:00
+Downloading platformdirs-4.10.0-py3-none-any.whl (22 kB)
+Downloading tqdm-4.68.4-py3-none-any.whl (676 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 676.6/676.6 kB 36.3 MB/s  0:00:00
+Building wheels for collected packages: cobaya
+  Building wheel for cobaya (pyproject.toml): started
+  Building wheel for cobaya (pyproject.toml): finished with status 'done'
+  Created wheel for cobaya: filename=cobaya-3.5.4-py3-none-any.whl size=525174 sha256=0a5815a71d06b30b9ddf1c498dab0b16937719aa9c1f448b168c9ab66b9bc4f6
+  Stored in directory: /home/salahealer_gmail_com/.cache/pip/wheels/70/d0/fa/a68da39d55a514411f28a271e1511fcfb8311a1c6d3ffdc007
+Successfully built cobaya
+Installing collected packages: fuzzywuzzy, urllib3, typing_extensions, tqdm, six, PyYAML, pyparsing, portalocker, platformdirs, pillow, numpy, mpi4py, kiwisolver, idna, fonttools, dill, cycler, charset_normalizer, certifi, scipy, requests, python-dateutil, h5py, h5netcdf, contourpy, pandas, matplotlib, xarray, py-bobyqa, getdist, xarray-einstats, cobaya, arviz
+
+Successfully installed PyYAML-6.0.3 arviz-0.23.4 certifi-2026.6.17 charset_normalizer-3.4.9 cobaya-3.5.4 contourpy-1.3.3 cycler-0.12.1 dill-0.4.1 fonttools-4.63.0 fuzzywuzzy-0.18.0 getdist-1.7.7 h5netcdf-1.8.1 h5py-3.16.0 idna-3.18 kiwisolver-1.5.0 matplotlib-3.11.0 mpi4py-4.1.2 numpy-2.4.6 pandas-3.0.3 pillow-12.3.0 platformdirs-4.10.0 portalocker-3.2.0 py-bobyqa-1.5.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 requests-2.34.2 scipy-1.17.1 six-1.17.0 tqdm-4.68.4 typing_extensions-4.16.0 urllib3-2.7.0 xarray-2026.7.0 xarray-einstats-0.9.1
+Collecting camb==1.5.0
+  Downloading camb-1.5.0.tar.gz (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 15.9 MB/s  0:00:00
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: scipy>=1.0 in ./.venv-mcmc/lib/python3.11/site-packages (from camb==1.5.0) (1.17.1)
+Collecting sympy>=1.0 (from camb==1.5.0)
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: numpy<2.7,>=1.26.4 in ./.venv-mcmc/lib/python3.11/site-packages (from scipy>=1.0->camb==1.5.0) (2.4.6)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.0->camb==1.5.0)
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 51.3 MB/s  0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 75.0 MB/s  0:00:00
+Building wheels for collected packages: camb
+  Building wheel for camb (pyproject.toml): started
+  Building wheel for camb (pyproject.toml): finished with status 'done'
+  Created wheel for camb: filename=camb-1.5.0-py3-none-any.whl size=1082681 sha256=c782b205296c629b486c6e151efb94787001f441279167774032e2c68f5aa5bb
+  Stored in directory: /tmp/pip-ephem-wheel-cache-dc7nlv3j/wheels/47/d5/28/d7f7660d0ea13bc19aecd10af575d74260a1c3a7073b8cf4dc
+Successfully built camb
+Installing collected packages: mpmath, sympy, camb
+
+Successfully installed camb-1.5.0 mpmath-1.3.0 sympy-1.14.0
+Collecting git+https://github.com/ACTCollaboration/DR6-ACT-lite.git@880eacb40d66722eb1c32d7b5621e91662b4d808
+  Cloning https://github.com/ACTCollaboration/DR6-ACT-lite.git (to revision 880eacb40d66722eb1c32d7b5621e91662b4d808) to /tmp/pip-req-build-ftsshbmh
+  Running command git clone --filter=blob:none --quiet https://github.com/ACTCollaboration/DR6-ACT-lite.git /tmp/pip-req-build-ftsshbmh
+  Running command git rev-parse -q --verify 'sha^880eacb40d66722eb1c32d7b5621e91662b4d808'
+  Running command git fetch -q https://github.com/ACTCollaboration/DR6-ACT-lite.git 880eacb40d66722eb1c32d7b5621e91662b4d808
+  Running command git checkout -q 880eacb40d66722eb1c32d7b5621e91662b4d808
+  Resolved https://github.com/ACTCollaboration/DR6-ACT-lite.git to commit 880eacb40d66722eb1c32d7b5621e91662b4d808
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting sacc>=0.12.0 (from ACT-DR6-CMBonly==1.0.0)
+  Downloading sacc-2.4-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: cobaya>=3.3 in ./.venv-mcmc/lib/python3.11/site-packages (from ACT-DR6-CMBonly==1.0.0) (3.5.4)
+Requirement already satisfied: numpy>=1.17.0 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (2.4.6)
+Requirement already satisfied: scipy>=1.5 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (1.17.1)
+Requirement already satisfied: pandas>=1.0.1 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (3.0.3)
+Requirement already satisfied: PyYAML>=5.1 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (6.0.3)
+Requirement already satisfied: requests>=2.18 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (2.34.2)
+Requirement already satisfied: py-bobyqa>=1.4 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (1.5.0)
+Requirement already satisfied: GetDist>=1.3.1 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (1.7.7)
+Requirement already satisfied: fuzzywuzzy>=0.17 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (0.18.0)
+Requirement already satisfied: packaging in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (26.2)
+Requirement already satisfied: tqdm in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (4.68.4)
+Requirement already satisfied: portalocker>=2.3.0 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (3.2.0)
+Requirement already satisfied: dill>=0.3.3 in ./.venv-mcmc/lib/python3.11/site-packages (from cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (0.4.1)
+Requirement already satisfied: matplotlib!=3.5.0,>=2.2.0 in ./.venv-mcmc/lib/python3.11/site-packages (from GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (3.11.0)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv-mcmc/lib/python3.11/site-packages (from matplotlib!=3.5.0,>=2.2.0->GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in ./.venv-mcmc/lib/python3.11/site-packages (from matplotlib!=3.5.0,>=2.2.0->GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv-mcmc/lib/python3.11/site-packages (from matplotlib!=3.5.0,>=2.2.0->GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (4.63.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv-mcmc/lib/python3.11/site-packages (from matplotlib!=3.5.0,>=2.2.0->GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (1.5.0)
+Requirement already satisfied: pillow>=9 in ./.venv-mcmc/lib/python3.11/site-packages (from matplotlib!=3.5.0,>=2.2.0->GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (12.3.0)
+Requirement already satisfied: pyparsing>=3 in ./.venv-mcmc/lib/python3.11/site-packages (from matplotlib!=3.5.0,>=2.2.0->GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv-mcmc/lib/python3.11/site-packages (from matplotlib!=3.5.0,>=2.2.0->GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (2.9.0.post0)
+Requirement already satisfied: setuptools in ./.venv-mcmc/lib/python3.11/site-packages (from py-bobyqa>=1.4->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (66.1.1)
+Requirement already satisfied: six>=1.5 in ./.venv-mcmc/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib!=3.5.0,>=2.2.0->GetDist>=1.3.1->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv-mcmc/lib/python3.11/site-packages (from requests>=2.18->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (3.4.9)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv-mcmc/lib/python3.11/site-packages (from requests>=2.18->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (3.18)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv-mcmc/lib/python3.11/site-packages (from requests>=2.18->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in ./.venv-mcmc/lib/python3.11/site-packages (from requests>=2.18->cobaya>=3.3->ACT-DR6-CMBonly==1.0.0) (2026.6.17)
+Collecting astropy (from sacc>=0.12.0->ACT-DR6-CMBonly==1.0.0)
+  Downloading astropy-8.0.1-cp311-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+Collecting astropy-iers-data>=0.2026.6.22.1.23.34 (from astropy->sacc>=0.12.0->ACT-DR6-CMBonly==1.0.0)
+  Downloading astropy_iers_data-0.2026.7.6.1.1.20-py3-none-any.whl.metadata (3.4 kB)
+Collecting pyerfa>=2.0.1.3 (from astropy->sacc>=0.12.0->ACT-DR6-CMBonly==1.0.0)
+  Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.7 kB)
+Downloading sacc-2.4-py3-none-any.whl (50 kB)
+Downloading astropy-8.0.1-cp311-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.5/10.5 MB 60.5 MB/s  0:00:00
+Downloading astropy_iers_data-0.2026.7.6.1.1.20-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 147.5 MB/s  0:00:00
+Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.7/738.7 kB 86.5 MB/s  0:00:00
+Building wheels for collected packages: ACT-DR6-CMBonly
+  Building wheel for ACT-DR6-CMBonly (pyproject.toml): started
+  Building wheel for ACT-DR6-CMBonly (pyproject.toml): finished with status 'done'
+  Created wheel for ACT-DR6-CMBonly: filename=act_dr6_cmbonly-1.0.0-py3-none-any.whl size=213627 sha256=4805477e779ba19c2893d9075b14b027438991ace31e02908f8c2ec5039b1dea
+  Stored in directory: /tmp/pip-ephem-wheel-cache-p0j6cs5w/wheels/26/c3/9f/61382c8d5751a2459bb6a901792ec848d9e1e0657f09cab99e
+Successfully built ACT-DR6-CMBonly
+Installing collected packages: pyerfa, astropy-iers-data, astropy, sacc, ACT-DR6-CMBonly
+
+Successfully installed ACT-DR6-CMBonly-1.0.0 astropy-8.0.1 astropy-iers-data-0.2026.7.6.1.1.20 pyerfa-2.0.1.5 sacc-2.4
+No broken requirements found.
+cobaya: 3.5.4
+camb: 1.5.0
+getdist: 1.7.7
+arviz: 0.23.4
+mpi4py: 4.1.2
+act_dr6_cmbonly import: PASS
+ACT-lite commit verified: 880eacb40d66722eb1c32d7b5621e91662b4d808
+
+=== CLOUD MCMC SOFTWARE ENVIRONMENT: PASS ===
+Repository commit: 956986c86f103a91f5ce970b5afd744e34ef44bf
+Virtual environment: .venv-mcmc
+Cobaya packages path: /opt/cobaya-packages-act-dr6
+ACT-lite commit: 880eacb40d66722eb1c32d7b5621e91662b4d808
+MPI ranks verified: 4
+Likelihood data downloaded: no
+Likelihood evaluated: no
+MCMC started: no
+
+Activate later with:
+  source .venv-mcmc/bin/activate
+  export COBAYA_PACKAGES_PATH='/opt/cobaya-packages-act-dr6'
