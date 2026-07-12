@@ -1,0 +1,1208 @@
+{
+  "actlite_lcdm_camb": {
+    "chain_columns": [
+      "weight",
+      "minuslogpost",
+      "ombh2",
+      "omch2",
+      "cosmomc_theta",
+      "logA",
+      "ns",
+      "tau",
+      "A_act",
+      "P_act",
+      "As",
+      "H0",
+      "thetastar",
+      "sigma8",
+      "YHe",
+      "zrei",
+      "taurend",
+      "zstar",
+      "rstar",
+      "zdrag",
+      "chi2__CMB",
+      "minuslogprior",
+      "minuslogprior__0",
+      "minuslogprior__cal_dip_prior",
+      "chi2",
+      "chi2__planck_2018_lowl.EE_sroll2",
+      "chi2__act_dr6_cmbonly.ACTDR6CMBonly"
+    ],
+    "chain_root": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb",
+    "likelihood": {
+      "act_dr6_cmbonly.ACTDR6CMBonly": {
+        "data_folder": "ACTDR6CMBonly",
+        "ell_cuts": {
+          "EE": [
+            600,
+            8500
+          ],
+          "TE": [
+            600,
+            8500
+          ],
+          "TT": [
+            600,
+            8500
+          ]
+        },
+        "input_file": "dr6_data_cmb_sacc_oct22.fits",
+        "input_params": [
+          "A_act",
+          "P_act"
+        ],
+        "lmax_theory": 9000,
+        "output_params": [],
+        "speed": -1,
+        "stop_at_error": true,
+        "type": [],
+        "version": null
+      },
+      "planck_2018_lowl.EE_sroll2": {
+        "aliases": [
+          "lowE"
+        ],
+        "input_params": [],
+        "output_params": [],
+        "speed": -1,
+        "stop_at_error": false,
+        "type": "CMB",
+        "version": null
+      }
+    },
+    "parameters": {
+      "derived": {
+        "As": {
+          "derived": true,
+          "latex": "A_\\mathrm{s}",
+          "value": "lambda logA: 1e-10*np.exp(logA)"
+        },
+        "H0": {
+          "derived": true,
+          "latex": "H_0"
+        },
+        "YHe": {
+          "derived": true,
+          "latex": "Y_\\mathrm{He}",
+          "renames": [
+            "yhe",
+            "yheused"
+          ]
+        },
+        "chi2__CMB": {
+          "derived": true,
+          "latex": "\\chi^2_\\mathrm{CMB}"
+        },
+        "rstar": {
+          "derived": true,
+          "latex": "r_{s,\\star}"
+        },
+        "sigma8": {
+          "derived": true,
+          "latex": "\\sigma_8"
+        },
+        "taurend": {
+          "derived": true,
+          "latex": "\\tau_\\mathrm{rec}"
+        },
+        "thetastar": {
+          "derived": true,
+          "latex": "\\theta_\\star"
+        },
+        "zdrag": {
+          "derived": true,
+          "latex": "z_d"
+        },
+        "zrei": {
+          "derived": true,
+          "latex": "z_\\mathrm{reio}"
+        },
+        "zstar": {
+          "derived": true,
+          "latex": "z_\\star"
+        }
+      },
+      "fixed": {},
+      "other": {},
+      "sampled": {
+        "A_act": {
+          "latex": "A_{\\rm ACT}",
+          "prior": {
+            "max": 1.5,
+            "min": 0.5
+          },
+          "proposal": 0.003,
+          "ref": {
+            "dist": "norm",
+            "loc": 1.0,
+            "scale": 0.01
+          }
+        },
+        "P_act": {
+          "latex": "p_{\\rm ACT}",
+          "prior": {
+            "max": 1.1,
+            "min": 0.9
+          },
+          "proposal": 0.01,
+          "ref": {
+            "dist": "norm",
+            "loc": 1.0,
+            "scale": 0.01
+          }
+        },
+        "cosmomc_theta": {
+          "latex": "\\theta_\\mathrm{MC}",
+          "prior": {
+            "max": 0.0105,
+            "min": 0.0103
+          },
+          "proposal": 1e-05,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.010417,
+            "scale": 6.7e-05
+          }
+        },
+        "logA": {
+          "latex": "\\log(10^{10} A_\\mathrm{s})",
+          "prior": {
+            "max": 3.5,
+            "min": 2.6
+          },
+          "proposal": 0.0036,
+          "ref": {
+            "dist": "norm",
+            "loc": 3.064,
+            "scale": 0.24
+          }
+        },
+        "ns": {
+          "latex": "n_\\mathrm{s}",
+          "prior": {
+            "max": 1.1,
+            "min": 0.9
+          },
+          "proposal": 0.0033,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.9729,
+            "scale": 0.061
+          }
+        },
+        "ombh2": {
+          "latex": "\\Omega_\\mathrm{b}h^2",
+          "prior": {
+            "max": 0.027,
+            "min": 0.017
+          },
+          "proposal": 6.5e-05,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.02239,
+            "scale": 0.0021
+          },
+          "renames": [
+            "omegabh2"
+          ]
+        },
+        "omch2": {
+          "latex": "\\Omega_\\mathrm{c}h^2",
+          "prior": {
+            "max": 0.15,
+            "min": 0.09
+          },
+          "proposal": 0.0011,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.12,
+            "scale": 0.026
+          },
+          "renames": [
+            "omegach2"
+          ]
+        },
+        "tau": {
+          "latex": "\\tau_\\mathrm{reio}",
+          "prior": {
+            "max": 0.1,
+            "min": 0.0
+          },
+          "proposal": 0.0073,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.0544,
+            "scale": 0.0073
+          }
+        }
+      }
+    },
+    "sampler": {
+      "mcmc": {
+        "Rminus1_cl_level": 0.95,
+        "Rminus1_cl_stop": 0.05,
+        "Rminus1_single_split": 4,
+        "Rminus1_stop": 0.01,
+        "blocking": [
+          [
+            1,
+            [
+              "ombh2",
+              "omch2",
+              "cosmomc_theta",
+              "tau"
+            ]
+          ],
+          [
+            1,
+            [
+              "logA",
+              "ns"
+            ]
+          ],
+          [
+            32,
+            [
+              "A_act",
+              "P_act"
+            ]
+          ]
+        ],
+        "burn_in": 0,
+        "callback_every": null,
+        "callback_function": null,
+        "check_every": null,
+        "covmat": "lcdm.covmat",
+        "covmat_params": null,
+        "drag": false,
+        "drag_limits": null,
+        "fallback_covmat_scale": 4,
+        "learn_every": "40d",
+        "learn_proposal": true,
+        "learn_proposal_Rminus1_max": 10.0,
+        "learn_proposal_Rminus1_max_early": 30.0,
+        "learn_proposal_Rminus1_min": 0.0,
+        "max_samples": Infinity,
+        "max_tries": "40d",
+        "measure_speeds": true,
+        "output_every": "60s",
+        "oversample": null,
+        "oversample_power": 0.4,
+        "oversample_thin": true,
+        "proposal_scale": 2.4,
+        "seed": null,
+        "temperature": 1,
+        "version": "3.5.4"
+      }
+    },
+    "theory": {
+      "camb": {
+        "external_primordial_pk": false,
+        "extra_args": {
+          "DoLateRadTruncation": false,
+          "k_per_logint": 130,
+          "kmax": 10,
+          "lAccuracyBoost": 1.2,
+          "lens_margin": 2050,
+          "lens_potential_accuracy": 8,
+          "min_l_logl_sampling": 6000,
+          "nonlinear": true,
+          "recombination_model": "CosmoRec"
+        },
+        "ignore_obsolete": false,
+        "input_params": [
+          "As",
+          "ns",
+          "ombh2",
+          "omch2",
+          "cosmomc_theta",
+          "tau"
+        ],
+        "output_params": [
+          "H0",
+          "thetastar",
+          "sigma8",
+          "YHe",
+          "zrei",
+          "taurend",
+          "zstar",
+          "rstar",
+          "zdrag"
+        ],
+        "params": {
+          "H0": {
+            "derived": true,
+            "latex": "H_0"
+          },
+          "YHe": {
+            "derived": true,
+            "latex": "Y_\\mathrm{He}"
+          },
+          "rstar": {
+            "derived": true,
+            "latex": "r_{s,\\star}"
+          },
+          "sigma8": {
+            "derived": true,
+            "latex": "\\sigma_8"
+          },
+          "taurend": {
+            "derived": true,
+            "latex": "\\tau_\\mathrm{rec}"
+          },
+          "thetastar": {
+            "derived": true,
+            "latex": "\\theta_\\star"
+          },
+          "zdrag": {
+            "derived": true,
+            "latex": "z_d"
+          },
+          "zrei": {
+            "derived": true,
+            "latex": "z_\\mathrm{reio}"
+          },
+          "zstar": {
+            "derived": true,
+            "latex": "z_\\star"
+          }
+        },
+        "path": null,
+        "renames": {
+          "YpBBN": "Y_p",
+          "omegabh2": "ombh2",
+          "omegach2": "omch2",
+          "omegak": "omk",
+          "omegal": "omega_de",
+          "yhe": "YHe",
+          "yheused": "YHe"
+        },
+        "speed": 0.3,
+        "stop_at_error": true,
+        "use_renames": false,
+        "version": "1.5.0"
+      }
+    },
+    "updated_yaml": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.updated.yaml"
+  },
+  "p-actlite_lcdm_camb": {
+    "chain_columns": [
+      "weight",
+      "minuslogpost",
+      "ombh2",
+      "omch2",
+      "cosmomc_theta",
+      "logA",
+      "ns",
+      "tau",
+      "A_planck",
+      "P_act",
+      "As",
+      "H0",
+      "thetastar",
+      "sigma8",
+      "YHe",
+      "zrei",
+      "taurend",
+      "zstar",
+      "rstar",
+      "zdrag",
+      "A_act",
+      "chi2__CMB",
+      "minuslogprior",
+      "minuslogprior__0",
+      "minuslogprior__cal_dip_prior",
+      "chi2",
+      "chi2__planck_2018_lowl.TT",
+      "chi2__planck_2018_lowl.EE_sroll2",
+      "chi2__act_dr6_cmbonly.PlanckActCut",
+      "chi2__act_dr6_cmbonly.ACTDR6CMBonly"
+    ],
+    "chain_root": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb",
+    "likelihood": {
+      "act_dr6_cmbonly.ACTDR6CMBonly": {
+        "data_folder": "ACTDR6CMBonly",
+        "ell_cuts": {
+          "EE": [
+            600,
+            8500
+          ],
+          "TE": [
+            600,
+            8500
+          ],
+          "TT": [
+            600,
+            8500
+          ]
+        },
+        "input_file": "dr6_data_cmb_sacc_oct22.fits",
+        "input_params": [
+          "A_act",
+          "P_act"
+        ],
+        "lmax_theory": 9000,
+        "output_params": [],
+        "speed": -1,
+        "stop_at_error": true,
+        "type": [],
+        "version": null
+      },
+      "act_dr6_cmbonly.PlanckActCut": {
+        "aliases": [
+          "plikHM_TTTEEE"
+        ],
+        "dataset_file": "plik_lite_v22.dataset",
+        "dataset_params": {
+          "lmax_cuts": "1000 600 600",
+          "lmin_cuts": "0 0 0",
+          "use_cl": "tt te ee"
+        },
+        "input_params": [
+          "A_planck"
+        ],
+        "output_params": [],
+        "path": null,
+        "speed": 200,
+        "stop_at_error": false,
+        "type": "CMB",
+        "version": null
+      },
+      "planck_2018_lowl.EE_sroll2": {
+        "aliases": [
+          "lowE"
+        ],
+        "input_params": [
+          "A_planck"
+        ],
+        "output_params": [],
+        "speed": -1,
+        "stop_at_error": false,
+        "type": "CMB",
+        "version": null
+      },
+      "planck_2018_lowl.TT": {
+        "aliases": [
+          "lowT"
+        ],
+        "input_params": [
+          "A_planck"
+        ],
+        "lmax": 29,
+        "lmin": 2,
+        "output_params": [],
+        "speed": -1,
+        "stop_at_error": false,
+        "type": "CMB",
+        "version": null
+      }
+    },
+    "parameters": {
+      "derived": {
+        "A_act": {
+          "derived": true,
+          "latex": "A_{\\rm ACT}",
+          "value": "lambda A_planck: A_planck"
+        },
+        "As": {
+          "derived": true,
+          "latex": "A_\\mathrm{s}",
+          "value": "lambda logA: 1e-10*np.exp(logA)"
+        },
+        "H0": {
+          "derived": true,
+          "latex": "H_0"
+        },
+        "YHe": {
+          "derived": true,
+          "latex": "Y_\\mathrm{He}",
+          "renames": [
+            "yheused",
+            "yhe"
+          ]
+        },
+        "chi2__CMB": {
+          "derived": true,
+          "latex": "\\chi^2_\\mathrm{CMB}"
+        },
+        "rstar": {
+          "derived": true,
+          "latex": "r_{s,\\star}"
+        },
+        "sigma8": {
+          "derived": true,
+          "latex": "\\sigma_8"
+        },
+        "taurend": {
+          "derived": true,
+          "latex": "\\tau_\\mathrm{rec}"
+        },
+        "thetastar": {
+          "derived": true,
+          "latex": "\\theta_\\star"
+        },
+        "zdrag": {
+          "derived": true,
+          "latex": "z_d"
+        },
+        "zrei": {
+          "derived": true,
+          "latex": "z_\\mathrm{reio}"
+        },
+        "zstar": {
+          "derived": true,
+          "latex": "z_\\star"
+        }
+      },
+      "fixed": {},
+      "other": {},
+      "sampled": {
+        "A_planck": {
+          "latex": "A_{\\rm planck}",
+          "prior": {
+            "max": 1.5,
+            "min": 0.5
+          },
+          "proposal": 0.003,
+          "ref": {
+            "dist": "norm",
+            "loc": 1.0,
+            "scale": 0.1
+          }
+        },
+        "P_act": {
+          "latex": "p_{\\rm ACT}",
+          "prior": {
+            "max": 1.1,
+            "min": 0.9
+          },
+          "proposal": 0.01,
+          "ref": {
+            "dist": "norm",
+            "loc": 1.0,
+            "scale": 0.01
+          }
+        },
+        "cosmomc_theta": {
+          "latex": "\\theta_\\mathrm{MC}",
+          "prior": {
+            "max": 0.0105,
+            "min": 0.0103
+          },
+          "proposal": 1e-05,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.010417,
+            "scale": 6.7e-05
+          }
+        },
+        "logA": {
+          "latex": "\\log(10^{10} A_\\mathrm{s})",
+          "prior": {
+            "max": 3.5,
+            "min": 2.6
+          },
+          "proposal": 0.0036,
+          "ref": {
+            "dist": "norm",
+            "loc": 3.064,
+            "scale": 0.24
+          }
+        },
+        "ns": {
+          "latex": "n_\\mathrm{s}",
+          "prior": {
+            "max": 1.1,
+            "min": 0.9
+          },
+          "proposal": 0.0033,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.9729,
+            "scale": 0.061
+          }
+        },
+        "ombh2": {
+          "latex": "\\Omega_\\mathrm{b}h^2",
+          "prior": {
+            "max": 0.027,
+            "min": 0.017
+          },
+          "proposal": 6.5e-05,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.02239,
+            "scale": 0.0021
+          },
+          "renames": [
+            "omegabh2"
+          ]
+        },
+        "omch2": {
+          "latex": "\\Omega_\\mathrm{c}h^2",
+          "prior": {
+            "max": 0.15,
+            "min": 0.09
+          },
+          "proposal": 0.0011,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.12,
+            "scale": 0.026
+          },
+          "renames": [
+            "omegach2"
+          ]
+        },
+        "tau": {
+          "latex": "\\tau_\\mathrm{reio}",
+          "prior": {
+            "max": 0.1,
+            "min": 0.0
+          },
+          "proposal": 0.0073,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.0544,
+            "scale": 0.0073
+          }
+        }
+      }
+    },
+    "sampler": {
+      "mcmc": {
+        "Rminus1_cl_level": 0.95,
+        "Rminus1_cl_stop": 0.05,
+        "Rminus1_single_split": 4,
+        "Rminus1_stop": 0.01,
+        "blocking": [
+          [
+            1,
+            [
+              "ombh2",
+              "omch2",
+              "cosmomc_theta",
+              "tau"
+            ]
+          ],
+          [
+            1,
+            [
+              "logA",
+              "ns"
+            ]
+          ],
+          [
+            23,
+            [
+              "A_planck"
+            ]
+          ],
+          [
+            32,
+            [
+              "P_act"
+            ]
+          ]
+        ],
+        "burn_in": 0,
+        "callback_every": null,
+        "callback_function": null,
+        "check_every": null,
+        "covmat": "lcdm.covmat",
+        "covmat_params": null,
+        "drag": false,
+        "drag_limits": null,
+        "fallback_covmat_scale": 4,
+        "learn_every": "40d",
+        "learn_proposal": true,
+        "learn_proposal_Rminus1_max": 10.0,
+        "learn_proposal_Rminus1_max_early": 30.0,
+        "learn_proposal_Rminus1_min": 0.0,
+        "max_samples": Infinity,
+        "max_tries": "40d",
+        "measure_speeds": true,
+        "output_every": "60s",
+        "oversample": null,
+        "oversample_power": 0.4,
+        "oversample_thin": true,
+        "proposal_scale": 2.4,
+        "seed": null,
+        "temperature": 1,
+        "version": "3.5.4"
+      }
+    },
+    "theory": {
+      "camb": {
+        "external_primordial_pk": false,
+        "extra_args": {
+          "DoLateRadTruncation": false,
+          "k_per_logint": 130,
+          "kmax": 10,
+          "lAccuracyBoost": 1.2,
+          "lens_margin": 2050,
+          "lens_potential_accuracy": 8,
+          "min_l_logl_sampling": 6000,
+          "nonlinear": true,
+          "recombination_model": "CosmoRec"
+        },
+        "ignore_obsolete": false,
+        "input_params": [
+          "As",
+          "ns",
+          "ombh2",
+          "omch2",
+          "cosmomc_theta",
+          "tau"
+        ],
+        "output_params": [
+          "H0",
+          "thetastar",
+          "sigma8",
+          "YHe",
+          "zrei",
+          "taurend",
+          "zstar",
+          "rstar",
+          "zdrag"
+        ],
+        "params": {
+          "H0": {
+            "derived": true,
+            "latex": "H_0"
+          },
+          "YHe": {
+            "derived": true,
+            "latex": "Y_\\mathrm{He}"
+          },
+          "rstar": {
+            "derived": true,
+            "latex": "r_{s,\\star}"
+          },
+          "sigma8": {
+            "derived": true,
+            "latex": "\\sigma_8"
+          },
+          "taurend": {
+            "derived": true,
+            "latex": "\\tau_\\mathrm{rec}"
+          },
+          "thetastar": {
+            "derived": true,
+            "latex": "\\theta_\\star"
+          },
+          "zdrag": {
+            "derived": true,
+            "latex": "z_d"
+          },
+          "zrei": {
+            "derived": true,
+            "latex": "z_\\mathrm{reio}"
+          },
+          "zstar": {
+            "derived": true,
+            "latex": "z_\\star"
+          }
+        },
+        "path": null,
+        "renames": {
+          "YpBBN": "Y_p",
+          "omegabh2": "ombh2",
+          "omegach2": "omch2",
+          "omegak": "omk",
+          "omegal": "omega_de",
+          "yhe": "YHe",
+          "yheused": "YHe"
+        },
+        "speed": 0.3,
+        "stop_at_error": true,
+        "use_renames": false,
+        "version": "1.5.0"
+      }
+    },
+    "updated_yaml": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.updated.yaml"
+  },
+  "planck_lcdm_camb": {
+    "chain_columns": [
+      "weight",
+      "minuslogpost",
+      "ombh2",
+      "omch2",
+      "cosmomc_theta",
+      "logA",
+      "ns",
+      "tau",
+      "A_planck",
+      "As",
+      "H0",
+      "thetastar",
+      "sigma8",
+      "YHe",
+      "zrei",
+      "taurend",
+      "zstar",
+      "rstar",
+      "zdrag",
+      "chi2__CMB",
+      "minuslogprior",
+      "minuslogprior__0",
+      "minuslogprior__cal_dip_prior",
+      "chi2",
+      "chi2__planck_2018_lowl.TT",
+      "chi2__planck_2018_lowl.EE_sroll2",
+      "chi2__act_dr6_cmbonly.PlanckActCut"
+    ],
+    "chain_root": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb",
+    "likelihood": {
+      "act_dr6_cmbonly.PlanckActCut": {
+        "aliases": [
+          "plikHM_TTTEEE"
+        ],
+        "dataset_file": "plik_lite_v22.dataset",
+        "dataset_params": {
+          "lmax_cuts": "3000 3000 3000",
+          "lmin_cuts": "0 0 0",
+          "use_cl": "tt te ee"
+        },
+        "input_params": [
+          "A_planck"
+        ],
+        "output_params": [],
+        "path": null,
+        "speed": 200,
+        "stop_at_error": false,
+        "type": "CMB",
+        "version": null
+      },
+      "planck_2018_lowl.EE_sroll2": {
+        "aliases": [
+          "lowE"
+        ],
+        "input_params": [
+          "A_planck"
+        ],
+        "output_params": [],
+        "speed": -1,
+        "stop_at_error": false,
+        "type": "CMB",
+        "version": null
+      },
+      "planck_2018_lowl.TT": {
+        "aliases": [
+          "lowT"
+        ],
+        "input_params": [
+          "A_planck"
+        ],
+        "lmax": 29,
+        "lmin": 2,
+        "output_params": [],
+        "speed": -1,
+        "stop_at_error": false,
+        "type": "CMB",
+        "version": null
+      }
+    },
+    "parameters": {
+      "derived": {
+        "As": {
+          "derived": true,
+          "latex": "A_\\mathrm{s}",
+          "value": "lambda logA: 1e-10*np.exp(logA)"
+        },
+        "H0": {
+          "derived": true,
+          "latex": "H_0"
+        },
+        "YHe": {
+          "derived": true,
+          "latex": "Y_\\mathrm{He}",
+          "renames": [
+            "yhe",
+            "yheused"
+          ]
+        },
+        "chi2__CMB": {
+          "derived": true,
+          "latex": "\\chi^2_\\mathrm{CMB}"
+        },
+        "rstar": {
+          "derived": true,
+          "latex": "r_{s,\\star}"
+        },
+        "sigma8": {
+          "derived": true,
+          "latex": "\\sigma_8"
+        },
+        "taurend": {
+          "derived": true,
+          "latex": "\\tau_\\mathrm{rec}"
+        },
+        "thetastar": {
+          "derived": true,
+          "latex": "\\theta_\\star"
+        },
+        "zdrag": {
+          "derived": true,
+          "latex": "z_d"
+        },
+        "zrei": {
+          "derived": true,
+          "latex": "z_\\mathrm{reio}"
+        },
+        "zstar": {
+          "derived": true,
+          "latex": "z_\\star"
+        }
+      },
+      "fixed": {},
+      "other": {},
+      "sampled": {
+        "A_planck": {
+          "latex": "A_{\\rm planck}",
+          "prior": {
+            "max": 1.5,
+            "min": 0.5
+          },
+          "proposal": 0.003,
+          "ref": {
+            "dist": "norm",
+            "loc": 1.0,
+            "scale": 0.1
+          }
+        },
+        "cosmomc_theta": {
+          "latex": "\\theta_\\mathrm{MC}",
+          "prior": {
+            "max": 0.0105,
+            "min": 0.0103
+          },
+          "proposal": 1e-05,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.010417,
+            "scale": 6.7e-05
+          }
+        },
+        "logA": {
+          "latex": "\\log(10^{10} A_\\mathrm{s})",
+          "prior": {
+            "max": 3.5,
+            "min": 2.6
+          },
+          "proposal": 0.0036,
+          "ref": {
+            "dist": "norm",
+            "loc": 3.064,
+            "scale": 0.24
+          }
+        },
+        "ns": {
+          "latex": "n_\\mathrm{s}",
+          "prior": {
+            "max": 1.1,
+            "min": 0.9
+          },
+          "proposal": 0.0033,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.9729,
+            "scale": 0.061
+          }
+        },
+        "ombh2": {
+          "latex": "\\Omega_\\mathrm{b}h^2",
+          "prior": {
+            "max": 0.027,
+            "min": 0.017
+          },
+          "proposal": 6.5e-05,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.02239,
+            "scale": 0.0021
+          },
+          "renames": [
+            "omegabh2"
+          ]
+        },
+        "omch2": {
+          "latex": "\\Omega_\\mathrm{c}h^2",
+          "prior": {
+            "max": 0.15,
+            "min": 0.09
+          },
+          "proposal": 0.0011,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.12,
+            "scale": 0.026
+          },
+          "renames": [
+            "omegach2"
+          ]
+        },
+        "tau": {
+          "latex": "\\tau_\\mathrm{reio}",
+          "prior": {
+            "max": 0.1,
+            "min": 0.0
+          },
+          "proposal": 0.0073,
+          "ref": {
+            "dist": "norm",
+            "loc": 0.0544,
+            "scale": 0.0073
+          }
+        }
+      }
+    },
+    "sampler": {
+      "mcmc": {
+        "Rminus1_cl_level": 0.95,
+        "Rminus1_cl_stop": 0.05,
+        "Rminus1_single_split": 4,
+        "Rminus1_stop": 0.01,
+        "blocking": [
+          [
+            1,
+            [
+              "ombh2",
+              "omch2",
+              "cosmomc_theta",
+              "tau"
+            ]
+          ],
+          [
+            1,
+            [
+              "logA",
+              "ns"
+            ]
+          ],
+          [
+            26,
+            [
+              "A_planck"
+            ]
+          ]
+        ],
+        "burn_in": 0,
+        "callback_every": null,
+        "callback_function": null,
+        "check_every": null,
+        "covmat": "lcdm.covmat",
+        "covmat_params": null,
+        "drag": false,
+        "drag_limits": null,
+        "fallback_covmat_scale": 4,
+        "learn_every": "40d",
+        "learn_proposal": true,
+        "learn_proposal_Rminus1_max": 10.0,
+        "learn_proposal_Rminus1_max_early": 30.0,
+        "learn_proposal_Rminus1_min": 0.0,
+        "max_samples": Infinity,
+        "max_tries": "40d",
+        "measure_speeds": true,
+        "output_every": "60s",
+        "oversample": null,
+        "oversample_power": 0.4,
+        "oversample_thin": true,
+        "proposal_scale": 2.4,
+        "seed": null,
+        "temperature": 1,
+        "version": "3.5.4"
+      }
+    },
+    "theory": {
+      "camb": {
+        "external_primordial_pk": false,
+        "extra_args": {
+          "DoLateRadTruncation": false,
+          "k_per_logint": 130,
+          "kmax": 10,
+          "lAccuracyBoost": 1.2,
+          "lens_margin": 2050,
+          "lens_potential_accuracy": 8,
+          "min_l_logl_sampling": 6000,
+          "nonlinear": true,
+          "recombination_model": "CosmoRec"
+        },
+        "ignore_obsolete": false,
+        "input_params": [
+          "As",
+          "ns",
+          "ombh2",
+          "omch2",
+          "cosmomc_theta",
+          "tau"
+        ],
+        "output_params": [
+          "H0",
+          "thetastar",
+          "sigma8",
+          "YHe",
+          "zrei",
+          "taurend",
+          "zstar",
+          "rstar",
+          "zdrag"
+        ],
+        "params": {
+          "H0": {
+            "derived": true,
+            "latex": "H_0"
+          },
+          "YHe": {
+            "derived": true,
+            "latex": "Y_\\mathrm{He}"
+          },
+          "rstar": {
+            "derived": true,
+            "latex": "r_{s,\\star}"
+          },
+          "sigma8": {
+            "derived": true,
+            "latex": "\\sigma_8"
+          },
+          "taurend": {
+            "derived": true,
+            "latex": "\\tau_\\mathrm{rec}"
+          },
+          "thetastar": {
+            "derived": true,
+            "latex": "\\theta_\\star"
+          },
+          "zdrag": {
+            "derived": true,
+            "latex": "z_d"
+          },
+          "zrei": {
+            "derived": true,
+            "latex": "z_\\mathrm{reio}"
+          },
+          "zstar": {
+            "derived": true,
+            "latex": "z_\\star"
+          }
+        },
+        "path": null,
+        "renames": {
+          "YpBBN": "Y_p",
+          "omegabh2": "ombh2",
+          "omegach2": "omch2",
+          "omegak": "omk",
+          "omegal": "omega_de",
+          "yhe": "YHe",
+          "yheused": "YHe"
+        },
+        "speed": 0.3,
+        "stop_at_error": true,
+        "use_renames": false,
+        "version": "1.5.0"
+      }
+    },
+    "updated_yaml": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.updated.yaml"
+  }
+}

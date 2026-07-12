@@ -1,0 +1,442 @@
+Wrote results/provenance/phase1_parameter_schema/parameter_schema.json
+
+=== planck_lcdm_camb ===
+
+Chain columns:
+  weight
+  minuslogpost
+  ombh2
+  omch2
+  cosmomc_theta
+  logA
+  ns
+  tau
+  A_planck
+  As
+  H0
+  thetastar
+  sigma8
+  YHe
+  zrei
+  taurend
+  zstar
+  rstar
+  zdrag
+  chi2__CMB
+  minuslogprior
+  minuslogprior__0
+  minuslogprior__cal_dip_prior
+  chi2
+  chi2__planck_2018_lowl.TT
+  chi2__planck_2018_lowl.EE_sroll2
+  chi2__act_dr6_cmbonly.PlanckActCut
+
+Sampled parameters:
+  ombh2
+  omch2
+  cosmomc_theta
+  logA
+  ns
+  tau
+  A_planck
+
+Derived parameters declared in YAML:
+  As
+  H0
+  thetastar
+  sigma8
+  YHe
+  zrei
+  taurend
+  zstar
+  rstar
+  zdrag
+  chi2__CMB
+
+Fixed parameters:
+
+Theory configuration:
+{
+  "camb": {
+    "external_primordial_pk": false,
+    "extra_args": {
+      "DoLateRadTruncation": false,
+      "k_per_logint": 130,
+      "kmax": 10,
+      "lAccuracyBoost": 1.2,
+      "lens_margin": 2050,
+      "lens_potential_accuracy": 8,
+      "min_l_logl_sampling": 6000,
+      "nonlinear": true,
+      "recombination_model": "CosmoRec"
+    },
+    "ignore_obsolete": false,
+    "input_params": [
+      "As",
+      "ns",
+      "ombh2",
+      "omch2",
+      "cosmomc_theta",
+      "tau"
+    ],
+    "output_params": [
+      "H0",
+      "thetastar",
+      "sigma8",
+      "YHe",
+      "zrei",
+      "taurend",
+      "zstar",
+      "rstar",
+      "zdrag"
+    ],
+    "params": {
+      "H0": {
+        "derived": true,
+        "latex": "H_0"
+      },
+      "YHe": {
+        "derived": true,
+        "latex": "Y_\\mathrm{He}"
+      },
+      "rstar": {
+        "derived": true,
+        "latex": "r_{s,\\star}"
+      },
+      "sigma8": {
+        "derived": true,
+        "latex": "\\sigma_8"
+      },
+      "taurend": {
+        "derived": true,
+        "latex": "\\tau_\\mathrm{rec}"
+      },
+      "thetastar": {
+        "derived": true,
+        "latex": "\\theta_\\star"
+      },
+      "zdrag": {
+        "derived": true,
+        "latex": "z_d"
+      },
+      "zrei": {
+        "derived": true,
+        "latex": "z_\\mathrm{reio}"
+      },
+      "zstar": {
+        "derived": true,
+        "latex": "z_\\star"
+      }
+    },
+    "path": null,
+    "renames": {
+      "YpBBN": "Y_p",
+      "omegabh2": "ombh2",
+      "omegach2": "omch2",
+      "omegak": "omk",
+      "omegal": "omega_de",
+      "yhe": "YHe",
+      "yheused": "YHe"
+    },
+    "speed": 0.3,
+    "stop_at_error": true,
+    "use_renames": false,
+    "version": "1.5.0"
+  }
+}
+
+=== actlite_lcdm_camb ===
+
+Chain columns:
+  weight
+  minuslogpost
+  ombh2
+  omch2
+  cosmomc_theta
+  logA
+  ns
+  tau
+  A_act
+  P_act
+  As
+  H0
+  thetastar
+  sigma8
+  YHe
+  zrei
+  taurend
+  zstar
+  rstar
+  zdrag
+  chi2__CMB
+  minuslogprior
+  minuslogprior__0
+  minuslogprior__cal_dip_prior
+  chi2
+  chi2__planck_2018_lowl.EE_sroll2
+  chi2__act_dr6_cmbonly.ACTDR6CMBonly
+
+Sampled parameters:
+  ombh2
+  omch2
+  cosmomc_theta
+  logA
+  ns
+  tau
+  A_act
+  P_act
+
+Derived parameters declared in YAML:
+  As
+  H0
+  thetastar
+  sigma8
+  YHe
+  zrei
+  taurend
+  zstar
+  rstar
+  zdrag
+  chi2__CMB
+
+Fixed parameters:
+
+Theory configuration:
+{
+  "camb": {
+    "external_primordial_pk": false,
+    "extra_args": {
+      "DoLateRadTruncation": false,
+      "k_per_logint": 130,
+      "kmax": 10,
+      "lAccuracyBoost": 1.2,
+      "lens_margin": 2050,
+      "lens_potential_accuracy": 8,
+      "min_l_logl_sampling": 6000,
+      "nonlinear": true,
+      "recombination_model": "CosmoRec"
+    },
+    "ignore_obsolete": false,
+    "input_params": [
+      "As",
+      "ns",
+      "ombh2",
+      "omch2",
+      "cosmomc_theta",
+      "tau"
+    ],
+    "output_params": [
+      "H0",
+      "thetastar",
+      "sigma8",
+      "YHe",
+      "zrei",
+      "taurend",
+      "zstar",
+      "rstar",
+      "zdrag"
+    ],
+    "params": {
+      "H0": {
+        "derived": true,
+        "latex": "H_0"
+      },
+      "YHe": {
+        "derived": true,
+        "latex": "Y_\\mathrm{He}"
+      },
+      "rstar": {
+        "derived": true,
+        "latex": "r_{s,\\star}"
+      },
+      "sigma8": {
+        "derived": true,
+        "latex": "\\sigma_8"
+      },
+      "taurend": {
+        "derived": true,
+        "latex": "\\tau_\\mathrm{rec}"
+      },
+      "thetastar": {
+        "derived": true,
+        "latex": "\\theta_\\star"
+      },
+      "zdrag": {
+        "derived": true,
+        "latex": "z_d"
+      },
+      "zrei": {
+        "derived": true,
+        "latex": "z_\\mathrm{reio}"
+      },
+      "zstar": {
+        "derived": true,
+        "latex": "z_\\star"
+      }
+    },
+    "path": null,
+    "renames": {
+      "YpBBN": "Y_p",
+      "omegabh2": "ombh2",
+      "omegach2": "omch2",
+      "omegak": "omk",
+      "omegal": "omega_de",
+      "yhe": "YHe",
+      "yheused": "YHe"
+    },
+    "speed": 0.3,
+    "stop_at_error": true,
+    "use_renames": false,
+    "version": "1.5.0"
+  }
+}
+
+=== p-actlite_lcdm_camb ===
+
+Chain columns:
+  weight
+  minuslogpost
+  ombh2
+  omch2
+  cosmomc_theta
+  logA
+  ns
+  tau
+  A_planck
+  P_act
+  As
+  H0
+  thetastar
+  sigma8
+  YHe
+  zrei
+  taurend
+  zstar
+  rstar
+  zdrag
+  A_act
+  chi2__CMB
+  minuslogprior
+  minuslogprior__0
+  minuslogprior__cal_dip_prior
+  chi2
+  chi2__planck_2018_lowl.TT
+  chi2__planck_2018_lowl.EE_sroll2
+  chi2__act_dr6_cmbonly.PlanckActCut
+  chi2__act_dr6_cmbonly.ACTDR6CMBonly
+
+Sampled parameters:
+  ombh2
+  omch2
+  cosmomc_theta
+  logA
+  ns
+  tau
+  A_planck
+  P_act
+
+Derived parameters declared in YAML:
+  As
+  H0
+  thetastar
+  sigma8
+  YHe
+  zrei
+  taurend
+  zstar
+  rstar
+  zdrag
+  A_act
+  chi2__CMB
+
+Fixed parameters:
+
+Theory configuration:
+{
+  "camb": {
+    "external_primordial_pk": false,
+    "extra_args": {
+      "DoLateRadTruncation": false,
+      "k_per_logint": 130,
+      "kmax": 10,
+      "lAccuracyBoost": 1.2,
+      "lens_margin": 2050,
+      "lens_potential_accuracy": 8,
+      "min_l_logl_sampling": 6000,
+      "nonlinear": true,
+      "recombination_model": "CosmoRec"
+    },
+    "ignore_obsolete": false,
+    "input_params": [
+      "As",
+      "ns",
+      "ombh2",
+      "omch2",
+      "cosmomc_theta",
+      "tau"
+    ],
+    "output_params": [
+      "H0",
+      "thetastar",
+      "sigma8",
+      "YHe",
+      "zrei",
+      "taurend",
+      "zstar",
+      "rstar",
+      "zdrag"
+    ],
+    "params": {
+      "H0": {
+        "derived": true,
+        "latex": "H_0"
+      },
+      "YHe": {
+        "derived": true,
+        "latex": "Y_\\mathrm{He}"
+      },
+      "rstar": {
+        "derived": true,
+        "latex": "r_{s,\\star}"
+      },
+      "sigma8": {
+        "derived": true,
+        "latex": "\\sigma_8"
+      },
+      "taurend": {
+        "derived": true,
+        "latex": "\\tau_\\mathrm{rec}"
+      },
+      "thetastar": {
+        "derived": true,
+        "latex": "\\theta_\\star"
+      },
+      "zdrag": {
+        "derived": true,
+        "latex": "z_d"
+      },
+      "zrei": {
+        "derived": true,
+        "latex": "z_\\mathrm{reio}"
+      },
+      "zstar": {
+        "derived": true,
+        "latex": "z_\\star"
+      }
+    },
+    "path": null,
+    "renames": {
+      "YpBBN": "Y_p",
+      "omegabh2": "ombh2",
+      "omegach2": "omch2",
+      "omegak": "omk",
+      "omegal": "omega_de",
+      "yhe": "YHe",
+      "yheused": "YHe"
+    },
+    "speed": 0.3,
+    "stop_at_error": true,
+    "use_renames": false,
+    "version": "1.5.0"
+  }
+}
