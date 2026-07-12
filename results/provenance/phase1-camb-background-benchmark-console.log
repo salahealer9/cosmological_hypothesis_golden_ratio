@@ -1,0 +1,10 @@
+Overall pass: True
+Median seconds per background: 0.0009853444989857962
+P90 seconds per background: 0.001105791701047565
+Serial 32-call seconds: 0.03141244200014626
+Parallel 32-call seconds: 0.05128690299898153
+Parallel speedup: 0.6124846727588533
+Maximum repeatability difference: 0.0
+Maximum serial/parallel difference: 0.0
+Maximum closure error: 2.220446049250313e-16
+No target statistic computed.

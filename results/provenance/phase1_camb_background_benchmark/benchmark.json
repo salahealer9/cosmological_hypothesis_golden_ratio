@@ -1,0 +1,58 @@
+{
+  "checks": {
+    "background_closure": true,
+    "camb_version_1_5_0": true,
+    "no_target_statistic_computed": true,
+    "one_hundred_measured_calls": true,
+    "repeatability_within_tolerance": true,
+    "serial_parallel_identity": true,
+    "sixteen_repeatability_calls": true,
+    "thirty_two_serial_parallel_calls": true
+  },
+  "machine": {
+    "logical_cpus": 4,
+    "platform": "Linux-6.6.119-09251-gf81e51484dec-x86_64-with-glibc2.36",
+    "workers": 2
+  },
+  "maximum_closure_error": 2.220446049250313e-16,
+  "nominal_output_for_technical_validation": {
+    "Omega_Lambda": 0.6821541686685635,
+    "Omega_m": 0.3177653521285446,
+    "age_Gyr": 13.839230539800058,
+    "closure_sum": 1.0,
+    "components": {
+      "baryon": 0.04900868790378418,
+      "cdm": 0.2673201158388228,
+      "curvature": 0.0,
+      "dark_energy": 0.6821541686685635,
+      "massive_neutrino": 0.0014365483859376585,
+      "massless_neutrino": 2.5389531966275365e-05,
+      "photon": 5.508967092552985e-05
+    }
+  },
+  "overall_pass": true,
+  "parallel_test": {
+    "maximum_relative_difference": 0.0,
+    "parallel_seconds": 0.05128690299898153,
+    "points": 32,
+    "serial_seconds": 0.03141244200014626,
+    "speedup": 0.6124846727588533
+  },
+  "phase": "CAMB background timing and reproducibility",
+  "repeatability": {
+    "calls": 16,
+    "maximum_relative_difference": 0.0
+  },
+  "software": {
+    "camb": "1.5.0",
+    "python": "3.11.2"
+  },
+  "timing": {
+    "maximum_seconds": 0.0017044300002453383,
+    "mean_seconds": 0.0010084707098576473,
+    "measured_calls": 100,
+    "median_seconds": 0.0009853444989857962,
+    "minimum_seconds": 0.0009274639996874612,
+    "p90_seconds": 0.001105791701047565
+  }
+}
