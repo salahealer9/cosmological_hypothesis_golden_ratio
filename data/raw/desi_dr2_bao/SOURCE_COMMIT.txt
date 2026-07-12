@@ -1,0 +1,6 @@
+repository=https://github.com/CobayaSampler/bao_data.git
+tag=v2.6
+commit=b7b8a36e9bccb063081f811f323cada21ab5fbdd
+tag_object_resolution=b7b8a36e9bccb063081f811f323cada21ab5fbdd
+retrieved_utc=2026-07-12T15:21:52+00:00
+subdirectory=desi_bao_dr2

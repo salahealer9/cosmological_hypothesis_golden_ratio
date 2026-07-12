@@ -1,0 +1,3 @@
+dfa501bf262a24ce73f28a7c4c4c6dfdede2ceba1c9d18aeb9f8eb40f528c99d  ./archives/actlite_lcdm_camb.tar.gz
+4cc5291f9e179511b08a7a086dfc0c91c2b3b627c99e2b81b5cbb2a482976fbc  ./archives/p-actlite_lcdm_camb.tar.gz
+2ec731163d6339b51016907bf0845c82a6aa15a77e0c9efc54942ed36121ec2c  ./archives/planck_lcdm_camb.tar.gz
