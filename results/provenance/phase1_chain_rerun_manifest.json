@@ -1,0 +1,581 @@
+{
+  "actlite_lcdm_camb": {
+    "files": {
+      ".checkpoint": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.checkpoint"
+      },
+      ".covmat": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.covmat"
+      },
+      ".input.yaml": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.input.yaml"
+      },
+      ".progress": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.progress"
+      },
+      ".updated.yaml": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.updated.yaml"
+      }
+    },
+    "likelihoods": {
+      "act_dr6_cmbonly.ACTDR6CMBonly": {
+        "version": null
+      },
+      "planck_2018_lowl.EE_sroll2": {
+        "version": null
+      }
+    },
+    "numbered_chains": [
+      "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.1.txt",
+      "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.2.txt",
+      "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.3.txt",
+      "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.4.txt"
+    ],
+    "output_in_yaml": "act-camb-lcdm",
+    "packages_path": null,
+    "root": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb",
+    "sampler": {
+      "mcmc": {
+        "Rminus1_cl_level": 0.95,
+        "Rminus1_cl_stop": 0.05,
+        "Rminus1_single_split": 4,
+        "Rminus1_stop": 0.01,
+        "blocking": [
+          [
+            1,
+            [
+              "ombh2",
+              "omch2",
+              "cosmomc_theta",
+              "tau"
+            ]
+          ],
+          [
+            1,
+            [
+              "logA",
+              "ns"
+            ]
+          ],
+          [
+            32,
+            [
+              "A_act",
+              "P_act"
+            ]
+          ]
+        ],
+        "burn_in": 0,
+        "callback_every": null,
+        "callback_function": null,
+        "check_every": null,
+        "covmat": "lcdm.covmat",
+        "covmat_params": null,
+        "drag": false,
+        "drag_limits": null,
+        "fallback_covmat_scale": 4,
+        "learn_every": "40d",
+        "learn_proposal": true,
+        "learn_proposal_Rminus1_max": 10.0,
+        "learn_proposal_Rminus1_max_early": 30.0,
+        "learn_proposal_Rminus1_min": 0.0,
+        "max_samples": Infinity,
+        "max_tries": "40d",
+        "measure_speeds": true,
+        "output_every": "60s",
+        "oversample": null,
+        "oversample_power": 0.4,
+        "oversample_thin": true,
+        "proposal_scale": 2.4,
+        "seed": null,
+        "temperature": 1,
+        "version": "3.5.4"
+      }
+    },
+    "theory": {
+      "camb": {
+        "external_primordial_pk": false,
+        "extra_args": {
+          "DoLateRadTruncation": false,
+          "k_per_logint": 130,
+          "kmax": 10,
+          "lAccuracyBoost": 1.2,
+          "lens_margin": 2050,
+          "lens_potential_accuracy": 8,
+          "min_l_logl_sampling": 6000,
+          "nonlinear": true,
+          "recombination_model": "CosmoRec"
+        },
+        "ignore_obsolete": false,
+        "input_params": [
+          "As",
+          "ns",
+          "ombh2",
+          "omch2",
+          "cosmomc_theta",
+          "tau"
+        ],
+        "output_params": [
+          "H0",
+          "thetastar",
+          "sigma8",
+          "YHe",
+          "zrei",
+          "taurend",
+          "zstar",
+          "rstar",
+          "zdrag"
+        ],
+        "params": {
+          "H0": {
+            "derived": true,
+            "latex": "H_0"
+          },
+          "YHe": {
+            "derived": true,
+            "latex": "Y_\\mathrm{He}"
+          },
+          "rstar": {
+            "derived": true,
+            "latex": "r_{s,\\star}"
+          },
+          "sigma8": {
+            "derived": true,
+            "latex": "\\sigma_8"
+          },
+          "taurend": {
+            "derived": true,
+            "latex": "\\tau_\\mathrm{rec}"
+          },
+          "thetastar": {
+            "derived": true,
+            "latex": "\\theta_\\star"
+          },
+          "zdrag": {
+            "derived": true,
+            "latex": "z_d"
+          },
+          "zrei": {
+            "derived": true,
+            "latex": "z_\\mathrm{reio}"
+          },
+          "zstar": {
+            "derived": true,
+            "latex": "z_\\star"
+          }
+        },
+        "path": null,
+        "renames": {
+          "YpBBN": "Y_p",
+          "omegabh2": "ombh2",
+          "omegach2": "omch2",
+          "omegak": "omk",
+          "omegal": "omega_de",
+          "yhe": "YHe",
+          "yheused": "YHe"
+        },
+        "speed": 0.3,
+        "stop_at_error": true,
+        "use_renames": false,
+        "version": "1.5.0"
+      }
+    },
+    "updated_yaml": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.updated.yaml"
+  },
+  "p-actlite_lcdm_camb": {
+    "files": {
+      ".checkpoint": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.checkpoint"
+      },
+      ".covmat": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.covmat"
+      },
+      ".input.yaml": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.input.yaml"
+      },
+      ".progress": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.progress"
+      },
+      ".updated.yaml": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.updated.yaml"
+      }
+    },
+    "likelihoods": {
+      "act_dr6_cmbonly.ACTDR6CMBonly": {
+        "version": null
+      },
+      "act_dr6_cmbonly.PlanckActCut": {
+        "path": null,
+        "version": null
+      },
+      "planck_2018_lowl.EE_sroll2": {
+        "version": null
+      },
+      "planck_2018_lowl.TT": {
+        "version": null
+      }
+    },
+    "numbered_chains": [
+      "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.1.txt",
+      "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.2.txt",
+      "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.3.txt",
+      "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.4.txt"
+    ],
+    "output_in_yaml": "p-act-camb-lcdm",
+    "packages_path": null,
+    "root": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb",
+    "sampler": {
+      "mcmc": {
+        "Rminus1_cl_level": 0.95,
+        "Rminus1_cl_stop": 0.05,
+        "Rminus1_single_split": 4,
+        "Rminus1_stop": 0.01,
+        "blocking": [
+          [
+            1,
+            [
+              "ombh2",
+              "omch2",
+              "cosmomc_theta",
+              "tau"
+            ]
+          ],
+          [
+            1,
+            [
+              "logA",
+              "ns"
+            ]
+          ],
+          [
+            23,
+            [
+              "A_planck"
+            ]
+          ],
+          [
+            32,
+            [
+              "P_act"
+            ]
+          ]
+        ],
+        "burn_in": 0,
+        "callback_every": null,
+        "callback_function": null,
+        "check_every": null,
+        "covmat": "lcdm.covmat",
+        "covmat_params": null,
+        "drag": false,
+        "drag_limits": null,
+        "fallback_covmat_scale": 4,
+        "learn_every": "40d",
+        "learn_proposal": true,
+        "learn_proposal_Rminus1_max": 10.0,
+        "learn_proposal_Rminus1_max_early": 30.0,
+        "learn_proposal_Rminus1_min": 0.0,
+        "max_samples": Infinity,
+        "max_tries": "40d",
+        "measure_speeds": true,
+        "output_every": "60s",
+        "oversample": null,
+        "oversample_power": 0.4,
+        "oversample_thin": true,
+        "proposal_scale": 2.4,
+        "seed": null,
+        "temperature": 1,
+        "version": "3.5.4"
+      }
+    },
+    "theory": {
+      "camb": {
+        "external_primordial_pk": false,
+        "extra_args": {
+          "DoLateRadTruncation": false,
+          "k_per_logint": 130,
+          "kmax": 10,
+          "lAccuracyBoost": 1.2,
+          "lens_margin": 2050,
+          "lens_potential_accuracy": 8,
+          "min_l_logl_sampling": 6000,
+          "nonlinear": true,
+          "recombination_model": "CosmoRec"
+        },
+        "ignore_obsolete": false,
+        "input_params": [
+          "As",
+          "ns",
+          "ombh2",
+          "omch2",
+          "cosmomc_theta",
+          "tau"
+        ],
+        "output_params": [
+          "H0",
+          "thetastar",
+          "sigma8",
+          "YHe",
+          "zrei",
+          "taurend",
+          "zstar",
+          "rstar",
+          "zdrag"
+        ],
+        "params": {
+          "H0": {
+            "derived": true,
+            "latex": "H_0"
+          },
+          "YHe": {
+            "derived": true,
+            "latex": "Y_\\mathrm{He}"
+          },
+          "rstar": {
+            "derived": true,
+            "latex": "r_{s,\\star}"
+          },
+          "sigma8": {
+            "derived": true,
+            "latex": "\\sigma_8"
+          },
+          "taurend": {
+            "derived": true,
+            "latex": "\\tau_\\mathrm{rec}"
+          },
+          "thetastar": {
+            "derived": true,
+            "latex": "\\theta_\\star"
+          },
+          "zdrag": {
+            "derived": true,
+            "latex": "z_d"
+          },
+          "zrei": {
+            "derived": true,
+            "latex": "z_\\mathrm{reio}"
+          },
+          "zstar": {
+            "derived": true,
+            "latex": "z_\\star"
+          }
+        },
+        "path": null,
+        "renames": {
+          "YpBBN": "Y_p",
+          "omegabh2": "ombh2",
+          "omegach2": "omch2",
+          "omegak": "omk",
+          "omegal": "omega_de",
+          "yhe": "YHe",
+          "yheused": "YHe"
+        },
+        "speed": 0.3,
+        "stop_at_error": true,
+        "use_renames": false,
+        "version": "1.5.0"
+      }
+    },
+    "updated_yaml": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.updated.yaml"
+  },
+  "planck_lcdm_camb": {
+    "files": {
+      ".checkpoint": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.checkpoint"
+      },
+      ".covmat": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.covmat"
+      },
+      ".input.yaml": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.input.yaml"
+      },
+      ".progress": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.progress"
+      },
+      ".updated.yaml": {
+        "exists": true,
+        "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.updated.yaml"
+      }
+    },
+    "likelihoods": {
+      "act_dr6_cmbonly.PlanckActCut": {
+        "path": null,
+        "version": null
+      },
+      "planck_2018_lowl.EE_sroll2": {
+        "version": null
+      },
+      "planck_2018_lowl.TT": {
+        "version": null
+      }
+    },
+    "numbered_chains": [
+      "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.1.txt",
+      "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.2.txt",
+      "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.3.txt",
+      "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.4.txt"
+    ],
+    "output_in_yaml": "planck-camb-lcdm",
+    "packages_path": null,
+    "root": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb",
+    "sampler": {
+      "mcmc": {
+        "Rminus1_cl_level": 0.95,
+        "Rminus1_cl_stop": 0.05,
+        "Rminus1_single_split": 4,
+        "Rminus1_stop": 0.01,
+        "blocking": [
+          [
+            1,
+            [
+              "ombh2",
+              "omch2",
+              "cosmomc_theta",
+              "tau"
+            ]
+          ],
+          [
+            1,
+            [
+              "logA",
+              "ns"
+            ]
+          ],
+          [
+            26,
+            [
+              "A_planck"
+            ]
+          ]
+        ],
+        "burn_in": 0,
+        "callback_every": null,
+        "callback_function": null,
+        "check_every": null,
+        "covmat": "lcdm.covmat",
+        "covmat_params": null,
+        "drag": false,
+        "drag_limits": null,
+        "fallback_covmat_scale": 4,
+        "learn_every": "40d",
+        "learn_proposal": true,
+        "learn_proposal_Rminus1_max": 10.0,
+        "learn_proposal_Rminus1_max_early": 30.0,
+        "learn_proposal_Rminus1_min": 0.0,
+        "max_samples": Infinity,
+        "max_tries": "40d",
+        "measure_speeds": true,
+        "output_every": "60s",
+        "oversample": null,
+        "oversample_power": 0.4,
+        "oversample_thin": true,
+        "proposal_scale": 2.4,
+        "seed": null,
+        "temperature": 1,
+        "version": "3.5.4"
+      }
+    },
+    "theory": {
+      "camb": {
+        "external_primordial_pk": false,
+        "extra_args": {
+          "DoLateRadTruncation": false,
+          "k_per_logint": 130,
+          "kmax": 10,
+          "lAccuracyBoost": 1.2,
+          "lens_margin": 2050,
+          "lens_potential_accuracy": 8,
+          "min_l_logl_sampling": 6000,
+          "nonlinear": true,
+          "recombination_model": "CosmoRec"
+        },
+        "ignore_obsolete": false,
+        "input_params": [
+          "As",
+          "ns",
+          "ombh2",
+          "omch2",
+          "cosmomc_theta",
+          "tau"
+        ],
+        "output_params": [
+          "H0",
+          "thetastar",
+          "sigma8",
+          "YHe",
+          "zrei",
+          "taurend",
+          "zstar",
+          "rstar",
+          "zdrag"
+        ],
+        "params": {
+          "H0": {
+            "derived": true,
+            "latex": "H_0"
+          },
+          "YHe": {
+            "derived": true,
+            "latex": "Y_\\mathrm{He}"
+          },
+          "rstar": {
+            "derived": true,
+            "latex": "r_{s,\\star}"
+          },
+          "sigma8": {
+            "derived": true,
+            "latex": "\\sigma_8"
+          },
+          "taurend": {
+            "derived": true,
+            "latex": "\\tau_\\mathrm{rec}"
+          },
+          "thetastar": {
+            "derived": true,
+            "latex": "\\theta_\\star"
+          },
+          "zdrag": {
+            "derived": true,
+            "latex": "z_d"
+          },
+          "zrei": {
+            "derived": true,
+            "latex": "z_\\mathrm{reio}"
+          },
+          "zstar": {
+            "derived": true,
+            "latex": "z_\\star"
+          }
+        },
+        "path": null,
+        "renames": {
+          "YpBBN": "Y_p",
+          "omegabh2": "ombh2",
+          "omegach2": "omch2",
+          "omegak": "omk",
+          "omegal": "omega_de",
+          "yhe": "YHe",
+          "yheused": "YHe"
+        },
+        "speed": 0.3,
+        "stop_at_error": true,
+        "use_renames": false,
+        "version": "1.5.0"
+      }
+    },
+    "updated_yaml": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.updated.yaml"
+  }
+}
