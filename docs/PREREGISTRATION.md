@@ -6,8 +6,8 @@
 
 - [x] The hypothesis statement and all primary decision rules are final.
 - [x] This document is frozen and versioned.
-- [x] Freeze date and time (UTC): Jul 12 12:13:45 PM UTC 2026
-- [x] Git commit hash: ____________________  # Will fill after commit
+- [x] Freeze date and time (UTC): Jul 12 12:40:45 PM UTC 2026
+- [x] Git commit hash: b8c95e6
 - [x] Signed Git tag: v0.1.0-preregistration-freeze
 - [x] `config/analysis_plan.toml` is frozen and agrees exactly with this document.
 - [x] Exact likelihood releases, dataset combinations, nuisance treatments, and exclusions are recorded in `config/analysis_plan.toml`.
