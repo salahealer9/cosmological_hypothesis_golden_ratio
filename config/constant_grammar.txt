@@ -1,0 +1,6 @@
+# PLACEHOLDER ONLY. Replace with an honest record of every expression explored.
+phi^p, p in {-4,-3,-2,-1,1,2,3,4}
+1 + phi^p, p in {-4,-3,-2,-1}
+1 - phi^p, p in {-4,-3,-2,-1}
+sqrt(1 + phi^p), p in {-4,-3,-2,-1}
+sqrt(1 - phi^p), p in {-4,-3,-2,-1}

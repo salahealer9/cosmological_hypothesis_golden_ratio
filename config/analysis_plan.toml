@@ -1,0 +1,270 @@
+# config/analysis_plan.toml
+# This file is frozen with v0.1.0-preregistration-freeze.
+# DO NOT MODIFY after the signed tag is created.
+# All confirmatory data downloads and analyses must use this exact configuration.
+
+[project]
+name = "cosmological_hypothesis_golden_ratio"
+version = "0.1.0"
+status = "frozen"
+hypothesis_version = "Hphi-1.0"
+freeze_date = "2026-07-12"
+freeze_tag = "v0.1.0-preregistration-freeze"
+commit_resolution = "git rev-parse v0.1.0-preregistration-freeze^{commit}"
+manifest = "SHA256SUMS.txt"
+
+[hypothesis]
+target = "Phi^{-1/2}"
+target_value = 0.7861513777574233
+description = "H0 * t0 * sqrt(Omega_Lambda_0) = Phi^{-1/2}"
+derivation = """
+For spatially flat matter-plus-Lambda cosmology:
+H0*t0 = (2/(3*sqrt(Omega_Lambda))) * asinh(sqrt(Omega_Lambda/Omega_m))
+
+Therefore:
+H0*t0*sqrt(Omega_Lambda) = (2/3) * asinh(sqrt(Omega_Lambda/Omega_m))
+
+Imposing Phi^{-1/2} gives:
+Omega_Lambda/Omega_m = sinh^2(3/(2*sqrt(Phi)))
+
+Under Omega_m + Omega_Lambda = 1:
+Omega_m = [1 + sinh^2(3/(2*sqrt(Phi)))]^{-1}
+        = 0.3157273701547816...
+"""
+
+[priors]
+# Primary: induced from standard base parameters
+# This is the main evidence calculation (Section 3.1 of preregistration)
+primary = "induced_from_base_parameters"
+base_parameterization = "TO_BE_FILLED_FROM_LIKELIHOOD"
+base_prior_specification = "TO_BE_FILLED_FROM_LIKELIHOOD"
+nuisance_prior_specification = "TO_BE_FILLED_FROM_LIKELIHOOD"
+
+# Sensitivity analyses centered on the target (Section 3.2)
+# These are supplementary only; do not replace primary
+[priors.sensitivity]
+sigma_delta_narrow = 0.01
+sigma_delta_medium = 0.05
+sigma_delta_wide = 0.10
+description = "Narrow, medium, and wide Gaussian priors centered on Phi^{-1/2}"
+
+[models.M0]
+name = "flat six-parameter LambdaCDM"
+cosmological_dimension = 6
+nuisance_dimension = "likelihood_dependent"
+description = "Standard spatially flat LambdaCDM with 6 free cosmological parameters"
+
+[models.MPhi]
+name = "M0 with delta_Phi = 0"
+cosmological_dimension = 5
+nuisance_dimension = "likelihood_dependent"
+constraint = "delta_Phi = 0"
+description = "Same as M0 but with H0*t0*sqrt(Omega_Lambda) = Phi^{-1/2}"
+
+[models.M0.priors]
+parameterization = "TO_BE_FILLED_FROM_LIKELIHOOD"
+base_prior_specification = "TO_BE_FILLED_FROM_LIKELIHOOD"
+nuisance_prior_specification = "TO_BE_FILLED_FROM_LIKELIHOOD"
+# Example: Planck 2018 base priors will be specified when likelihood is frozen
+
+[models.MPhi.priors]
+inherits = "models.M0.priors"
+constraint_prior = "delta_Phi fixed to 0"
+
+[data]
+discovery = ["PLANCK_2018_EXACT_COMBINATION"]
+confirmatory_primary = ["ACT_DR6_02_CMB_ONLY"]
+confirmatory_secondary = ["DESI_DR2_BAO"]
+robustness = ["PANTHEON_PLUS"]
+
+[data.PLANCK_2018_EXACT_COMBINATION]
+release = "Planck 2018"
+likelihood_type = "full"
+description = "Discovery-conditioning dataset (used for pipeline validation, not independent confirmation)"
+status = "to_be_downloaded"
+checksums = "data/raw/planck_2018/checksums.txt"
+download_date = "TO_BE_FILLED_AT_DOWNLOAD"
+
+[data.ACT_DR6_02_CMB_ONLY]
+release = "DR6.02"
+likelihood_type = "CMB-only"
+description = "Primary held-out CMB validation (non-Planck block, Section 2.2)"
+overlap_rules = "No Planck high-ell information included"
+status = "to_be_downloaded"
+checksums = "data/raw/act_dr6_02/checksums.txt"
+download_date = "TO_BE_FILLED_AT_DOWNLOAD"
+
+[data.DESI_DR2_BAO]
+release = "DR2"
+likelihood_type = "BAO-only"
+description = "Secondary held-out BAO validation (Section 2.2)"
+bao_bins = "TO_BE_FILLED_AT_DOWNLOAD"
+covariance_matrix = "TO_BE_FILLED_AT_DOWNLOAD"
+status = "to_be_downloaded"
+checksums = "data/raw/desi_dr2_bao/checksums.txt"
+download_date = "TO_BE_FILLED_AT_DOWNLOAD"
+
+[data.PANTHEON_PLUS]
+release = "Pantheon+"
+description = "Preselected supernova robustness dataset (Section 2.2)"
+status = "to_be_downloaded"
+checksums = "data/raw/pantheon_plus/checksums.txt"
+download_date = "TO_BE_FILLED_AT_DOWNLOAD"
+
+[held_out.primary]
+conditioning = ["PLANCK_2018_EXACT_COMBINATION"]
+validation = ["ACT_DR6_02_CMB_ONLY"]
+independence_classification = "held_out_with_independence_established"
+description = "Sequential prediction: Planck 2018 -> ACT DR6.02 (Section 5.1)"
+
+[held_out.secondary]
+conditioning = ["EXACT_PREREGISTERED_CMB_BLOCK"]
+validation = ["DESI_DR2_BAO"]
+independence_classification = "held_out_with_independence_established"
+description = "Sequential prediction: CMB block -> DESI DR2 BAO (Section 5.2)"
+# The "CMB block" will be defined as either Planck alone, ACT alone, or Planck+ACT.
+# This choice will be frozen before confirmatory inspection.
+
+[held_out.predictive_estimator]
+method = "TO_BE_FIXED_BEFORE_CONFIRMATORY_ANALYSIS"
+posterior_draws = 0
+number_of_batches = 0
+stabilization_method = "TO_BE_FIXED"
+mcse_method = "TO_BE_FIXED"
+resolution_rule = "TO_BE_FIXED"
+# These placeholders must be replaced with actual numbers and methods before freezing.
+
+[outcomes]
+primary = [
+  "posterior_distribution_delta_Phi",
+  "Bayes_factor_K_Phi0",
+  "held_out_predictive_log_score",
+  "Delta_chi_squared",
+  "per_dataset_likelihood_contributions"
+]
+
+[outcomes.posterior]
+quantiles = [0.025, 0.16, 0.50, 0.84, 0.975]
+mean = true
+sign_probability = true
+description = "Posterior of delta_Phi under M0 (Section 4.1)"
+
+[outcomes.bayes_factor]
+primary = "induced_prior"
+sensitivity_sigma_delta = [0.01, 0.05, 0.10]
+description = "Bayes factor K_Phi0 = Z_MPhi / Z_M0 (Section 4.2)"
+
+[outcomes.bayes_factor.thresholds]
+disfavoured_max = 0.3333333333333333
+supported_min = 3.0
+strong_against_max = 0.1
+strong_support_min = 10.0
+sensitivity_floor_for_supported = 1.0
+
+[outcomes.predictive_score]
+description = "Held-out predictive log-score difference (Section 4.3)"
+threshold = "positive_beyond_numerical_uncertainty"
+
+[outcomes.delta_chi2]
+description = "Best-fit likelihood degradation (Section 4.4)"
+threshold = 9.0
+per_dataset = true
+
+[decision_rules.supported]
+primary_bayes_factor_min = 3.0
+all_sensitivity_bayes_factors_min = 1.0
+primary_predictive_score = "positive_beyond_numerical_uncertainty"
+secondary_predictive_score = "not_materially_negative"
+material_dataset_tension = false
+description = "All conditions must be met for 'Supported' verdict (Section 6)"
+
+[decision_rules.disfavoured]
+primary_bayes_factor_max = 0.3333333333333333
+delta_chi_squared_min = 9.0
+predictive_penalty_rule = "negative_beyond_numerical_uncertainty_and_robust"
+description = "Any condition met for 'Disfavoured' verdict (Section 6)"
+
+[decision_rules.compatible]
+bayes_factor_min = 0.3333333333333333
+bayes_factor_max = 3.0
+predictive_score = "unresolved_or_near_zero"
+description = "Verdict: compatible but unsupported (Section 6)"
+
+[decision_rules.inconclusive]
+description = "Verdict: inconclusive due to convergence, tension, or prior sensitivity (Section 6)"
+
+[tension]
+method = "pairwise_Tij"
+threshold_Tij = 3.0
+p_value_threshold = 0.01
+fallback = "suspiciousness_statistic"
+fallback_implementation = "TO_BE_FIXED_BEFORE_CONFIRMATORY_ANALYSIS"
+fallback_version = "TO_BE_FIXED"
+description = "Material tension declared if Tij >= 3 or p <= 0.01 (Section 7)"
+
+[look_elsewhere]
+constant_grammar_file = "config/constant_grammar.txt"
+grammar_status = "frozen"
+description = "Finite search grammar of constants considered before freezing"
+null_audit = "simulation_based"
+run_after_frozen_confirmatory_fits = true
+run_before_final_interpretation = true
+description_audit = """
+  Simulation-based null audit estimates how often a comparably simple constant
+  from the declared search grammar falls as close to the posterior centre as
+  Phi^{-1/2}. The corrected result is part of the primary interpretation.
+"""
+
+[negative_controls]
+enabled = true
+targets = [
+  { name = "Phi^-1", value = 0.6180339887498948 },
+  { name = "Phi^-3/2", value = 0.4858682717566456 },
+  { name = "round_0.8", value = 0.8 }
+]
+description = "Same pipeline run without retuning against false targets (Section 12)"
+
+[numerical_acceptance]
+analytic_quadrature_relative_error_max = 1e-10
+rhat_upper_bound = 1.01
+bulk_ess_minimum_delta_phi = 10000
+tail_ess_minimum_delta_phi = 10000
+thinning_for_convergence_forbidden = true
+preserve_weights = true
+preserve_parameter_covariance = true
+nested_sampling_repeat_agreement = "TO_BE_FIXED_BEFORE_CONFIRMATORY_ANALYSIS"
+description = "Numerical acceptance criteria (Section 10)"
+
+[stopping_rule]
+primary_analysis_ends_after = [
+  "all_explicitly_enumerated_primary_dataset_combinations",
+  "all_prior_width_calculations",
+  "all_negative_controls",
+  "all_required_robustness_checks",
+  "look_elsewhere_null_audit"
+]
+additional_combinations = "exploratory_only"
+description = "Confirmatory analysis ends after all frozen checks are complete (Section 13)"
+
+[robustness]
+enabled = true
+checks = [
+  "nonzero_radiation_density",
+  "summed_neutrino_mass",
+  "curvature_Omega_k",
+  "constant_w_dark_energy",
+  "CPL_w0wa",
+  "alternative_CMB_likelihoods",
+  "alternative_supernova_compilations",
+  "alternative_numerical_age_integrators",
+  "full_vs_marginalized_ACT_likelihoods"
+]
+description = "Robustness checks to run after primary analysis (Section 8)"
+
+[reproducibility]
+random_seed = 20260712
+save_environment = true
+save_input_checksums = true
+environment_file = "results/environment.txt"
+raw_checksums_file = "data/raw/checksums.txt"
+derived_checksums_file = "data/derived/checksums.txt"

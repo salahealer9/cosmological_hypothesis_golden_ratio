@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+
+# External datasets and large chains
+data/raw/*
+!data/raw/.gitkeep
+
+# Generated files
+results/*
+!results/.gitkeep
+data/derived/*
+!data/derived/.gitkeep

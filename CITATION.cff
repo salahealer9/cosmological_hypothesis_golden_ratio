@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "Golden-Ratio Cosmological Hypothesis"
+message: "Please cite this software and research protocol if you use it."
+type: software
+authors:
+  - family-names: Gherbi
+    given-names: Salah-Eddin
+    orcid: "https://orcid.org/0009-0005-4017-1095"
+version: 0.1.0
+date-released: 2026-07-12
