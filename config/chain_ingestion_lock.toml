@@ -1,0 +1,261 @@
+# Chain-ingestion lock for the confirmatory chain-only phase.
+#
+# Freeze this file before computing H0*t0*sqrt(Omega_Lambda), delta_Phi,
+# posterior target distances, or any scientific verdict.
+#
+# This lock supplements, and does not modify:
+#   v0.1.0-preregistration-freeze
+#   v0.1.1-confirmatory-execution-lock
+
+[lock]
+name = "chain_ingestion_lock"
+version = "0.1.0"
+status = "frozen_before_posterior_target_inspection"
+date = "2026-07-12"
+base_preregistration_tag = "v0.1.0-preregistration-freeze"
+base_execution_lock_tag = "v0.1.1-confirmatory-execution-lock"
+source_audit_commit = "b4ebe39205fad326b21fdf36cf7789542b914440"
+random_seed = 20260712
+forbidden_before_lock = [
+  "H0_t0_sqrt_Omega_Lambda",
+  "delta_Phi",
+  "golden_ratio_target_distance",
+  "posterior_target_probability",
+  "scientific_verdict"
+]
+
+[software]
+python = "3.11"
+camb = "1.5.0"
+cobaya_chain_format = "3.5.4"
+getdist = "1.7.7"
+arviz = "0.23.4"
+numpy = "environment-pinned"
+scipy = "environment-pinned"
+
+[chains.planck]
+stem = "planck_lcdm_camb"
+role = "discovery_context_and_pipeline_validation_only"
+expected_numbered_files = 4
+likelihoods = [
+  "planck_2018_lowl.TT",
+  "planck_2018_lowl.EE_sroll2",
+  "act_dr6_cmbonly.PlanckActCut"
+]
+theory = "camb"
+theory_version = "1.5.0"
+
+[chains.actlite]
+stem = "actlite_lcdm_camb"
+role = "primary_independent_CMB_posterior_diagnostic"
+expected_numbered_files = 4
+likelihoods = [
+  "planck_2018_lowl.EE_sroll2",
+  "act_dr6_cmbonly.ACTDR6CMBonly"
+]
+theory = "camb"
+theory_version = "1.5.0"
+
+[chains.planck_actlite]
+stem = "p-actlite_lcdm_camb"
+role = "secondary_CMB_conditioning_block_for_DESI"
+expected_numbered_files = 4
+likelihoods = [
+  "planck_2018_lowl.TT",
+  "planck_2018_lowl.EE_sroll2",
+  "act_dr6_cmbonly.PlanckActCut",
+  "act_dr6_cmbonly.ACTDR6CMBonly"
+]
+theory = "camb"
+theory_version = "1.5.0"
+
+[columns]
+weight = "weight"
+minus_log_posterior = "minuslogpost"
+ombh2 = "ombh2"
+omch2 = "omch2"
+H0 = "H0"
+tau = "tau"
+common_sampled_cosmological = [
+  "ombh2",
+  "omch2",
+  "cosmomc_theta",
+  "logA",
+  "ns",
+  "tau"
+]
+
+[ingestion]
+format = "Cobaya_GetDist_text"
+preserve_chain_identity_for_diagnostics = true
+pool_only_after_convergence_gate = true
+preserve_original_weights = true
+preserve_full_parameter_covariance = true
+thin = false
+sort_samples = false
+renormalize_weights_only_for_numerical_summaries = true
+reject_nonfinite_rows = true
+nonfinite_row_policy = "hard_fail_and_investigate"
+nonpositive_weight_policy = "hard_fail_and_investigate"
+drop_individual_chain_policy = "forbidden_without_documented_deviation"
+primary_ignore_rows_fraction = 0.30
+ignore_rows_basis = "fraction_of_stored_rows_per_numbered_chain"
+ignore_rows_semantics = "GetDist_1.7.7_ignore_rows"
+burnin_sensitivity_fractions = [0.00, 0.10, 0.50]
+primary_summary_uses = "0.30_only"
+sensitivity_summary_labelling = "burnin_sensitivity_not_primary"
+
+[ingestion.weight_rules]
+posterior_summary = "use_stored_positive_weight_exactly"
+chain_order = "preserve_file_order_within_each_numbered_chain"
+pooling = "concatenate_retained_numbered_chains_without_reordering"
+normalization = "divide_by_sum_of_retained_weights_only_when_required"
+integer_expansion = "not_used_for_primary_posterior_summaries"
+
+[convergence]
+official_progress_diagnostics = "provenance_only"
+recompute_after_primary_burnin = true
+weighted_multivariate_implementation = "GetDist_1.7.7"
+weighted_multivariate_quantity = "Gelman_Rubin_R_minus_1"
+weighted_multivariate_R_minus_1_max = 0.01
+rank_diagnostic_implementation = "ArviZ_0.23.4"
+rank_normalized_split_rhat_method = "rank"
+rank_normalized_split_rhat_max = 1.01
+bulk_ess_method = "bulk"
+tail_ess_method = "tail"
+check_full_sampled_parameter_set = true
+check_common_cosmological_subset = true
+check_derived_X = true
+bulk_ess_minimum_derived_X = 10000
+tail_ess_minimum_derived_X = 10000
+minimum_retained_numbered_chains = 4
+minimum_retained_weight_ess = 10000
+weight_integrality_required_for_rank_diagnostics = true
+rank_diagnostic_weight_handling = """
+After the primary row-fraction burn-in is removed independently from each
+numbered chain, reconstruct MCMC multiplicity for diagnostics only by repeating
+each retained row according to its positive integer Cobaya weight. If any
+retained weight is non-integer within absolute tolerance 1e-12, stop before
+computing target-related output and document the incompatibility.
+"""
+rank_diagnostic_chain_alignment = """
+For ArviZ diagnostics only, use the final min(N_c) expanded draws from every
+numbered chain, where N_c is each retained expanded-chain length. Posterior
+summaries continue to use every retained row and its exact stored weight.
+"""
+failure_policy = """
+Do not change burn-in, remove chains, thin samples, or alter thresholds after
+viewing delta_Phi. If the primary 30 percent retained samples fail a frozen
+convergence criterion, classify that chain product as numerically insufficient
+and rerun the exact released likelihood/model configuration for longer on the
+server. Sensitivity burn-ins do not rescue a failed primary convergence gate.
+"""
+
+[convergence.preinspection_warnings]
+planck = "official full-chain diagnostics satisfy Rminus1 and Rminus1_cl stops"
+actlite = """
+official full-chain Rminus1=0.011515 is slightly above 0.01 and
+Rminus1_cl is unavailable; independent retained-chain diagnostics are mandatory
+"""
+planck_actlite = """
+official full-chain Rminus1=0.007480 passes, but Rminus1_cl=0.076828 exceeds
+0.05; independent retained-chain diagnostics are mandatory
+"""
+
+[background]
+primary_engine = "direct_CAMB_background_per_retained_sample"
+camb_version = "1.5.0"
+parallelization = "process_pool_with_deterministic_input_order"
+spectra_required = false
+background_only = true
+sample_inputs = ["H0", "ombh2", "omch2", "tau"]
+unused_for_background_but_preserved = [
+  "cosmomc_theta",
+  "logA",
+  "ns",
+  "nuisance_parameters",
+  "likelihood_columns"
+]
+output_age = "CAMB_derived_age_Gyr"
+output_omega_lambda = "CAMB_get_Omega_de_at_z_0"
+output_omega_m = "CAMB_get_Omega_matter_at_z_0"
+no_surrogate_for_primary = true
+no_interpolation_for_primary = true
+
+[background.fixed_model]
+omk = 0.0
+mnu_eV = 0.06
+nnu = 3.044
+num_massive_neutrinos = 1
+neutrino_hierarchy = "degenerate"
+TCMB_K = 2.7255
+dark_energy_model = "DarkEnergyFluid"
+w = -1.0
+wa = 0.0
+YHe = "CAMB_default_BBN_consistency"
+model = "flat_LambdaCDM_with_radiation_and_one_massive_neutrino"
+
+[dimensionless_age]
+H0_input_unit = "km_s^-1_Mpc^-1"
+age_input_unit = "Gyr"
+Mpc_in_metres = 3.0856775814913673e22
+Julian_year_in_seconds = 31557600.0
+Gyr_in_seconds = 3.15576e16
+formula = """
+H0_t0 = (H0_km_s_Mpc * 1000 / Mpc_in_metres)
+        * (age_Gyr * Gyr_in_seconds)
+"""
+omega_lambda_source = "CAMB_background_at_z_0"
+X_formula = "X = H0_t0 * sqrt(Omega_Lambda_0)"
+delta_formula = "delta_Phi = X - 0.7861513777574233"
+target_value = 0.7861513777574233
+
+[background_validation]
+run_before_full_chain_transformation = true
+nominal_nonposterior_timing_calls = 100
+serial_parallel_identity_calls = 32
+serial_parallel_relative_tolerance = 1e-12
+camb_repeatability_calls = 16
+camb_repeatability_relative_tolerance = 1e-12
+posterior_validation_selection = "deterministic_evenly_spaced_rows_after_primary_burnin"
+posterior_validation_rows_per_dataset = 64
+analytic_matter_lambda_crosscheck = true
+analytic_crosscheck_role = "reported_approximation_only_not_primary"
+analytic_crosscheck_must_not_replace_camb = true
+
+[posterior_outputs]
+weighted_mean = true
+weighted_quantiles = [0.025, 0.16, 0.50, 0.84, 0.975]
+sign_probability = true
+per_numbered_chain_summaries = true
+pooled_summary = true
+burnin_sensitivity = true
+negative_controls = [
+  { name = "Phi^-1", value = 0.6180339887498948 },
+  { name = "Phi^-3/2", value = 0.4858682717566456 },
+  { name = "round_0.8", value = 0.8 }
+]
+blind_output_order = [
+  "technical_validation",
+  "convergence_gate",
+  "posterior_summary",
+  "negative_controls",
+  "interpretation"
+]
+
+[roles]
+planck_confirmation_claim_allowed = false
+actlite_chain_summary_is_primary_predictive_test = false
+planck_actlite_chain_summary_is_DESI_test = false
+held_out_predictive_tests_require_likelihood_evaluation = true
+description = """
+The chain-only posterior summaries are necessary diagnostics and descriptive
+constraints under M0. They do not replace the preregistered held-out predictive
+log-score, Bayes-factor, or per-dataset likelihood calculations.
+"""
+
+[stopping]
+if_chain_convergence_fails = "stop_that_dataset_and_rerun_exact_configuration"
+if_background_validation_fails = "stop_before_posterior_target_output"
+if_checksum_fails = "stop_and_reacquire"
+post_lock_method_changes = "document_as_deviation_or_new_signed_lock"

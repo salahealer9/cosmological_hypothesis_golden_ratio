@@ -1,0 +1,10 @@
+Name: arviz
+Version: 0.23.4
+Summary: Exploratory analysis of Bayesian models
+Home-page: http://github.com/arviz-devs/arviz
+Author: ArviZ Developers
+Author-email: 
+License: Apache-2.0
+Location: /home/salahealer/book4/venv/lib/python3.11/site-packages
+Requires: h5netcdf, h5py, matplotlib, numpy, packaging, pandas, platformdirs, scipy, setuptools, typing_extensions, xarray, xarray-einstats
+Required-by: 
