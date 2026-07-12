@@ -1,0 +1,30 @@
+
+==================================================
+FILE: data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.checkpoint
+==================================================
+sampler:
+  mcmc:
+    converged: false
+    Rminus1_last: 0.011515223577829668
+    burn_in: 0
+    mpi_size: 4
+
+==================================================
+FILE: data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.checkpoint
+==================================================
+sampler:
+  mcmc:
+    converged: false
+    Rminus1_last: 0.007480114369175584
+    burn_in: 0
+    mpi_size: 4
+
+==================================================
+FILE: data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.checkpoint
+==================================================
+sampler:
+  mcmc:
+    converged: true
+    Rminus1_last: 0.004163725587266924
+    burn_in: 0
+    mpi_size: 4

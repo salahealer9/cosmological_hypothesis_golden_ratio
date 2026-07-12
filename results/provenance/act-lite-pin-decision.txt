@@ -1,0 +1,24 @@
+ACT DR6-lite public source pin
+================================
+
+v1.0.0 commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+v1.0.1 commit: 880eacb40d66722eb1c32d7b5621e91662b4d808
+Selected public pin: v1.0.1
+Selected commit: 880eacb40d66722eb1c32d7b5621e91662b4d808
+
+The released ACT chains were generated in January 2025, before the
+public v1.0.0 and v1.0.1 tags in March 2025. The exact internal
+generating commit is therefore not recoverable from the supplied
+chain metadata.
+
+A direct Git comparison found no differences between v1.0.0 and
+v1.0.1 under:
+
+- act_dr6_cmbonly/
+- setup.py
+- requirements.txt
+
+The only repository changes were typo corrections in four example
+YAML files. Since the extension uses the released chain configuration
+rather than those examples, v1.0.1 is pinned as the exact public
+software revision.
