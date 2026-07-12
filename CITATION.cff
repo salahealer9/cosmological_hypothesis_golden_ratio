@@ -1,15 +1,18 @@
 cff-version: 1.2.0
 title: "Golden-Ratio Cosmological Hypothesis"
-message: "Please cite the archived preregistration release using the version DOI below."
+message: "Please cite the archived confirmatory execution-lock release using the version DOI below."
 type: software
 authors:
   - family-names: "Gherbi"
     given-names: "Salah-Eddin"
     orcid: "https://orcid.org/0009-0005-4017-1095"
-version: "v0.1.0-preregistration-freeze"
+version: "v0.1.1-confirmatory-execution-lock"
 date-released: 2026-07-12
-doi: "10.5281/zenodo.21322457"
+doi: "10.5281/zenodo.21324108"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21324108"
+    description: "Version DOI for the immutable v0.1.1 confirmatory execution lock"
   - type: doi
     value: "10.5281/zenodo.21322457"
     description: "Version DOI for the immutable v0.1.0 preregistration freeze"

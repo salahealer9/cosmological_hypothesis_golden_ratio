@@ -1,6 +1,6 @@
 # Golden-Ratio Cosmological Hypothesis
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21322457.svg)](https://doi.org/10.5281/zenodo.21322457)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21324108.svg)](https://doi.org/10.5281/zenodo.21324108)
 
 A reproducible research project for testing the dimensionless hypothesis
 
@@ -18,18 +18,35 @@ The project deliberately separates:
 
 This is not presented as established cosmology. The relation was noticed after modern cosmological parameters were already known, so Planck-era agreement is discovery evidence only, not an independent confirmation.
 
-## Preregistration status
+## Frozen analysis boundaries
 
-The confirmatory protocol and analysis configuration were frozen before the held-out analysis under the immutable release tag:
+Two immutable releases define the confirmatory analysis boundary.
+
+### 1. Preregistration freeze
+
+The scientific hypothesis, confirmatory protocol, decision rules, and analysis configuration were frozen before held-out analysis under:
 
 ```text
 v0.1.0-preregistration-freeze
 ```
 
 - **Version DOI:** [10.5281/zenodo.21322457](https://doi.org/10.5281/zenodo.21322457)
+
+### 2. Confirmatory execution lock
+
+The operational execution protocol, exact inference software, sampler commit, synthetic evidence benchmark, and Cobaya-to-PolyChord wrapper test were then sealed—still before acquiring or inspecting the confirmatory cosmological data—under:
+
+```text
+v0.1.1-confirmatory-execution-lock
+```
+
+- **Version DOI:** [10.5281/zenodo.21324108](https://doi.org/10.5281/zenodo.21324108)
+
+The execution-lock release records successful synthetic validation of the direct PolyChord/anesthetic path and the Cobaya-to-PolyChord wrapper, together with the pinned software environment.
+
 - **Concept DOI:** [10.5281/zenodo.21322456](https://doi.org/10.5281/zenodo.21322456)
 
-The version DOI identifies this exact frozen preregistration release. The concept DOI resolves to the project record and should be used when referring to the evolving project across releases. Confirmatory work must proceed outside the frozen tag, on a separate analysis branch.
+The concept DOI resolves to the evolving project record. Both frozen tags remain immutable; all subsequent confirmatory work proceeds on the separate `confirmatory-analysis` branch.
 
 ## Exact idealized prediction
 
@@ -85,6 +102,7 @@ If a chain supplies \(H_0\) and age directly, pass `--h0-column` and `--age-gyr-
 
 - Read [`docs/HYPOTHESIS.md`](docs/HYPOTHESIS.md) for the precise claim.
 - Treat [`docs/PREREGISTRATION.md`](docs/PREREGISTRATION.md) and [`config/analysis_plan.toml`](config/analysis_plan.toml) at `v0.1.0-preregistration-freeze` as immutable.
+- Treat [`config/confirmatory_execution_lock.toml`](config/confirmatory_execution_lock.toml) and its validated software stack at `v0.1.1-confirmatory-execution-lock` as immutable.
 - Follow [`docs/DATA_PLAN.md`](docs/DATA_PLAN.md) and preserve raw-file checksums.
 - Record every model and dataset combination in the analysis outputs.
 - Keep exploratory and confirmatory outputs in separate subdirectories.
@@ -94,7 +112,7 @@ If a chain supplies \(H_0\) and age directly, pass `--h0-column` and `--age-gyr-
 
 ```text
 cosmological_hypothesis_golden_ratio/
-├── config/                 # frozen analysis choices
+├── config/                 # frozen analysis and execution choices
 ├── data/raw/               # untouched external chains/data; not committed by default
 ├── data/derived/           # reproducible transformations
 ├── docs/                   # hypothesis, preregistration, statistics, provenance
@@ -125,11 +143,13 @@ See [`references.bib`](references.bib) and [`docs/SOURCE_PROVENANCE.md`](docs/SO
 
 ## Citation
 
-For the exact frozen preregistration release, cite:
+For the latest frozen execution-lock release, cite:
 
-> Gherbi, S.-E. (2026). *Golden-Ratio Cosmological Hypothesis* (Version v0.1.0-preregistration-freeze). Zenodo. https://doi.org/10.5281/zenodo.21322457
+> Gherbi, S.-E. (2026). *Golden-Ratio Cosmological Hypothesis* (Version v0.1.1-confirmatory-execution-lock). Zenodo. https://doi.org/10.5281/zenodo.21324108
 
-Citation metadata is also provided in [`CITATION.cff`](CITATION.cff). Use the concept DOI `10.5281/zenodo.21322456` when citing the project as a whole rather than this specific archived version.
+For the earlier preregistration freeze specifically, cite version DOI `10.5281/zenodo.21322457`.
+
+Citation metadata is also provided in [`CITATION.cff`](CITATION.cff). Use the concept DOI `10.5281/zenodo.21322456` when citing the evolving project across releases.
 
 ## Author
 
