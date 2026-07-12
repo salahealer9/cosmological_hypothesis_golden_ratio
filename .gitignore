@@ -16,3 +16,7 @@ results/*
 !results/.gitkeep
 data/derived/*
 !data/derived/.gitkeep
+
+# Regenerable execution-lock sampler products
+results/synthetic_benchmark/raw/
+results/cobaya_smoke/cobaya_gaussian_polychord_raw/

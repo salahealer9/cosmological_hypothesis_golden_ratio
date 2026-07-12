@@ -1,0 +1,1782 @@
+
+=== A, seed=20260712 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/A_seed20260712.resume
+
+generating live points
+
+
+all live points generated
+
+Speed  1 =  0.982E-05 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |6040 |
+posteriors | 501 |
+equals     |  51 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  53
+nlike      =               20393
+<nlike>    =          39.79   (           1.99 per slice )
+log(Z)     =          -10.15 +/-  0.10
+log(Z_1)   =          -10.15 +/-  0.10 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8351 |
+posteriors |1002 |
+equals     | 215 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 223
+nlike      =               66839
+<nlike>    =          92.89   (           4.64 per slice )
+log(Z)     =           -4.58 +/-  0.06
+log(Z_1)   =           -4.58 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9013 |
+posteriors |1503 |
+equals     | 648 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 663
+nlike      =              113570
+<nlike>    =          93.46   (           4.67 per slice )
+log(Z)     =           -3.42 +/-  0.06
+log(Z_1)   =           -3.42 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9336 |
+posteriors |2004 |
+equals     | 863 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 901
+nlike      =              160351
+<nlike>    =          93.56   (           4.68 per slice )
+log(Z)     =           -3.11 +/-  0.06
+log(Z_1)   =           -3.11 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9421 |
+posteriors |2505 |
+equals     | 959 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                 994
+nlike      =              207152
+<nlike>    =          93.60   (           4.68 per slice )
+log(Z)     =           -3.01 +/-  0.06
+log(Z_1)   =           -3.01 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9191 |
+posteriors |3006 |
+equals     | 985 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                1029
+nlike      =              254185
+<nlike>    =          94.07   (           4.70 per slice )
+log(Z)     =           -2.98 +/-  0.06
+log(Z_1)   =           -2.98 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9424 |
+posteriors |3507 |
+equals     | 995 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                1046
+nlike      =              301168
+<nlike>    =          93.97   (           4.70 per slice )
+log(Z)     =           -2.97 +/-  0.06
+log(Z_1)   =           -2.97 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9322 |
+posteriors |4008 |
+equals     | 998 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                1053
+nlike      =              347683
+<nlike>    =          93.03   (           4.65 per slice )
+log(Z)     =           -2.96 +/-  0.06
+log(Z_1)   =           -2.96 +/-  0.06 (still evaluating)
+
+
+
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.44647841E+00
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         4980                              |
+| log(Z) =           -2.96104 +/-            0.05685 |
+|____________________________________________________|
+
+=== A, seed=20260713 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/A_seed20260713.resume
+
+generating live points
+
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+all live points generated
+
+Speed  1 =  0.149E-04 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |5988 |
+posteriors | 501 |
+equals     |  30 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  37
+nlike      =               19537
+<nlike>    =          38.07   (           1.90 per slice )
+log(Z)     =          -11.07 +/-  0.12
+log(Z_1)   =          -11.07 +/-  0.12 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8139 |
+posteriors |1002 |
+equals     | 202 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 224
+nlike      =               66106
+<nlike>    =          93.14   (           4.66 per slice )
+log(Z)     =           -4.65 +/-  0.07
+log(Z_1)   =           -4.65 +/-  0.07 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8907 |
+posteriors |1503 |
+equals     | 646 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 660
+nlike      =              112533
+<nlike>    =          92.85   (           4.64 per slice )
+log(Z)     =           -3.43 +/-  0.06
+log(Z_1)   =           -3.43 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9450 |
+posteriors |2004 |
+equals     | 871 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 899
+nlike      =              159014
+<nlike>    =          92.96   (           4.65 per slice )
+log(Z)     =           -3.12 +/-  0.06
+log(Z_1)   =           -3.12 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9719 |
+posteriors |2505 |
+equals     | 958 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                1001
+nlike      =              205691
+<nlike>    =          93.35   (           4.67 per slice )
+log(Z)     =           -3.02 +/-  0.06
+log(Z_1)   =           -3.02 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9407 |
+posteriors |3006 |
+equals     | 988 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                1031
+nlike      =              252483
+<nlike>    =          93.58   (           4.68 per slice )
+log(Z)     =           -2.99 +/-  0.06
+log(Z_1)   =           -2.99 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9435 |
+posteriors |3507 |
+equals     |1006 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                1042
+nlike      =              299209
+<nlike>    =          93.45   (           4.67 per slice )
+log(Z)     =           -2.98 +/-  0.06
+log(Z_1)   =           -2.98 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9642 |
+posteriors |4008 |
+equals     |1013 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                1048
+nlike      =              345918
+<nlike>    =          93.42   (           4.67 per slice )
+log(Z)     =           -2.97 +/-  0.06
+log(Z_1)   =           -2.97 +/-  0.06 (still evaluating)
+
+
+
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.41071467E+00
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         4984                              |
+| log(Z) =           -2.96900 +/-            0.05729 |
+|____________________________________________________|
+
+=== B_concordant, seed=20260712 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/B_concordant_seed20260712.resume
+
+generating live points
+
+
+all live points generated
+
+Speed  1 =  0.124E-04 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |6040 |
+posteriors | 501 |
+equals     |  51 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  53
+nlike      =               20393
+<nlike>    =          39.79   (           1.99 per slice )
+log(Z)     =          -10.15 +/-  0.10
+log(Z_1)   =          -10.15 +/-  0.10 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8351 |
+posteriors |1002 |
+equals     | 215 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 223
+nlike      =               66839
+<nlike>    =          92.89   (           4.64 per slice )
+log(Z)     =           -4.58 +/-  0.06
+log(Z_1)   =           -4.58 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9013 |
+posteriors |1503 |
+equals     | 648 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 663
+nlike      =              113570
+<nlike>    =          93.46   (           4.67 per slice )
+log(Z)     =           -3.42 +/-  0.06
+log(Z_1)   =           -3.42 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9336 |
+posteriors |2004 |
+equals     | 863 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 901
+nlike      =              160351
+<nlike>    =          93.56   (           4.68 per slice )
+log(Z)     =           -3.11 +/-  0.06
+log(Z_1)   =           -3.11 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9421 |
+posteriors |2505 |
+equals     | 959 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                 994
+nlike      =              207152
+<nlike>    =          93.60   (           4.68 per slice )
+log(Z)     =           -3.01 +/-  0.06
+log(Z_1)   =           -3.01 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9191 |
+posteriors |3006 |
+equals     | 985 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                1029
+nlike      =              254185
+<nlike>    =          94.07   (           4.70 per slice )
+log(Z)     =           -2.98 +/-  0.06
+log(Z_1)   =           -2.98 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9424 |
+posteriors |3507 |
+equals     | 995 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                1046
+nlike      =              301168
+<nlike>    =          93.97   (           4.70 per slice )
+log(Z)     =           -2.97 +/-  0.06
+log(Z_1)   =           -2.97 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9322 |
+posteriors |4008 |
+equals     | 998 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                1053
+nlike      =              347683
+<nlike>    =          93.03   (           4.65 per slice )
+log(Z)     =           -2.96 +/-  0.06
+log(Z_1)   =           -2.96 +/-  0.06 (still evaluating)
+
+
+
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.46805965E+00
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         4980                              |
+| log(Z) =           -2.96104 +/-            0.05685 |
+|____________________________________________________|
+
+=== B_concordant, seed=20260713 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/B_concordant_seed20260713.resume
+
+generating live points
+
+
+all live points generated
+
+Speed  1 =  0.132E-04 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |5988 |
+posteriors | 501 |
+equals     |  30 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  37
+nlike      =               19537
+<nlike>    =          38.07   (           1.90 per slice )
+log(Z)     =          -11.07 +/-  0.12
+log(Z_1)   =          -11.07 +/-  0.12 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8139 |
+posteriors |1002 |
+equals     | 202 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 224
+nlike      =               66106
+<nlike>    =          93.14   (           4.66 per slice )
+log(Z)     =           -4.65 +/-  0.07
+log(Z_1)   =           -4.65 +/-  0.07 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8907 |
+posteriors |1503 |
+equals     | 646 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 660
+nlike      =              112533
+<nlike>    =          92.85   (           4.64 per slice )
+log(Z)     =           -3.43 +/-  0.06
+log(Z_1)   =           -3.43 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9450 |
+posteriors |2004 |
+equals     | 871 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 899
+nlike      =              159014
+<nlike>    =          92.96   (           4.65 per slice )
+log(Z)     =           -3.12 +/-  0.06
+log(Z_1)   =           -3.12 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9719 |
+posteriors |2505 |
+equals     | 958 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                1001
+nlike      =              205691
+<nlike>    =          93.35   (           4.67 per slice )
+log(Z)     =           -3.02 +/-  0.06
+log(Z_1)   =           -3.02 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9407 |
+posteriors |3006 |
+equals     | 988 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                1031
+nlike      =              252483
+<nlike>    =          93.58   (           4.68 per slice )
+log(Z)     =           -2.99 +/-  0.06
+log(Z_1)   =           -2.99 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9435 |
+posteriors |3507 |
+equals     |1006 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                1042
+nlike      =              299209
+<nlike>    =          93.45   (           4.67 per slice )
+log(Z)     =           -2.98 +/-  0.06
+log(Z_1)   =           -2.98 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9642 |
+posteriors |4008 |
+equals     |1013 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                1048
+nlike      =              345918
+<nlike>    =          93.42   (           4.67 per slice )
+log(Z)     =           -2.97 +/-  0.06
+log(Z_1)   =           -2.97 +/-  0.06 (still evaluating)
+
+
+
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.69832460E+00
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         4984                              |
+| log(Z) =           -2.96900 +/-            0.05729 |
+|____________________________________________________|
+
+=== AB_concordant, seed=20260712 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/AB_concordant_seed20260712.resume
+
+generating live points
+
+
+all live points generated
+
+Speed  1 =  0.182E-04 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |6040 |
+posteriors | 501 |
+equals     |  29 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  30
+nlike      =               20393
+<nlike>    =          39.79   (           1.99 per slice )
+log(Z)     =          -17.71 +/-  0.13
+log(Z_1)   =          -17.71 +/-  0.13 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8351 |
+posteriors |1002 |
+equals     | 115 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 107
+nlike      =               66839
+<nlike>    =          92.89   (           4.64 per slice )
+log(Z)     =           -6.95 +/-  0.08
+log(Z_1)   =           -6.95 +/-  0.08 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8504 |
+posteriors |1503 |
+equals     | 505 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 500
+nlike      =              113710
+<nlike>    =          93.74   (           4.69 per slice )
+log(Z)     =           -4.94 +/-  0.06
+log(Z_1)   =           -4.94 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9173 |
+posteriors |2004 |
+equals     | 816 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 821
+nlike      =              160565
+<nlike>    =          93.71   (           4.69 per slice )
+log(Z)     =           -4.45 +/-  0.06
+log(Z_1)   =           -4.45 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9370 |
+posteriors |2505 |
+equals     | 949 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                 943
+nlike      =              207140
+<nlike>    =          93.15   (           4.66 per slice )
+log(Z)     =           -4.31 +/-  0.06
+log(Z_1)   =           -4.31 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9371 |
+posteriors |3006 |
+equals     | 998 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                 985
+nlike      =              253800
+<nlike>    =          93.32   (           4.67 per slice )
+log(Z)     =           -4.26 +/-  0.06
+log(Z_1)   =           -4.26 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9987 |
+posteriors |3507 |
+equals     |1015 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                1006
+nlike      =              300561
+<nlike>    =          93.52   (           4.68 per slice )
+log(Z)     =           -4.24 +/-  0.06
+log(Z_1)   =           -4.24 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9809 |
+posteriors |4008 |
+equals     |1021 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                1012
+nlike      =              347283
+<nlike>    =          93.44   (           4.67 per slice )
+log(Z)     =           -4.24 +/-  0.06
+log(Z_1)   =           -4.24 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9186 |
+posteriors |4509 |
+equals     |1022 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4509
+nposterior =                4509
+nequals    =                1015
+nlike      =              393996
+<nlike>    =          93.43   (           4.67 per slice )
+log(Z)     =           -4.23 +/-  0.06
+log(Z_1)   =           -4.23 +/-  0.06 (still evaluating)
+
+
+
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         5155                              |
+| log(Z) =           -4.23176 +/-            0.06296 |
+|____________________________________________________|
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.53057734E+00
+
+=== AB_concordant, seed=20260713 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/AB_concordant_seed20260713.resume
+
+generating live points
+
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+all live points generated
+
+Speed  1 =  0.972E-05 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |5988 |
+posteriors | 501 |
+equals     |  20 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  21
+nlike      =               19537
+<nlike>    =          38.07   (           1.90 per slice )
+log(Z)     =          -19.11 +/-  0.17
+log(Z_1)   =          -19.11 +/-  0.17 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8139 |
+posteriors |1002 |
+equals     | 105 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 125
+nlike      =               66106
+<nlike>    =          93.14   (           4.66 per slice )
+log(Z)     =           -7.03 +/-  0.08
+log(Z_1)   =           -7.03 +/-  0.08 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8966 |
+posteriors |1503 |
+equals     | 501 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 500
+nlike      =              112932
+<nlike>    =          93.65   (           4.68 per slice )
+log(Z)     =           -4.93 +/-  0.06
+log(Z_1)   =           -4.93 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9225 |
+posteriors |2004 |
+equals     | 815 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 790
+nlike      =              159481
+<nlike>    =          93.10   (           4.65 per slice )
+log(Z)     =           -4.45 +/-  0.06
+log(Z_1)   =           -4.45 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9580 |
+posteriors |2505 |
+equals     | 946 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                 901
+nlike      =              205981
+<nlike>    =          93.00   (           4.65 per slice )
+log(Z)     =           -4.31 +/-  0.06
+log(Z_1)   =           -4.31 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9764 |
+posteriors |3006 |
+equals     | 988 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                 943
+nlike      =              252500
+<nlike>    =          93.04   (           4.65 per slice )
+log(Z)     =           -4.26 +/-  0.06
+log(Z_1)   =           -4.26 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9433 |
+posteriors |3507 |
+equals     |1011 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                 960
+nlike      =              298976
+<nlike>    =          92.95   (           4.65 per slice )
+log(Z)     =           -4.24 +/-  0.06
+log(Z_1)   =           -4.24 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9136 |
+posteriors |4008 |
+equals     |1021 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                 964
+nlike      =              345646
+<nlike>    =          93.34   (           4.67 per slice )
+log(Z)     =           -4.24 +/-  0.06
+log(Z_1)   =           -4.24 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9096 |
+posteriors |4509 |
+equals     |1026 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4509
+nposterior =                4509
+nequals    =                 967
+nlike      =              392360
+<nlike>    =          93.43   (           4.67 per slice )
+log(Z)     =           -4.23 +/-  0.06
+log(Z_1)   =           -4.23 +/-  0.06 (still evaluating)
+
+
+
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.60880037E+00
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         5156                              |
+| log(Z) =           -4.23183 +/-            0.06308 |
+|____________________________________________________|
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+=== B_shifted, seed=20260712 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/B_shifted_seed20260712.resume
+
+generating live points
+
+
+all live points generated
+
+Speed  1 =  0.179E-04 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |5724 |
+posteriors | 501 |
+equals     |  38 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  45
+nlike      =               19656
+<nlike>    =          38.31   (           1.92 per slice )
+log(Z)     =           -9.94 +/-  0.12
+log(Z_1)   =           -9.94 +/-  0.12 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8257 |
+posteriors |1002 |
+equals     | 240 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 232
+nlike      =               64599
+<nlike>    =          89.89   (           4.49 per slice )
+log(Z)     =           -4.43 +/-  0.06
+log(Z_1)   =           -4.43 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8762 |
+posteriors |1503 |
+equals     | 667 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 661
+nlike      =              111474
+<nlike>    =          93.75   (           4.69 per slice )
+log(Z)     =           -3.34 +/-  0.06
+log(Z_1)   =           -3.34 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9662 |
+posteriors |2004 |
+equals     | 903 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 877
+nlike      =              157901
+<nlike>    =          92.85   (           4.64 per slice )
+log(Z)     =           -3.05 +/-  0.06
+log(Z_1)   =           -3.05 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9972 |
+posteriors |2505 |
+equals     | 991 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                 968
+nlike      =              204429
+<nlike>    =          93.06   (           4.65 per slice )
+log(Z)     =           -2.96 +/-  0.06
+log(Z_1)   =           -2.96 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9520 |
+posteriors |3006 |
+equals     |1016 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                1002
+nlike      =              251216
+<nlike>    =          93.57   (           4.68 per slice )
+log(Z)     =           -2.93 +/-  0.06
+log(Z_1)   =           -2.93 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9134 |
+posteriors |3507 |
+equals     |1028 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                1009
+nlike      =              298226
+<nlike>    =          94.02   (           4.70 per slice )
+log(Z)     =           -2.92 +/-  0.06
+log(Z_1)   =           -2.92 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9585 |
+posteriors |4008 |
+equals     |1031 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                1017
+nlike      =              344895
+<nlike>    =          93.34   (           4.67 per slice )
+log(Z)     =           -2.91 +/-  0.06
+log(Z_1)   =           -2.91 +/-  0.06 (still evaluating)
+
+
+
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         4954                              |
+| log(Z) =           -2.90951 +/-            0.05611 |
+|____________________________________________________|
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.50302075E+00
+
+=== B_shifted, seed=20260713 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/B_shifted_seed20260713.resume
+
+generating live points
+
+
+all live points generated
+
+Speed  1 =  0.123E-04 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |6096 |
+posteriors | 501 |
+equals     |  39 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  30
+nlike      =               18741
+<nlike>    =          36.48   (           1.82 per slice )
+log(Z)     =          -11.71 +/-  0.12
+log(Z_1)   =          -11.71 +/-  0.12 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8468 |
+posteriors |1002 |
+equals     | 221 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 221
+nlike      =               62207
+<nlike>    =          86.93   (           4.35 per slice )
+log(Z)     =           -4.75 +/-  0.07
+log(Z_1)   =           -4.75 +/-  0.07 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9088 |
+posteriors |1503 |
+equals     | 614 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 627
+nlike      =              108735
+<nlike>    =          93.06   (           4.65 per slice )
+log(Z)     =           -3.48 +/-  0.06
+log(Z_1)   =           -3.48 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9237 |
+posteriors |2004 |
+equals     | 867 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 841
+nlike      =              155201
+<nlike>    =          92.93   (           4.65 per slice )
+log(Z)     =           -3.16 +/-  0.06
+log(Z_1)   =           -3.16 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9534 |
+posteriors |2505 |
+equals     | 968 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                 930
+nlike      =              201909
+<nlike>    =          93.42   (           4.67 per slice )
+log(Z)     =           -3.06 +/-  0.06
+log(Z_1)   =           -3.06 +/-  0.06 (still evaluating)
+
+
+
+__________________
+lives      |  500 |
+phantoms   |10190 |
+posteriors | 3006 |
+equals     | 1003 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                 961
+nlike      =              248537
+<nlike>    =          93.26   (           4.66 per slice )
+log(Z)     =           -3.02 +/-  0.06
+log(Z_1)   =           -3.02 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9476 |
+posteriors |3507 |
+equals     |1015 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                 979
+nlike      =              295426
+<nlike>    =          93.78   (           4.69 per slice )
+log(Z)     =           -3.01 +/-  0.06
+log(Z_1)   =           -3.01 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9561 |
+posteriors |4008 |
+equals     |1020 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                 987
+nlike      =              342046
+<nlike>    =          93.24   (           4.66 per slice )
+log(Z)     =           -3.00 +/-  0.06
+log(Z_1)   =           -3.00 +/-  0.06 (still evaluating)
+
+
+
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.66288059E+00
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         5000                              |
+| log(Z) =           -3.00221 +/-            0.05786 |
+|____________________________________________________|
+
+=== AB_shifted, seed=20260712 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/AB_shifted_seed20260712.resume
+
+generating live points
+
+
+all live points generated
+
+Speed  1 =  0.982E-05 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |5816 |
+posteriors | 501 |
+equals     |  24 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  26
+nlike      =               20191
+<nlike>    =          39.38   (           1.97 per slice )
+log(Z)     =          -20.75 +/-  0.16
+log(Z_1)   =          -20.75 +/-  0.16 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |7767 |
+posteriors |1002 |
+equals     | 136 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 146
+nlike      =               66766
+<nlike>    =          93.15   (           4.66 per slice )
+log(Z)     =          -10.30 +/-  0.07
+log(Z_1)   =          -10.30 +/-  0.07 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9113 |
+posteriors |1503 |
+equals     | 552 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 558
+nlike      =              113630
+<nlike>    =          93.73   (           4.69 per slice )
+log(Z)     =           -8.66 +/-  0.06
+log(Z_1)   =           -8.66 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9535 |
+posteriors |2004 |
+equals     | 835 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 823
+nlike      =              160159
+<nlike>    =          93.06   (           4.65 per slice )
+log(Z)     =           -8.27 +/-  0.06
+log(Z_1)   =           -8.27 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9008 |
+posteriors |2505 |
+equals     | 942 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                 930
+nlike      =              206980
+<nlike>    =          93.64   (           4.68 per slice )
+log(Z)     =           -8.15 +/-  0.06
+log(Z_1)   =           -8.15 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9362 |
+posteriors |3006 |
+equals     | 982 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                 963
+nlike      =              253490
+<nlike>    =          93.02   (           4.65 per slice )
+log(Z)     =           -8.11 +/-  0.06
+log(Z_1)   =           -8.11 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9531 |
+posteriors |3507 |
+equals     | 998 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                 974
+nlike      =              300345
+<nlike>    =          93.71   (           4.69 per slice )
+log(Z)     =           -8.09 +/-  0.06
+log(Z_1)   =           -8.09 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9210 |
+posteriors |4008 |
+equals     |1002 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                 980
+nlike      =              346940
+<nlike>    =          93.19   (           4.66 per slice )
+log(Z)     =           -8.09 +/-  0.06
+log(Z_1)   =           -8.09 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9493 |
+posteriors |4509 |
+equals     |1003 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4509
+nposterior =                4509
+nequals    =                 983
+nlike      =              393698
+<nlike>    =          93.52   (           4.68 per slice )
+log(Z)     =           -8.08 +/-  0.06
+log(Z_1)   =           -8.08 +/-  0.06 (still evaluating)
+
+
+
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         5081                              |
+| log(Z) =           -8.08306 +/-            0.06063 |
+|____________________________________________________|
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.61499738E+00
+
+=== AB_shifted, seed=20260713 ===
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :     500
+nDims    :       1
+nDerived :       0
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/AB_shifted_seed20260713.resume
+
+generating live points
+
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+all live points generated
+
+Speed  1 =  0.134E-04 seconds
+number of repeats:           20
+started sampling
+
+_________________
+lives      | 500 |
+phantoms   |5937 |
+posteriors | 501 |
+equals     |  22 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 501
+nposterior =                 501
+nequals    =                  19
+nlike      =               19414
+<nlike>    =          37.83   (           1.89 per slice )
+log(Z)     =          -22.88 +/-  0.16
+log(Z_1)   =          -22.88 +/-  0.16 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |8281 |
+posteriors |1002 |
+equals     | 127 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1002
+nposterior =                1002
+nequals    =                 138
+nlike      =               66031
+<nlike>    =          93.23   (           4.66 per slice )
+log(Z)     =          -10.85 +/-  0.08
+log(Z_1)   =          -10.85 +/-  0.08 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9101 |
+posteriors |1503 |
+equals     | 519 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                1503
+nposterior =                1503
+nequals    =                 513
+nlike      =              112563
+<nlike>    =          93.06   (           4.65 per slice )
+log(Z)     =           -8.89 +/-  0.06
+log(Z_1)   =           -8.89 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9558 |
+posteriors |2004 |
+equals     | 824 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2004
+nposterior =                2004
+nequals    =                 799
+nlike      =              159237
+<nlike>    =          93.35   (           4.67 per slice )
+log(Z)     =           -8.43 +/-  0.06
+log(Z_1)   =           -8.43 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9506 |
+posteriors |2505 |
+equals     | 942 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                2505
+nposterior =                2505
+nequals    =                 932
+nlike      =              206006
+<nlike>    =          93.54   (           4.68 per slice )
+log(Z)     =           -8.29 +/-  0.06
+log(Z_1)   =           -8.29 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9597 |
+posteriors |3006 |
+equals     | 984 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3006
+nposterior =                3006
+nequals    =                 965
+nlike      =              252505
+<nlike>    =          93.00   (           4.65 per slice )
+log(Z)     =           -8.24 +/-  0.06
+log(Z_1)   =           -8.24 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9722 |
+posteriors |3507 |
+equals     |1006 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                3507
+nposterior =                3507
+nequals    =                 981
+nlike      =              299113
+<nlike>    =          93.22   (           4.66 per slice )
+log(Z)     =           -8.22 +/-  0.06
+log(Z_1)   =           -8.22 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9263 |
+posteriors |4008 |
+equals     |1016 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4008
+nposterior =                4008
+nequals    =                 985
+nlike      =              345856
+<nlike>    =          93.49   (           4.67 per slice )
+log(Z)     =           -8.21 +/-  0.06
+log(Z_1)   =           -8.21 +/-  0.06 (still evaluating)
+
+
+
+_________________
+lives      | 500 |
+phantoms   |9634 |
+posteriors |4509 |
+equals     |1020 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                4509
+nposterior =                4509
+nequals    =                 988
+nlike      =              392480
+<nlike>    =          93.25   (           4.66 per slice )
+log(Z)     =           -8.21 +/-  0.06
+log(Z_1)   =           -8.21 +/-  0.06 (still evaluating)
+
+
+
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.54962703E+00
+ ____________________________________________________ 
+|                                                    |
+| ndead  =         5145                              |
+| log(Z) =           -8.21066 +/-            0.06257 |
+|____________________________________________________|
+
+Summary: /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/summary.json
+Report:  /home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/REPORT.md
+Overall: PASS

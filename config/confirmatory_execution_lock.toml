@@ -1,0 +1,117 @@
+[lock]
+name = "confirmatory_execution_lock"
+version = "0.1.0"
+status = "frozen_before_confirmatory_data_inspection"
+date = "2026-07-12"
+base_preregistration_tag = "v0.1.0-preregistration-freeze"
+base_preregistration_commit = "56caa5823d063cab8a15534588cdd1eeda8724a7"
+random_seed = 20260712
+
+[primary_prediction.conditioning]
+dataset = "PLANCK_2018_ACT_COMPATIBLE"
+official_chain_id = "planck_lcdm_camb"
+likelihoods = [
+  "planck_2018_lowl.TT",
+  "planck_2018_lowl.EE_sroll2",
+  "act_dr6_cmbonly.PlanckActCut"
+]
+prior_source = "official planck_lcdm_camb updated YAML"
+contains_act_data = false
+
+[primary_prediction.validation]
+dataset = "ACT_DR6_02_CMB_ONLY"
+likelihood = "act_dr6_cmbonly.ACTDR6CMBonly"
+spectra = ["TT", "TE", "EE"]
+foreground_treatment = "pre_marginalized"
+held_out_score_includes_tau_prior = false
+independence_classification = "partially_held_out_with_overlap_audit_required"
+
+[primary_prediction.act_only_auxiliary]
+purpose = "posterior tension and pipeline cross-check only"
+likelihood = "act_dr6_cmbonly.ACTDR6CMBonly"
+tau_prior_distribution = "Gaussian"
+tau_prior_mean = 0.0566
+tau_prior_sigma = 0.0058
+official_data_tag = "actlite-tau"
+counts_as_primary_held_out_score = false
+
+[secondary_prediction.conditioning]
+dataset = "PLANCK_2018_PLUS_ACT_DR6_02"
+official_chain_id = "p-actlite_lcdm_camb"
+prior_source = "official p-actlite_lcdm_camb updated YAML"
+contains_desi_data = false
+contains_supernova_data = false
+
+[secondary_prediction.validation]
+dataset = "DESI_DR2_BAO"
+likelihood_id = "desi-bao-all"
+bins = [
+  "bgs",
+  "lrg-z0",
+  "lrg-z1",
+  "lrgpluselg",
+  "elg",
+  "qso",
+  "lya"
+]
+mean_file = "desi_gaussian_bao_ALL_GCcomb_mean.txt"
+covariance_file = "desi_gaussian_bao_ALL_GCcomb_cov.txt"
+likelihood_repository = "CobayaSampler/bao_data"
+likelihood_subdirectory = "desi_bao_dr2"
+independence_classification = "held_out_likelihood_evaluated_separately"
+
+[predictive_estimator]
+method = "weighted_log_mean_exp"
+posterior_draw_rule = "all retained post-burn-in samples; no subsampling"
+preserve_original_weights = true
+stabilization = "logsumexp"
+number_of_batches = 20
+batch_construction = "equal cumulative posterior-weight blocks within chains"
+mcse_method = "standard error across batch predictive estimates"
+confidence_multiplier = 1.96
+resolution_rule = """
+The sign is resolved only if the 95 percent Monte Carlo interval excludes zero
+and all batch-level estimates have the same sign.
+"""
+minimum_predictive_weight_ess = 10000
+
+[evidence]
+primary_prior = "induced from frozen official base-parameter priors"
+sensitivity_sigma_delta = [0.01, 0.05, 0.10]
+minimum_independent_runs = 2
+maximum_log_evidence_standard_error = 0.10
+repeat_agreement_rule = """
+Two independent evidence runs must differ by no more than the larger of
+0.20 log-evidence units or twice their combined reported standard error.
+"""
+
+[tension]
+primary_method = "pairwise_Tij"
+threshold_Tij = 3.0
+p_value_threshold = 0.01
+fallback_method = "suspiciousness"
+fallback_definition = "logR_minus_logI"
+fallback_requires_separate_and_joint_evidences = true
+fallback_software_and_version = """
+anesthetic 2.14.9;
+anesthetic.tension.tension_stats;
+Cobaya 3.6.2;
+PolyChordLite commit 370f6af5d59a4d3af2ed3333acfba152fdb7a4cf
+"""
+
+[data_integrity]
+raw_manifest = "data/raw/checksums.txt"
+derived_manifest = "data/derived/checksums.txt"
+modify_frozen_preregistration_manifest = false
+inspect_golden_ratio_residuals_before_lock = false
+
+
+[evidence.software]
+framework = "Cobaya 3.6.2"
+sampler = "PolyChordLite"
+sampler_commit = "370f6af5d59a4d3af2ed3333acfba152fdb7a4cf"
+postprocessor = "anesthetic 2.14.9"
+getdist = "1.7.7"
+mpi4py = "4.1.2"
+synthetic_benchmark = "passed"
+cobaya_wrapper_smoke_test = "passed"

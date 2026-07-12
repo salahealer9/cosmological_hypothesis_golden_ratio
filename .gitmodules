@@ -1,0 +1,3 @@
+[submodule "external/PolyChordLite"]
+	path = external/PolyChordLite
+	url = https://github.com/PolyChord/PolyChordLite.git

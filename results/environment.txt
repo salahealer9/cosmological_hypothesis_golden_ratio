@@ -1,9 +1,9 @@
 Confirmatory analysis environment
-===============================
+================================
 
-UTC timestamp: 2026-07-12T13:12:23+00:00
+UTC timestamp: 2026-07-12T13:23:39+00:00
 Branch: confirmatory-analysis
-Analysis starting commit: de1af397a6a6fa6bc7a2ef15f5e5eb41b5661841
+Starting commit: d6d4b4f24ab83b2d9e51ddf1662891ba9abd46f1
 Frozen tag target: 56caa5823d063cab8a15534588cdd1eeda8724a7
 Python: Python 3.11.2
 Platform: Linux penguin 6.6.119-09251-gf81e51484dec #1 SMP PREEMPT_DYNAMIC Wed, 15 Apr 2026 08:29:49 -0700 x86_64 GNU/Linux

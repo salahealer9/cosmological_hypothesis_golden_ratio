@@ -1,0 +1,102 @@
+[0 : output] Output to be read-from/written-into folder 'results/cobaya_smoke', with prefix 'cobaya_gaussian'
+[1 : gaussian] Initialized external likelihood.
+[0 : gaussian] Initialized external likelihood.
+[0 : polychord] *WARNING* This run has been SEEDED with seed 20260712
+[0 : polychord] `pypolychord` module loaded successfully from /home/salahealer/book4/venv/lib/python3.11/site-packages/pypolychord
+[0 : polychord] Storing raw PolyChord output in 'results/cobaya_smoke/cobaya_gaussian_polychord_raw'.
+[0 : model] Measuring speeds... (this may take a few seconds)
+[0 : model] Setting measured speeds (per sec): {gaussian: 86500.0}
+[0 : polychord] Parameter blocks and their oversampling factors:
+[0 : polychord] * 1 : ['theta']
+[0 : polychord] Calling PolyChord...
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+PolyChord: MPI is already initilised, not initialising, and will not finalize
+
+PolyChord: Next Generation Nested Sampling
+copyright: Will Handley, Mike Hobson & Anthony Lasenby
+  version: 1.22.3
+  release: 22nd Nov 2025
+    email: wh260@mrao.cam.ac.uk
+
+Run Settings
+nlive    :      50
+nDims    :       1
+nDerived :       2
+Synchronous parallelisation
+Generating equally weighted posteriors
+Generating weighted posteriors
+Writing a resume file to results/cobaya_smoke/cobaya_gaussian_polychord_raw/cobaya_gaussian.resume
+
+generating live points
+
+
+all live points generated
+
+number of repeats:            5
+started sampling
+
+________________
+lives      | 50 |
+phantoms   |  4 |
+posteriors |201 |
+equals     | 17 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 201
+nposterior =                 201
+nequals    =                  16
+nlike      =                 269
+<nlike>    =           0.38   (           0.08 per slice )
+log(Z)     =           -5.84 +/-  0.19
+log(Z_1)   =           -5.84 +/-  0.19 (still evaluating)
+
+
+
+________________
+lives      | 50 |
+phantoms   |146 |
+posteriors |252 |
+equals     | 53 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 252
+nposterior =                 252
+nequals    =                  53
+nlike      =                1475
+<nlike>    =          24.12   (           4.82 per slice )
+log(Z)     =           -3.85 +/-  0.13
+log(Z_1)   =           -3.85 +/-  0.13 (still evaluating)
+
+
+
+________________
+lives      | 50 |
+phantoms   |161 |
+posteriors |303 |
+equals     | 91 |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ncluster   =       1 /       1
+ndead      =                 303
+nposterior =                 303
+nequals    =                  93
+nlike      =                2669
+<nlike>    =          23.88   (           4.78 per slice )
+log(Z)     =           -3.28 +/-  0.13
+log(Z_1)   =           -3.28 +/-  0.13 (still evaluating)
+
+
+
+Worker  1: efficient MPI parallelisation; wait_time/slice_time=    0.24420008E+00
+ ____________________________________________________ 
+|                                                    |
+| ndead  =          398                              |
+| log(Z) =           -3.04094 +/-            0.13138 |
+|____________________________________________________|
+[0 : polychord] Loading PolyChord's results: samples and evidences.
+[0 : polychord] Finished! Raw PolyChord output stored in 'results/cobaya_smoke/cobaya_gaussian_polychord_raw', with prefix 'cobaya_gaussian'
+[0 : polychord] log(Z) = -3.04094 +/- 0.13138 ; Z in [0.041906393, 0.054499913] (68% C.L. log-gaussian)
+Numerical logZ: -3.040936534 +/- 0.131380352
+Analytic logZ:  -2.995732274
+Absolute error: 0.045204261
+Summary:        /home/salahealer/cosmological_hypothesis_golden_ratio/results/cobaya_smoke/summary.json
+Overall:        PASS

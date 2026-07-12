@@ -1,0 +1,300 @@
+{
+  "benchmark": {
+    "anesthetic_resamples": 4000,
+    "cases": {
+      "A": [
+        0.0
+      ],
+      "AB_concordant": [
+        0.0,
+        0.0
+      ],
+      "AB_shifted": [
+        0.0,
+        4.0
+      ],
+      "B_concordant": [
+        0.0
+      ],
+      "B_shifted": [
+        4.0
+      ]
+    },
+    "nlive": 500,
+    "num_repeats": 20,
+    "precision_criterion": 0.001,
+    "prior": {
+      "distribution": "uniform",
+      "lower": -10.0,
+      "upper": 10.0
+    },
+    "seeds": [
+      20260712,
+      20260713
+    ]
+  },
+  "checks": {
+    "AB_concordant_seed20260712": true,
+    "AB_concordant_seed20260713": true,
+    "AB_concordant_seed_agreement": true,
+    "AB_shifted_seed20260712": true,
+    "AB_shifted_seed20260713": true,
+    "AB_shifted_seed_agreement": true,
+    "A_seed20260712": true,
+    "A_seed20260713": true,
+    "A_seed_agreement": true,
+    "B_concordant_seed20260712": true,
+    "B_concordant_seed20260713": true,
+    "B_concordant_seed_agreement": true,
+    "B_shifted_seed20260712": true,
+    "B_shifted_seed20260713": true,
+    "B_shifted_seed_agreement": true,
+    "tension_concordant_logS_within_0_5_of_expectation": true,
+    "tension_concordant_sigma_below_1": true,
+    "tension_shifted_exceeds_concordant_by_1_5_sigma": true,
+    "tension_shifted_logS_within_0_5_of_expectation": true,
+    "tension_shifted_p_below_0_03": true,
+    "tension_shifted_sigma_above_2_2": true
+  },
+  "overall_pass": true,
+  "repeat_agreement": {
+    "A": {
+      "absolute_logZ_difference": 0.007969091027670405,
+      "combined_reported_error": 0.08071238966250609,
+      "pass": true,
+      "tolerance": 0.2
+    },
+    "AB_concordant": {
+      "absolute_logZ_difference": 6.917503363990107e-05,
+      "combined_reported_error": 0.0891211861539013,
+      "pass": true,
+      "tolerance": 0.2
+    },
+    "AB_shifted": {
+      "absolute_logZ_difference": 0.1275973573198499,
+      "combined_reported_error": 0.08712404258921305,
+      "pass": true,
+      "tolerance": 0.2
+    },
+    "B_concordant": {
+      "absolute_logZ_difference": 0.007969091027670405,
+      "combined_reported_error": 0.08071238966250609,
+      "pass": true,
+      "tolerance": 0.2
+    },
+    "B_shifted": {
+      "absolute_logZ_difference": 0.09270518383305992,
+      "combined_reported_error": 0.08059785165151098,
+      "pass": true,
+      "tolerance": 0.2
+    }
+  },
+  "runs": [
+    {
+      "absolute_error": 0.03469663129523104,
+      "analytic_logZ": -2.995732273553991,
+      "analytic_pass": true,
+      "case": "A",
+      "logZ": -2.96103564225876,
+      "logZerr": 0.0568493150996257,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/A_seed20260712",
+      "seed": 20260712
+    },
+    {
+      "absolute_error": 0.026727540267560634,
+      "analytic_logZ": -2.995732273553991,
+      "analytic_pass": true,
+      "case": "A",
+      "logZ": -2.96900473328643,
+      "logZerr": 0.057294373351453,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/A_seed20260713",
+      "seed": 20260713
+    },
+    {
+      "absolute_error": 0.03469663129523104,
+      "analytic_logZ": -2.995732273553991,
+      "analytic_pass": true,
+      "case": "B_concordant",
+      "logZ": -2.96103564225876,
+      "logZerr": 0.0568493150996257,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/B_concordant_seed20260712",
+      "seed": 20260712
+    },
+    {
+      "absolute_error": 0.026727540267560634,
+      "analytic_logZ": -2.995732273553991,
+      "analytic_pass": true,
+      "case": "B_concordant",
+      "logZ": -2.96900473328643,
+      "logZerr": 0.057294373351453,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/B_concordant_seed20260713",
+      "seed": 20260713
+    },
+    {
+      "absolute_error": 0.02948501128900638,
+      "analytic_logZ": -4.261244397038636,
+      "analytic_pass": true,
+      "case": "AB_concordant",
+      "logZ": -4.23175938574963,
+      "logZerr": 0.0629594550158085,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/AB_concordant_seed20260712",
+      "seed": 20260712
+    },
+    {
+      "absolute_error": 0.02941583625536648,
+      "analytic_logZ": -4.261244397038636,
+      "analytic_pass": true,
+      "case": "AB_concordant",
+      "logZ": -4.23182856078327,
+      "logZerr": 0.0630768804364223,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/AB_concordant_seed20260713",
+      "seed": 20260713
+    },
+    {
+      "absolute_error": 0.08622429456848835,
+      "analytic_logZ": -2.9957322745405786,
+      "analytic_pass": true,
+      "case": "B_shifted",
+      "logZ": -2.90950797997209,
+      "logZerr": 0.0561083678969747,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/B_shifted_seed20260712",
+      "seed": 20260712
+    },
+    {
+      "absolute_error": 0.0064808892645715765,
+      "analytic_logZ": -2.9957322745405786,
+      "analytic_pass": true,
+      "case": "B_shifted",
+      "logZ": -3.00221316380515,
+      "logZerr": 0.0578607357607619,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/B_shifted_seed20260713",
+      "seed": 20260713
+    },
+    {
+      "absolute_error": 0.1781844677007154,
+      "analytic_logZ": -8.261244397038636,
+      "analytic_pass": true,
+      "case": "AB_shifted",
+      "logZ": -8.08305992933792,
+      "logZerr": 0.0606290658794623,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/AB_shifted_seed20260712",
+      "seed": 20260712
+    },
+    {
+      "absolute_error": 0.050587110380865496,
+      "analytic_logZ": -8.261244397038636,
+      "analytic_pass": true,
+      "case": "AB_shifted",
+      "logZ": -8.21065728665777,
+      "logZerr": 0.0625676846916268,
+      "root": "/home/salahealer/cosmological_hypothesis_golden_ratio/results/synthetic_benchmark/raw/AB_shifted_seed20260713",
+      "seed": 20260713
+    }
+  ],
+  "software": {
+    "anesthetic": "2.14.9",
+    "cobaya": "3.6.2",
+    "getdist": "1.7.7",
+    "mpi4py": "4.1.2",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "polychordlite_commit": "370f6af5d59a4d3af2ed3333acfba152fdb7a4cf",
+    "python": "3.11.2",
+    "scipy": "1.16.3"
+  },
+  "tension": {
+    "analytic_expectations": {
+      "concordant_logS": 0.5,
+      "concordant_p": 1.0,
+      "concordant_sigma": 0.0,
+      "shifted_logS": -3.5,
+      "shifted_p": 0.004677734981047276,
+      "shifted_sigma": 2.828427124746189
+    },
+    "checks": {
+      "concordant_logS_within_0_5_of_expectation": true,
+      "concordant_sigma_below_1": true,
+      "shifted_exceeds_concordant_by_1_5_sigma": true,
+      "shifted_logS_within_0_5_of_expectation": true,
+      "shifted_p_below_0_03": true,
+      "shifted_sigma_above_2_2": true
+    },
+    "concordant": {
+      "I": {
+        "mean": 1.1779422632345826,
+        "median": 1.1777428699287527,
+        "q025": 1.0503159917199774,
+        "q975": 1.3013405943648242
+      },
+      "d_G": {
+        "mean": 1.0403827051235464,
+        "median": 1.0400956854593795,
+        "q025": 0.921709561990728,
+        "q975": 1.1540216031010766
+      },
+      "logR": {
+        "mean": 1.6989918653930474,
+        "median": 1.6999640772543065,
+        "q025": 1.553662869260909,
+        "q975": 1.8386553208213925
+      },
+      "logS": {
+        "mean": 0.521049602158465,
+        "median": 0.5202857538911467,
+        "q025": 0.477934994753964,
+        "q975": 0.5639240459906311
+      },
+      "p": {
+        "mean": 0.9479369266462027,
+        "median": 1.0,
+        "q025": 0.8224246682595975,
+        "q975": 1.0
+      },
+      "sigma": {
+        "mean": 0.06555094554492388,
+        "median": 0.0,
+        "q025": -0.0,
+        "q975": 0.22442750799618583
+      }
+    },
+    "pass": true,
+    "shifted": {
+      "I": {
+        "mean": 1.2627780116973863,
+        "median": 1.262479050807198,
+        "q025": 1.1379313945413967,
+        "q975": 1.387765763403876
+      },
+      "d_G": {
+        "mean": 1.0328298450772968,
+        "median": 1.0325253221461086,
+        "q025": 0.9216342550942167,
+        "q975": 1.1465898468923053
+      },
+      "logR": {
+        "mean": -2.2249806579541507,
+        "median": -2.2256088362702786,
+        "q025": -2.363782325234662,
+        "q975": -2.082639008246864
+      },
+      "logS": {
+        "mean": -3.4877586696515372,
+        "median": -3.4879915400717545,
+        "q025": -3.531766078850937,
+        "q975": -3.4454068985553996
+      },
+      "p": {
+        "mean": 0.004941738205634438,
+        "median": 0.004927390870406833,
+        "q025": 0.0041243260771683865,
+        "q975": 0.00582504011605974
+      },
+      "sigma": {
+        "mean": 2.811938036550219,
+        "median": 2.8117426546779276,
+        "q025": 2.7574708810683464,
+        "q975": 2.8684927831220093
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "absolute_error": 0.045204260594279067,
+  "acceptance_tolerance": 0.39414105590902504,
+  "analytic_logZ": -2.995732273553991,
+  "checks": {
+    "analytic_evidence_agreement": true,
+    "cobaya_metadata_written": true,
+    "finite_logZ": true,
+    "finite_logZ_error": true,
+    "polychord_raw_output_written": true,
+    "posterior_sample_nonempty": true
+  },
+  "metadata_files": [
+    "results/cobaya_smoke/cobaya_gaussian.input.yaml",
+    "results/cobaya_smoke/cobaya_gaussian.updated.yaml"
+  ],
+  "mpi_size": 2,
+  "numerical_logZ": -3.04093653414827,
+  "overall_pass": true,
+  "posterior_sample_rows": 398,
+  "prior": {
+    "distribution": "uniform",
+    "lower": -10.0,
+    "upper": 10.0
+  },
+  "raw_output_directory": "results/cobaya_smoke/cobaya_gaussian_polychord_raw",
+  "reported_logZ_error": 0.131380351969675,
+  "seed": 20260712,
+  "software": {
+    "cobaya": "3.6.2",
+    "mpi4py": "4.1.2",
+    "numpy": "2.4.6",
+    "pypolychord": "1.22.3",
+    "python": "3.11.2",
+    "scipy": "1.16.3"
+  },
+  "test": "Cobaya-to-PolyChord wrapper smoke test"
+}
