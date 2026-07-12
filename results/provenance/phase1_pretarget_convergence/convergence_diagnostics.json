@@ -1,0 +1,362 @@
+{
+  "checks": {
+    "all_datasets_pass": true,
+    "all_three_datasets_completed": true,
+    "no_runtime_errors": true,
+    "no_target_statistic_computed": true
+  },
+  "datasets": [
+    {
+      "aligned_draws_per_chain": 13424,
+      "arviz": {
+        "bulk_ess": {
+          "A_planck": 2064.77727838449,
+          "cosmomc_theta": 2094.0544815511385,
+          "logA": 1770.5896087778535,
+          "ns": 1853.8599338021718,
+          "ombh2": 1939.5683753418832,
+          "omch2": 2100.734839448044,
+          "tau": 1882.6650366991466
+        },
+        "maximum_rank_rhat": {
+          "parameter": "omch2",
+          "value": 1.0029871843237457
+        },
+        "minimum_bulk_ess": {
+          "parameter": "logA",
+          "value": 1770.5896087778535
+        },
+        "minimum_tail_ess": {
+          "parameter": "tau",
+          "value": 1900.8154379258758
+        },
+        "rank_rhat": {
+          "A_planck": 1.0019236271807792,
+          "cosmomc_theta": 1.0009280158919651,
+          "logA": 1.0009875101727013,
+          "ns": 1.002208718679439,
+          "ombh2": 1.0021665892666896,
+          "omch2": 1.0029871843237457,
+          "tau": 1.0010590345558281
+        },
+        "tail_ess": {
+          "A_planck": 3191.729710359383,
+          "cosmomc_theta": 2587.476217185208,
+          "logA": 2536.082734779674,
+          "ns": 3070.3889149557294,
+          "ombh2": 2895.3951768351853,
+          "omch2": 2879.4266009796197,
+          "tau": 1900.8154379258758
+        }
+      },
+      "burn_fraction": 0.3,
+      "chain_rows": [
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 17767,
+          "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.1.txt",
+          "removed_rows": 5330,
+          "retained_rows": 12437
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 18235,
+          "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.2.txt",
+          "removed_rows": 5470,
+          "retained_rows": 12765
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 18240,
+          "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.3.txt",
+          "removed_rows": 5472,
+          "retained_rows": 12768
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 18297,
+          "path": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.4.txt",
+          "removed_rows": 5489,
+          "retained_rows": 12808
+        }
+      ],
+      "checks": {
+        "four_numbered_chains": true,
+        "getdist_multivariate_R_minus_1": true,
+        "integer_weights": true,
+        "minimum_retained_weight_ess": true,
+        "no_target_statistic_computed": true,
+        "rank_normalized_split_rhat": true
+      },
+      "expanded_draw_lengths": [
+        13424,
+        13750,
+        13784,
+        13799
+      ],
+      "getdist": {
+        "eigenvalues": [
+          -3.362974623733021e-18,
+          -8.249799554302429e-20,
+          1.527493574591802e-19,
+          7.231783386195543e-19,
+          0.0006968414778397278,
+          0.0018233844673562077,
+          0.0035620421084885164
+        ],
+        "multivariate_R_minus_1": 0.0035620421084885164
+      },
+      "pass": true,
+      "retained_weight_ess": 47284.052435697275,
+      "sampled_parameters": [
+        "A_planck",
+        "cosmomc_theta",
+        "logA",
+        "ns",
+        "ombh2",
+        "omch2",
+        "tau"
+      ],
+      "stem": "planck_lcdm_camb"
+    },
+    {
+      "aligned_draws_per_chain": 15988,
+      "arviz": {
+        "bulk_ess": {
+          "A_act": 1941.2282115640705,
+          "P_act": 10385.455454113653,
+          "cosmomc_theta": 2007.3104865292014,
+          "logA": 1755.822002114399,
+          "ns": 1771.3046655025535,
+          "ombh2": 2017.5727542253328,
+          "omch2": 1975.3927633134151,
+          "tau": 1859.1359312285044
+        },
+        "maximum_rank_rhat": {
+          "parameter": "ns",
+          "value": 1.0044981785559184
+        },
+        "minimum_bulk_ess": {
+          "parameter": "logA",
+          "value": 1755.822002114399
+        },
+        "minimum_tail_ess": {
+          "parameter": "tau",
+          "value": 2486.7011724100307
+        },
+        "rank_rhat": {
+          "A_act": 1.002375735204604,
+          "P_act": 1.0002550118078912,
+          "cosmomc_theta": 1.0028975695450404,
+          "logA": 1.001464423384703,
+          "ns": 1.0044981785559184,
+          "ombh2": 1.0016311828268754,
+          "omch2": 1.001451681600329,
+          "tau": 1.0024191655190176
+        },
+        "tail_ess": {
+          "A_act": 4328.780275156014,
+          "P_act": 25585.830263076135,
+          "cosmomc_theta": 2616.6406447305185,
+          "logA": 2953.006454524104,
+          "ns": 2755.334270467848,
+          "ombh2": 2526.5972160667184,
+          "omch2": 2932.8220393057372,
+          "tau": 2486.7011724100307
+        }
+      },
+      "burn_fraction": 0.3,
+      "chain_rows": [
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 21905,
+          "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.1.txt",
+          "removed_rows": 6572,
+          "retained_rows": 15333
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 21847,
+          "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.2.txt",
+          "removed_rows": 6554,
+          "retained_rows": 15293
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 21927,
+          "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.3.txt",
+          "removed_rows": 6578,
+          "retained_rows": 15349
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 21748,
+          "path": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.4.txt",
+          "removed_rows": 6524,
+          "retained_rows": 15224
+        }
+      ],
+      "checks": {
+        "four_numbered_chains": true,
+        "getdist_multivariate_R_minus_1": true,
+        "integer_weights": true,
+        "minimum_retained_weight_ess": true,
+        "no_target_statistic_computed": true,
+        "rank_normalized_split_rhat": true
+      },
+      "expanded_draw_lengths": [
+        16113,
+        16061,
+        16113,
+        15988
+      ],
+      "getdist": {
+        "eigenvalues": [
+          -2.052061822417689e-18,
+          -3.5001055129914717e-19,
+          -2.414793869548429e-20,
+          5.294901877103352e-19,
+          1.0364727448284402e-17,
+          0.0006119967464308647,
+          0.0023232674787813305,
+          0.00927826470963532
+        ],
+        "multivariate_R_minus_1": 0.00927826470963532
+      },
+      "pass": true,
+      "retained_weight_ess": 58378.560981813556,
+      "sampled_parameters": [
+        "A_act",
+        "P_act",
+        "cosmomc_theta",
+        "logA",
+        "ns",
+        "ombh2",
+        "omch2",
+        "tau"
+      ],
+      "stem": "actlite_lcdm_camb"
+    },
+    {
+      "aligned_draws_per_chain": 15793,
+      "arviz": {
+        "bulk_ess": {
+          "A_planck": 2035.9381904261556,
+          "P_act": 26713.644539181318,
+          "cosmomc_theta": 1761.0253156407691,
+          "logA": 1930.0876470255973,
+          "ns": 2002.5344707381,
+          "ombh2": 1715.6743609093928,
+          "omch2": 1647.4295535709653,
+          "tau": 1987.5899087319538
+        },
+        "maximum_rank_rhat": {
+          "parameter": "cosmomc_theta",
+          "value": 1.0027805391246845
+        },
+        "minimum_bulk_ess": {
+          "parameter": "omch2",
+          "value": 1647.4295535709653
+        },
+        "minimum_tail_ess": {
+          "parameter": "cosmomc_theta",
+          "value": 2643.1119147817094
+        },
+        "rank_rhat": {
+          "A_planck": 1.0021538804076071,
+          "P_act": 1.0000463331041307,
+          "cosmomc_theta": 1.0027805391246845,
+          "logA": 1.00200998601335,
+          "ns": 1.0025900250873632,
+          "ombh2": 1.0008696400767514,
+          "omch2": 1.001748992714919,
+          "tau": 1.0013864975092828
+        },
+        "tail_ess": {
+          "A_planck": 3158.103848548379,
+          "P_act": 38695.366094980025,
+          "cosmomc_theta": 2643.1119147817094,
+          "logA": 2932.967110378201,
+          "ns": 3205.48402475381,
+          "ombh2": 2712.7297252519043,
+          "omch2": 2926.034438977479,
+          "tau": 2775.5735551838907
+        }
+      },
+      "burn_fraction": 0.3,
+      "chain_rows": [
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 22843,
+          "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.1.txt",
+          "removed_rows": 6853,
+          "retained_rows": 15990
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 22283,
+          "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.2.txt",
+          "removed_rows": 6685,
+          "retained_rows": 15598
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 22828,
+          "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.3.txt",
+          "removed_rows": 6848,
+          "retained_rows": 15980
+        },
+        {
+          "max_integer_error": 0.0,
+          "original_rows": 22638,
+          "path": "data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.4.txt",
+          "removed_rows": 6791,
+          "retained_rows": 15847
+        }
+      ],
+      "checks": {
+        "four_numbered_chains": true,
+        "getdist_multivariate_R_minus_1": true,
+        "integer_weights": true,
+        "minimum_retained_weight_ess": true,
+        "no_target_statistic_computed": true,
+        "rank_normalized_split_rhat": true
+      },
+      "expanded_draw_lengths": [
+        16177,
+        15793,
+        16202,
+        16081
+      ],
+      "getdist": {
+        "eigenvalues": [
+          -4.526932020942216e-18,
+          -8.036729472937569e-19,
+          3.266792044899655e-20,
+          1.2379619703312082e-18,
+          1.05836125418272e-17,
+          0.0004988077160262748,
+          0.0023485975077750586,
+          0.007420976971386023
+        ],
+        "multivariate_R_minus_1": 0.007420976971386023
+      },
+      "pass": true,
+      "retained_weight_ess": 62591.12492609045,
+      "sampled_parameters": [
+        "A_planck",
+        "P_act",
+        "cosmomc_theta",
+        "logA",
+        "ns",
+        "ombh2",
+        "omch2",
+        "tau"
+      ],
+      "stem": "p-actlite_lcdm_camb"
+    }
+  ],
+  "errors": [],
+  "overall_pass": true,
+  "phase": "pre-target convergence gate"
+}

@@ -1,0 +1,28 @@
+Overall pass: True
+
+planck_lcdm_camb
+  retained weight ESS: 47284.052435697275
+  GetDist R-1: 0.0035620421084885164
+  max rank R-hat: {'parameter': 'omch2', 'value': 1.0029871843237457}
+  min bulk ESS: {'parameter': 'logA', 'value': 1770.5896087778535}
+  min tail ESS: {'parameter': 'tau', 'value': 1900.8154379258758}
+  checks: {'four_numbered_chains': True, 'integer_weights': True, 'minimum_retained_weight_ess': True, 'getdist_multivariate_R_minus_1': True, 'rank_normalized_split_rhat': True, 'no_target_statistic_computed': True}
+
+actlite_lcdm_camb
+  retained weight ESS: 58378.560981813556
+  GetDist R-1: 0.00927826470963532
+  max rank R-hat: {'parameter': 'ns', 'value': 1.0044981785559184}
+  min bulk ESS: {'parameter': 'logA', 'value': 1755.822002114399}
+  min tail ESS: {'parameter': 'tau', 'value': 2486.7011724100307}
+  checks: {'four_numbered_chains': True, 'integer_weights': True, 'minimum_retained_weight_ess': True, 'getdist_multivariate_R_minus_1': True, 'rank_normalized_split_rhat': True, 'no_target_statistic_computed': True}
+
+p-actlite_lcdm_camb
+  retained weight ESS: 62591.12492609045
+  GetDist R-1: 0.007420976971386023
+  max rank R-hat: {'parameter': 'cosmomc_theta', 'value': 1.0027805391246845}
+  min bulk ESS: {'parameter': 'omch2', 'value': 1647.4295535709653}
+  min tail ESS: {'parameter': 'cosmomc_theta', 'value': 2643.1119147817094}
+  checks: {'four_numbered_chains': True, 'integer_weights': True, 'minimum_retained_weight_ess': True, 'getdist_multivariate_R_minus_1': True, 'rank_normalized_split_rhat': True, 'no_target_statistic_computed': True}
+
+Errors: none
+Output: results/provenance/phase1_pretarget_convergence/convergence_diagnostics.json
