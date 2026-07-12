@@ -44,6 +44,18 @@ v0.1.1-confirmatory-execution-lock
 
 The execution-lock release records successful synthetic validation of the direct PolyChord/anesthetic path and the Cobaya-to-PolyChord wrapper, together with the pinned software environment.
 
+### 3. Chain ingestion lock
+
+The chain ingestion protocol, burn-in fraction (30%), CAMB version (1.5.0), and ArviZ version (0.23.4) were frozen before any golden-ratio posterior evaluation under:
+
+```text
+v0.1.2-chain-ingestion-lock
+```
+
+- **Version DOI:** [10.5281/zenodo.21325129](https://doi.org/10.5281/zenodo.21325129)
+
+The chain-ingestion lock records the frozen burn-in protocol, confirmed convergence diagnostics, and pinned CAMB/ArviZ environment, ensuring that all subsequent posterior evaluations begin from a consistent, reproducible ingestion state.
+
 - **Concept DOI:** [10.5281/zenodo.21322456](https://doi.org/10.5281/zenodo.21322456)
 
 The concept DOI resolves to the evolving project record. Both frozen tags remain immutable; all subsequent confirmatory work proceeds on the separate `confirmatory-analysis` branch.
@@ -143,11 +155,13 @@ See [`references.bib`](references.bib) and [`docs/SOURCE_PROVENANCE.md`](docs/SO
 
 ## Citation
 
-For the latest frozen execution-lock release, cite:
+For the latest frozen chain-ingestion lock release, cite:
 
-> Gherbi, S.-E. (2026). *Golden-Ratio Cosmological Hypothesis* (Version v0.1.1-confirmatory-execution-lock). Zenodo. https://doi.org/10.5281/zenodo.21324108
+> Gherbi, S.-E. (2026). *Golden-Ratio Cosmological Hypothesis* (Version v0.1.2-chain-ingestion-lock). Zenodo. https://doi.org/10.5281/zenodo.21325129
 
-For the earlier preregistration freeze specifically, cite version DOI `10.5281/zenodo.21322457`.
+For the earlier execution lock release, cite version DOI `10.5281/zenodo.21324108`.
+
+For the preregistration freeze specifically, cite version DOI `10.5281/zenodo.21322457`.
 
 Citation metadata is also provided in [`CITATION.cff`](CITATION.cff). Use the concept DOI `10.5281/zenodo.21322456` when citing the evolving project across releases.
 
