@@ -1,0 +1,10 @@
+Name: camb
+Version: 1.5.0
+Summary: Code for Anisotropies in the Microwave Background
+Home-page: https://camb.info/
+Author: Antony Lewis
+Author-email: 
+License: 
+Location: /home/salahealer/book4/venv/lib/python3.11/site-packages
+Requires: scipy, sympy
+Required-by: 

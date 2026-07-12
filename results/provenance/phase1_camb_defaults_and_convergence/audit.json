@@ -1,0 +1,336 @@
+{
+  "audit": "CAMB 1.5.0 defaults and released-chain convergence metadata",
+  "checks": {
+    "all_three_chain_sampler_blocks_present": true,
+    "all_three_progress_blocks_present": true,
+    "camb_version_is_1_5_0": true,
+    "flat_default": true,
+    "lambda_default_w": true,
+    "lambda_default_wa": true,
+    "no_golden_ratio_statistic_computed": true,
+    "one_massive_neutrino_default": true,
+    "positive_massive_neutrino_density": true
+  },
+  "constants": {
+    "COBE_CMBTemp": 2.7255,
+    "default_nnu": 3.044
+  },
+  "nominal_default_resolution": {
+    "derived_background_only": {
+      "DAstar": 13.90161812825119,
+      "age": 13.839230539800058,
+      "kd": 0.14011882340434606,
+      "keq": 0.010357913922703412,
+      "rdrag": 147.51455206562085,
+      "rstar": 144.72277401661748,
+      "thetad": 0.16128279327026465,
+      "thetaeq": 0.8136529608351292,
+      "thetarseq": 0.4498592050129184,
+      "thetastar": 1.0410498452874957,
+      "zdrag": 1059.0858457423597,
+      "zeq": 3394.034123395346,
+      "zstar": 1090.4110769301637
+    },
+    "nominal_inputs": {
+      "H0": 67.0,
+      "ombh2": 0.022,
+      "omch2": 0.12
+    },
+    "resolved_background": {
+      "H0": 67.0,
+      "TCMB": 2.7255,
+      "dark_energy_class": "DarkEnergyFluid",
+      "nu_mass_degeneracies": [
+        1.0146666666666666
+      ],
+      "nu_mass_eigenstates": 1,
+      "nu_mass_fractions": [
+        1.0
+      ],
+      "nu_mass_numbers": [
+        1
+      ],
+      "num_nu_massive": 1,
+      "num_nu_massless": 2.0293333333333337,
+      "ombh2": 0.022,
+      "omch2": 0.12,
+      "omk": 0.0,
+      "omnuh2": 0.000644866570625114,
+      "w": -1.0,
+      "wa": 0.0
+    }
+  },
+  "overall_pass": true,
+  "released_chain_metadata": {
+    "actlite_lcdm_camb": {
+      "official_external_burnin_fraction": null,
+      "progress": {
+        "columns": [
+          "N",
+          "timestamp",
+          "acceptance_rate",
+          "Rminus1",
+          "Rminus1_cl"
+        ],
+        "final_diagnostics": {
+          "N": 86685.0,
+          "Rminus1": 0.011515,
+          "Rminus1_cl": NaN,
+          "acceptance_rate": 0.952093,
+          "timestamp": "2025-01-17T13:46:51.086216"
+        },
+        "path": "/home/salahealer/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.progress",
+        "rows": 77
+      },
+      "sampler": {
+        "mcmc": {
+          "Rminus1_cl_level": 0.95,
+          "Rminus1_cl_stop": 0.05,
+          "Rminus1_single_split": 4,
+          "Rminus1_stop": 0.01,
+          "blocking": [
+            [
+              1,
+              [
+                "ombh2",
+                "omch2",
+                "cosmomc_theta",
+                "tau"
+              ]
+            ],
+            [
+              1,
+              [
+                "logA",
+                "ns"
+              ]
+            ],
+            [
+              32,
+              [
+                "A_act",
+                "P_act"
+              ]
+            ]
+          ],
+          "burn_in": 0,
+          "callback_every": null,
+          "callback_function": null,
+          "check_every": null,
+          "covmat": "lcdm.covmat",
+          "covmat_params": null,
+          "drag": false,
+          "drag_limits": null,
+          "fallback_covmat_scale": 4,
+          "learn_every": "40d",
+          "learn_proposal": true,
+          "learn_proposal_Rminus1_max": 10.0,
+          "learn_proposal_Rminus1_max_early": 30.0,
+          "learn_proposal_Rminus1_min": 0.0,
+          "max_samples": Infinity,
+          "max_tries": "40d",
+          "measure_speeds": true,
+          "output_every": "60s",
+          "oversample": null,
+          "oversample_power": 0.4,
+          "oversample_thin": true,
+          "proposal_scale": 2.4,
+          "seed": null,
+          "temperature": 1,
+          "version": "3.5.4"
+        }
+      }
+    },
+    "p-actlite_lcdm_camb": {
+      "official_external_burnin_fraction": null,
+      "progress": {
+        "columns": [
+          "N",
+          "timestamp",
+          "acceptance_rate",
+          "Rminus1",
+          "Rminus1_cl"
+        ],
+        "final_diagnostics": {
+          "N": 89936.0,
+          "Rminus1": 0.00748,
+          "Rminus1_cl": 0.076828,
+          "acceptance_rate": 0.987333,
+          "timestamp": "2025-01-17T13:50:01.248266"
+        },
+        "path": "/home/salahealer/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/chains/p-actlite_lcdm_camb/p-actlite_lcdm_camb/p-actlite_lcdm_camb.progress",
+        "rows": 78
+      },
+      "sampler": {
+        "mcmc": {
+          "Rminus1_cl_level": 0.95,
+          "Rminus1_cl_stop": 0.05,
+          "Rminus1_single_split": 4,
+          "Rminus1_stop": 0.01,
+          "blocking": [
+            [
+              1,
+              [
+                "ombh2",
+                "omch2",
+                "cosmomc_theta",
+                "tau"
+              ]
+            ],
+            [
+              1,
+              [
+                "logA",
+                "ns"
+              ]
+            ],
+            [
+              23,
+              [
+                "A_planck"
+              ]
+            ],
+            [
+              32,
+              [
+                "P_act"
+              ]
+            ]
+          ],
+          "burn_in": 0,
+          "callback_every": null,
+          "callback_function": null,
+          "check_every": null,
+          "covmat": "lcdm.covmat",
+          "covmat_params": null,
+          "drag": false,
+          "drag_limits": null,
+          "fallback_covmat_scale": 4,
+          "learn_every": "40d",
+          "learn_proposal": true,
+          "learn_proposal_Rminus1_max": 10.0,
+          "learn_proposal_Rminus1_max_early": 30.0,
+          "learn_proposal_Rminus1_min": 0.0,
+          "max_samples": Infinity,
+          "max_tries": "40d",
+          "measure_speeds": true,
+          "output_every": "60s",
+          "oversample": null,
+          "oversample_power": 0.4,
+          "oversample_thin": true,
+          "proposal_scale": 2.4,
+          "seed": null,
+          "temperature": 1,
+          "version": "3.5.4"
+        }
+      }
+    },
+    "planck_lcdm_camb": {
+      "official_external_burnin_fraction": null,
+      "progress": {
+        "columns": [
+          "N",
+          "timestamp",
+          "acceptance_rate",
+          "Rminus1",
+          "Rminus1_cl"
+        ],
+        "final_diagnostics": {
+          "N": 72539.0,
+          "Rminus1": 0.004164,
+          "Rminus1_cl": 0.046883,
+          "acceptance_rate": 0.926749,
+          "timestamp": "2025-01-16T13:01:06.320255"
+        },
+        "path": "/home/salahealer/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.progress",
+        "rows": 74
+      },
+      "sampler": {
+        "mcmc": {
+          "Rminus1_cl_level": 0.95,
+          "Rminus1_cl_stop": 0.05,
+          "Rminus1_single_split": 4,
+          "Rminus1_stop": 0.01,
+          "blocking": [
+            [
+              1,
+              [
+                "ombh2",
+                "omch2",
+                "cosmomc_theta",
+                "tau"
+              ]
+            ],
+            [
+              1,
+              [
+                "logA",
+                "ns"
+              ]
+            ],
+            [
+              26,
+              [
+                "A_planck"
+              ]
+            ]
+          ],
+          "burn_in": 0,
+          "callback_every": null,
+          "callback_function": null,
+          "check_every": null,
+          "covmat": "lcdm.covmat",
+          "covmat_params": null,
+          "drag": false,
+          "drag_limits": null,
+          "fallback_covmat_scale": 4,
+          "learn_every": "40d",
+          "learn_proposal": true,
+          "learn_proposal_Rminus1_max": 10.0,
+          "learn_proposal_Rminus1_max_early": 30.0,
+          "learn_proposal_Rminus1_min": 0.0,
+          "max_samples": Infinity,
+          "max_tries": "40d",
+          "measure_speeds": true,
+          "output_every": "60s",
+          "oversample": null,
+          "oversample_power": 0.4,
+          "oversample_thin": true,
+          "proposal_scale": 2.4,
+          "seed": null,
+          "temperature": 1,
+          "version": "3.5.4"
+        }
+      }
+    }
+  },
+  "set_cosmology_signature_defaults": {
+    "Alens": 1.0,
+    "H0": null,
+    "TCMB": 2.7255,
+    "YHe": null,
+    "bbn_predictor": null,
+    "cosmomc_theta": null,
+    "deltazrei": null,
+    "meffsterile": 0.0,
+    "mnu": 0.06,
+    "neutrino_hierarchy": "degenerate",
+    "nnu": 3.044,
+    "num_massive_neutrinos": 1,
+    "ombh2": 0.022,
+    "omch2": 0.12,
+    "omk": 0.0,
+    "standard_neutrino_neff": 3.044,
+    "tau": null,
+    "theta_H0_range": [
+      10,
+      100
+    ],
+    "thetastar": null,
+    "zrei": null
+  },
+  "software": {
+    "camb": "1.5.0",
+    "python": "3.11.2"
+  }
+}
