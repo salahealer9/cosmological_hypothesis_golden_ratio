@@ -1,0 +1,116 @@
+{
+  "act_lite": {
+    "expected_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+    "installed_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+    "record": {
+      "direct_url": {
+        "url": "https://github.com/ACTCollaboration/DR6-ACT-lite.git",
+        "vcs_info": {
+          "commit_id": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+          "requested_revision": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+          "vcs": "git"
+        }
+      },
+      "name": "ACT-DR6-CMBonly",
+      "version": "1.0.0"
+    }
+  },
+  "checks": {
+    "act_lite_commit_matches": true,
+    "at_least_16_GiB_memory": true,
+    "at_least_eight_cpus": true,
+    "bootstrap_commit_is_ancestor": true,
+    "bootstrap_no_likelihood_data": true,
+    "bootstrap_no_likelihood_evaluation": true,
+    "bootstrap_no_mcmc": true,
+    "branch_matches": true,
+    "environment_inputs_unchanged_since_bootstrap": true,
+    "mpi_four_rank_pass": true,
+    "no_target_statistic_computed": true,
+    "package_versions_match": true,
+    "packages_path_exists": true,
+    "packages_path_matches_bootstrap": true,
+    "python_3_11": true,
+    "raw_data_checksums_pass": true,
+    "released_chain_checksums_pass": true,
+    "resume_seed_checksums_pass": true,
+    "tracked_worktree_clean": true
+  },
+  "checksums": {
+    "raw_data": {
+      "entries": 20,
+      "failures": [],
+      "pass": true,
+      "returncode": 0,
+      "stderr": ""
+    },
+    "released_chains": {
+      "entries": 41,
+      "failures": [],
+      "pass": true,
+      "returncode": 0,
+      "stderr": ""
+    },
+    "resume_seed": {
+      "entries": 41,
+      "failures": [],
+      "pass": true,
+      "returncode": 0,
+      "stderr": ""
+    }
+  },
+  "likelihood_data_installed": false,
+  "likelihood_evaluated": false,
+  "machine": {
+    "hostname": "earthgrid-python",
+    "logical_cpus": 8,
+    "memory_GiB": 31.35279083251953
+  },
+  "mcmc_started": false,
+  "mpi": {
+    "pass": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": [
+      "rank=0 size=4",
+      "rank=1 size=4",
+      "rank=2 size=4",
+      "rank=3 size=4"
+    ]
+  },
+  "overall_pass": true,
+  "packages": {
+    "arviz": "0.23.4",
+    "camb": "1.5.0",
+    "cobaya": "3.5.4",
+    "getdist": "1.7.7",
+    "mpi4py": "4.1.2"
+  },
+  "packages_path": "/opt/cobaya-packages-act-dr6",
+  "purpose": "pre-likelihood cloud deployment verification",
+  "python": {
+    "executable": "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/bin/python",
+    "version": "3.11.2"
+  },
+  "repository": {
+    "bootstrap_head": "956986c86f103a91f5ce970b5afd744e34ef44bf",
+    "bootstrap_is_ancestor": true,
+    "branch": "confirmatory-analysis",
+    "changed_since_bootstrap": [
+      "results/provenance/cloud_mcmc_environment/act-lite-direct-url.json",
+      "results/provenance/cloud_mcmc_environment/checksums.txt",
+      "results/provenance/cloud_mcmc_environment/console.log",
+      "results/provenance/cloud_mcmc_environment/core-packages.txt",
+      "results/provenance/cloud_mcmc_environment/environment.json",
+      "results/provenance/cloud_mcmc_environment/mpi-four-rank-test.txt",
+      "results/provenance/cloud_mcmc_environment/pip-freeze.txt",
+      "results/provenance/cloud_mcmc_environment/toolchain.txt",
+      "scripts/verify_cloud_mcmc_environment.py"
+    ],
+    "critical_changes_since_bootstrap": [],
+    "head": "78ed81c47b01aba727d5cf4b004d26231d7ef44e",
+    "root": "/opt/cosmological_hypothesis_golden_ratio",
+    "tracked_status": []
+  },
+  "target_statistic_computed": false
+}
