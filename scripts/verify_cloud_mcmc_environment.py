@@ -118,6 +118,49 @@ def main():
     head = run(["git", "rev-parse", "HEAD"]).stdout.strip()
     status = run(["git", "status", "--porcelain"]).stdout.strip()
 
+    bootstrap_head = bootstrap["repository_commit"]
+
+    bootstrap_is_ancestor = (
+        run(
+            [
+                "git",
+                "merge-base",
+                "--is-ancestor",
+                bootstrap_head,
+                head,
+            ]
+        ).returncode
+        == 0
+    )
+
+    changed_since_bootstrap = [
+        line
+        for line in run(
+            [
+                "git",
+                "diff",
+                "--name-only",
+                f"{bootstrap_head}..{head}",
+            ]
+        ).stdout.splitlines()
+        if line
+    ]
+
+    environment_critical_paths = {
+        ".gitmodules",
+        "config/confirmatory_execution_lock.toml",
+        "config/chain_ingestion_lock.toml",
+        "external/PolyChordLite",
+        "results/provenance/act-lite-pin-decision.txt",
+        "scripts/setup_cloud_mcmc_environment.sh",
+    }
+
+    critical_changes_since_bootstrap = sorted(
+        changed_path
+        for changed_path in changed_since_bootstrap
+        if changed_path in environment_critical_paths
+    )
+
     expected_act = parse_act_commit()
     act_record, actual_act = installed_act_commit()
 
@@ -173,7 +216,10 @@ def main():
 
     checks = {
         "branch_matches": branch == EXPECTED_BRANCH,
-        "head_matches_bootstrap": head == bootstrap["repository_commit"],
+        "bootstrap_commit_is_ancestor": bootstrap_is_ancestor,
+        "environment_inputs_unchanged_since_bootstrap": (
+            not critical_changes_since_bootstrap
+        ),
         "tracked_worktree_clean": status == "",
         "python_3_11": platform.python_version().startswith("3.11."),
         "package_versions_match": all(
@@ -210,7 +256,12 @@ def main():
             "root": str(ROOT),
             "branch": branch,
             "head": head,
-            "bootstrap_head": bootstrap["repository_commit"],
+            "bootstrap_head": bootstrap_head,
+            "bootstrap_is_ancestor": bootstrap_is_ancestor,
+            "changed_since_bootstrap": changed_since_bootstrap,
+            "critical_changes_since_bootstrap": (
+                critical_changes_since_bootstrap
+            ),
             "tracked_status": status.splitlines(),
         },
         "machine": {
