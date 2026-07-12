@@ -1,5 +1,7 @@
 # Golden-Ratio Cosmological Hypothesis
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21322457.svg)](https://doi.org/10.5281/zenodo.21322457)
+
 A reproducible research project for testing the dimensionless hypothesis
 
 \[
@@ -15,6 +17,19 @@ The project deliberately separates:
 4. the **physical-mechanism question**, which remains open.
 
 This is not presented as established cosmology. The relation was noticed after modern cosmological parameters were already known, so Planck-era agreement is discovery evidence only, not an independent confirmation.
+
+## Preregistration status
+
+The confirmatory protocol and analysis configuration were frozen before the held-out analysis under the immutable release tag:
+
+```text
+v0.1.0-preregistration-freeze
+```
+
+- **Version DOI:** [10.5281/zenodo.21322457](https://doi.org/10.5281/zenodo.21322457)
+- **Concept DOI:** [10.5281/zenodo.21322456](https://doi.org/10.5281/zenodo.21322456)
+
+The version DOI identifies this exact frozen preregistration release. The concept DOI resolves to the project record and should be used when referring to the evolving project across releases. Confirmatory work must proceed outside the frozen tag, on a separate analysis branch.
 
 ## Exact idealized prediction
 
@@ -69,10 +84,11 @@ If a chain supplies \(H_0\) and age directly, pass `--h0-column` and `--age-gyr-
 ## Research workflow
 
 - Read [`docs/HYPOTHESIS.md`](docs/HYPOTHESIS.md) for the precise claim.
-- Freeze [`docs/PREREGISTRATION.md`](docs/PREREGISTRATION.md) before confirmatory analysis.
+- Treat [`docs/PREREGISTRATION.md`](docs/PREREGISTRATION.md) and [`config/analysis_plan.toml`](config/analysis_plan.toml) at `v0.1.0-preregistration-freeze` as immutable.
 - Follow [`docs/DATA_PLAN.md`](docs/DATA_PLAN.md) and preserve raw-file checksums.
-- Record every model and dataset combination in [`config/analysis_plan.toml`](config/analysis_plan.toml).
+- Record every model and dataset combination in the analysis outputs.
 - Keep exploratory and confirmatory outputs in separate subdirectories.
+- Label all post-freeze deviations from the preregistered protocol explicitly.
 
 ## Repository map
 
@@ -106,6 +122,14 @@ cosmological_hypothesis_golden_ratio/
 - Brout et al., *The Pantheon+ Analysis: Cosmological Constraints*, ApJ 938, 110 (2022), DOI: 10.3847/1538-4357/ac8e04.
 
 See [`references.bib`](references.bib) and [`docs/SOURCE_PROVENANCE.md`](docs/SOURCE_PROVENANCE.md).
+
+## Citation
+
+For the exact frozen preregistration release, cite:
+
+> Gherbi, S.-E. (2026). *Golden-Ratio Cosmological Hypothesis* (Version v0.1.0-preregistration-freeze). Zenodo. https://doi.org/10.5281/zenodo.21322457
+
+Citation metadata is also provided in [`CITATION.cff`](CITATION.cff). Use the concept DOI `10.5281/zenodo.21322456` when citing the project as a whole rather than this specific archived version.
 
 ## Author
 
