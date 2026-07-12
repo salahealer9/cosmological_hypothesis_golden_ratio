@@ -1,0 +1,10 @@
+
+=== planck_lcdm_camb ===
+
+=== actlite_lcdm_camb ===
+
+=== p-actlite_lcdm_camb ===
+
+At least one derived-X gate failed.
+No posterior target summary or derived arrays were written.
+Technical output: results/confirmatory/phase1_chain_only/technical_gate_failure.json

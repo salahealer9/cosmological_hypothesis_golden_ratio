@@ -1,0 +1,117 @@
+{
+  "datasets": [
+    {
+      "dataset_key": "planck",
+      "derived_X_convergence": {
+        "aligned_draws_per_chain": 13424,
+        "bulk_ESS_X": 2126.0552411957938,
+        "checks": {
+          "bulk_ESS_X": false,
+          "getdist_R_minus_1": true,
+          "rank_Rhat": true,
+          "tail_ESS_X": false
+        },
+        "expanded_lengths": [
+          13424,
+          13750,
+          13784,
+          13799
+        ],
+        "getdist_R_minus_1": 0.0007958797490926026,
+        "pass": false,
+        "rank_Rhat": 1.0026721902229414,
+        "tail_ESS_X": 2676.966826364339
+      },
+      "pass": false,
+      "role": "discovery_context_and_pipeline_validation_only",
+      "stem": "planck_lcdm_camb",
+      "technical_validation": {
+        "checks": {
+          "closure": true,
+          "physical_Omega_Lambda": true,
+          "positive_age": true
+        },
+        "maximum_closure_error": 3.3306690738754696e-16,
+        "pass": true
+      },
+      "transform_seconds": 119.56805216800058
+    },
+    {
+      "dataset_key": "actlite",
+      "derived_X_convergence": {
+        "aligned_draws_per_chain": 15988,
+        "bulk_ESS_X": 1985.1665624583625,
+        "checks": {
+          "bulk_ESS_X": false,
+          "getdist_R_minus_1": true,
+          "rank_Rhat": true,
+          "tail_ESS_X": false
+        },
+        "expanded_lengths": [
+          16113,
+          16061,
+          16113,
+          15988
+        ],
+        "getdist_R_minus_1": 0.0017138856338834785,
+        "pass": false,
+        "rank_Rhat": 1.0015649786914225,
+        "tail_ESS_X": 2965.1495555705546
+      },
+      "pass": false,
+      "role": "primary_independent_CMB_posterior_diagnostic",
+      "stem": "actlite_lcdm_camb",
+      "technical_validation": {
+        "checks": {
+          "closure": true,
+          "physical_Omega_Lambda": true,
+          "positive_age": true
+        },
+        "maximum_closure_error": 3.3306690738754696e-16,
+        "pass": true
+      },
+      "transform_seconds": 115.58682225899611
+    },
+    {
+      "dataset_key": "planck_actlite",
+      "derived_X_convergence": {
+        "aligned_draws_per_chain": 15793,
+        "bulk_ESS_X": 1615.9510010515892,
+        "checks": {
+          "bulk_ESS_X": false,
+          "getdist_R_minus_1": true,
+          "rank_Rhat": true,
+          "tail_ESS_X": false
+        },
+        "expanded_lengths": [
+          16177,
+          15793,
+          16202,
+          16081
+        ],
+        "getdist_R_minus_1": 0.0013738313539110036,
+        "pass": false,
+        "rank_Rhat": 1.0018632243489578,
+        "tail_ESS_X": 2872.5873430084544
+      },
+      "pass": false,
+      "role": "secondary_CMB_conditioning_block_for_DESI",
+      "stem": "p-actlite_lcdm_camb",
+      "technical_validation": {
+        "checks": {
+          "closure": true,
+          "physical_Omega_Lambda": true,
+          "positive_age": true
+        },
+        "maximum_closure_error": 2.220446049250313e-16,
+        "pass": true
+      },
+      "transform_seconds": 139.29416834199583
+    }
+  ],
+  "lock": "config/chain_ingestion_lock.toml",
+  "overall_pass": false,
+  "phase": "chain-only posterior transformation technical gate",
+  "posterior_target_output_released": false,
+  "wall_seconds": 376.14087552000274
+}
