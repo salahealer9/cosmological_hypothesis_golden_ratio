@@ -88,6 +88,26 @@ def finite_posterior_record(posterior: dict[str, Any], expected_likelihoods: set
     }
 
 
+def current_affinity_record(rank: int, requested_threads: int) -> dict[str, Any]:
+    """Record and validate the logical CPUs available to this MPI rank."""
+    if not hasattr(os, "sched_getaffinity"):
+        raise RuntimeError("os.sched_getaffinity is unavailable on this platform")
+    logical_cpus = sorted(os.sched_getaffinity(0))
+    if len(logical_cpus) < requested_threads:
+        raise RuntimeError(
+            f"Rank {rank} has affinity to {len(logical_cpus)} logical CPUs "
+            f"but {requested_threads} OpenMP threads were requested: "
+            f"{logical_cpus}"
+        )
+    return {
+        "rank": rank,
+        "logical_cpus": logical_cpus,
+        "logical_cpu_count": len(logical_cpus),
+        "requested_openmp_threads": requested_threads,
+        "enough_logical_cpus": len(logical_cpus) >= requested_threads,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", choices=sorted(DATASETS), required=True)
@@ -110,6 +130,8 @@ def main() -> int:
     packages_path = Path(os.environ["COBAYA_PACKAGES_PATH"]).resolve()
 
     thread_gate = verify_thread_environment(args.omp_threads)
+    affinity_record = current_affinity_record(rank, args.omp_threads)
+    affinity_all = comm.gather(affinity_record, root=0)
     template_path = (root / dataset["runtime_template"]).resolve()
     chain_path = (
         root / dataset["directory"] / f"{dataset['prefix']}.{rank + 1}.txt"
@@ -210,10 +232,24 @@ def main() -> int:
             assert initialization_all is not None
             assert local_times_all is not None
             assert chain_metadata is not None
+            assert affinity_all is not None
             flattened = [value for values in local_times_all for value in values]
+            affinity_sets = [
+                set(item["logical_cpus"])
+                for item in affinity_all
+            ]
+            affinity_union = set().union(*affinity_sets)
+            affinity_sets_are_disjoint = (
+                len(affinity_union)
+                == sum(len(values) for values in affinity_sets)
+            )
             checks = {
                 "mpi_size_is_four": size == EXPECTED_MPI_RANKS,
                 "thread_environment_matches": all(thread_gate["checks"].values()),
+                "each_rank_has_enough_logical_cpus": all(
+                    item["enough_logical_cpus"] for item in affinity_all
+                ),
+                "rank_cpu_affinity_sets_are_disjoint": affinity_sets_are_disjoint,
                 "runtime_gates_passed": True,
                 "exact_likelihood_set": declared_likelihoods == expected_likelihoods,
                 "all_evaluations_finite": all(
@@ -254,6 +290,11 @@ def main() -> int:
                     "hostname": platform.node(),
                     "logical_cpus": os.cpu_count(),
                     "python": sys.version,
+                    "rank_cpu_affinity": affinity_all,
+                    "binding_model": (
+                        "four MPI ranks mapped one per physical core; "
+                        "OpenMP places are hardware threads within each bound core"
+                    ),
                 },
                 "inputs": {
                     "runtime_template": str(template_path.relative_to(root)),

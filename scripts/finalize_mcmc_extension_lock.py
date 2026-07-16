@@ -122,7 +122,7 @@ def main() -> int:
         "mkl_threads = 1",
         "numexpr_threads = 1",
         'omp_proc_bind = "close"',
-        'omp_places = "cores"',
+        'omp_places = "threads"',
         "minimum_rows_per_segment = 100",
         "maximum_rows_per_segment = 100000",
         'target_rows_rule = "max_current_stored_rows_plus_requested_minimum_growth"',

@@ -69,15 +69,15 @@ for DATASET in "${DATASETS[@]}"; do
     export MKL_NUM_THREADS=1
     export NUMEXPR_NUM_THREADS=1
     export OMP_PROC_BIND=close
-    export OMP_PLACES=cores
+    export OMP_PLACES=threads
 
     echo "=== dataset=$DATASET threads=$THREADS ===" | tee "$RUN_DIR/console.log"
 
     set +e
     mpirun \
       --report-bindings \
+      --map-by core \
       --bind-to core \
-      --map-by "slot:PE=$THREADS" \
       -np 4 \
       -x COBAYA_PACKAGES_PATH \
       -x CAMB_COSMOREC_SOURCE_DIR \

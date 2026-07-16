@@ -51,7 +51,7 @@ export OPENBLAS_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 export NUMEXPR_NUM_THREADS=1
 export OMP_PROC_BIND=close
-export OMP_PLACES=cores
+export OMP_PLACES=threads
 
 TMP_LOG="/tmp/mcmc-extension-${DATASET}-${SEGMENT_LABEL}.log"
 [[ ! -e "$TMP_LOG" ]] || {
@@ -63,8 +63,8 @@ set -o pipefail
 set +e
 mpirun \
   --report-bindings \
+  --map-by core \
   --bind-to core \
-  --map-by "slot:PE=$THREADS" \
   -np 4 \
   -x COBAYA_PACKAGES_PATH \
   -x CAMB_COSMOREC_SOURCE_DIR \

@@ -422,7 +422,7 @@ def verify_thread_environment(omp_threads: int) -> dict[str, Any]:
         "MKL_NUM_THREADS": "1",
         "NUMEXPR_NUM_THREADS": "1",
         "OMP_PROC_BIND": "close",
-        "OMP_PLACES": "cores",
+        "OMP_PLACES": "threads",
     }
     actual = {key: os.environ.get(key) for key in expected}
     checks = {key: actual[key] == value for key, value in expected.items()}
