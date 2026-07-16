@@ -1,0 +1,6 @@
+[model] *WARNING* Ignored blocks/options: ['version']
+[prior] *WARNING* External prior 'cal_dip_prior' loaded. Mind that it might not be normalized!
+[camb] `camb` module loaded successfully from /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb
+Overall: FAIL
+Output: /opt/cosmological_hypothesis_golden_ratio/results/provenance/locked_likelihood_smoke_test
+Error: TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'

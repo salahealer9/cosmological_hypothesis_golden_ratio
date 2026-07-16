@@ -1,0 +1,6 @@
+[model] *WARNING* Ignored blocks/options: ['version']
+[prior] *WARNING* External prior 'cal_dip_prior' loaded. Mind that it might not be normalized!
+[camb] `camb` module loaded successfully from /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb
+Overall: FAIL
+Output: /opt/cosmological_hypothesis_golden_ratio/results/provenance/locked_likelihood_smoke_test
+Error: FileNotFoundError: [Errno 2] No such file or directory: '/opt/cobaya-packages-act-dr6/data/ACTDR6CMBonly/v1.0/dr6_data_cmb_sacc_oct22.fits'

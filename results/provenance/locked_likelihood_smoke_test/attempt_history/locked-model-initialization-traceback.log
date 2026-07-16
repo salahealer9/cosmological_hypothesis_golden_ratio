@@ -1,0 +1,73 @@
+YAML: /opt/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.updated.yaml
+Packages path: /opt/cobaya-packages-act-dr6
+CAMB source: /opt/cosmology-software/CAMB-1.5.0-cosmorec
+
+Resolved theory configuration:
+{'camb': {'version': '1.5.0', 'path': None, 'speed': 0.3, 'stop_at_error': True, 'extra_args': {'kmax': 10, 'k_per_logint': 130, 'nonlinear': True, 'lens_potential_accuracy': 8, 'lens_margin': 2050, 'lAccuracyBoost': 1.2, 'min_l_logl_sampling': 6000, 'DoLateRadTruncation': False, 'recombination_model': 'CosmoRec'}, 'ignore_obsolete': False, 'use_renames': False, 'external_primordial_pk': False, 'renames': {'omegabh2': 'ombh2', 'omegach2': 'omch2', 'omegal': 'omega_de', 'omegak': 'omk', 'yhe': 'YHe', 'yheused': 'YHe', 'YpBBN': 'Y_p'}, 'params': {'H0': {'latex': 'H_0', 'derived': True}, 'thetastar': {'latex': '\\theta_\\star', 'derived': True}, 'sigma8': {'latex': '\\sigma_8', 'derived': True}, 'YHe': {'latex': 'Y_\\mathrm{He}', 'derived': True}, 'zrei': {'latex': 'z_\\mathrm{reio}', 'derived': True}, 'taurend': {'latex': '\\tau_\\mathrm{rec}', 'derived': True}, 'zstar': {'latex': 'z_\\star', 'derived': True}, 'rstar': {'latex': 'r_{s,\\star}', 'derived': True}, 'zdrag': {'latex': 'z_d', 'derived': True}}, 'input_params': ['As', 'ns', 'ombh2', 'omch2', 'cosmomc_theta', 'tau'], 'output_params': ['H0', 'thetastar', 'sigma8', 'YHe', 'zrei', 'taurend', 'zstar', 'rstar', 'zdrag']}}
+
+Likelihood path-related settings:
+planck_2018_lowl.TT: {}
+planck_2018_lowl.EE_sroll2: {}
+act_dr6_cmbonly.PlanckActCut: {'path': None, 'dataset_file': 'plik_lite_v22.dataset'}
+act_dr6_cmbonly.ACTDR6CMBonly: {'data_folder': 'ACTDR6CMBonly'}
+
+Beginning model initialization only...
+[model] *WARNING* Ignored blocks/options: ['version']
+[prior] *WARNING* External prior 'cal_dip_prior' loaded. Mind that it might not be normalized!
+[camb] `camb` module loaded successfully from /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb
+Traceback (most recent call last):
+  File "<stdin>", line 67, in <module>
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/model.py", line 1365, in get_model
+    return Model(updated_info["params"], updated_info["likelihood"],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/model.py", line 247, in __init__
+    self.likelihood = LikelihoodCollection(info_likelihood, theory=self.theory,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/likelihood.py", line 276, in __init__
+    self.add_instance(name, like_class(info, packages_path=packages_path,
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/likelihoods/base_classes/InstallableLikelihood.py", line 74, in __init__
+    super().__init__(*args, **kwargs)
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/likelihood.py", line 94, in __init__
+    super().__init__(info, name=name, timing=timing,
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/theory.py", line 65, in __init__
+    super().__init__(info, name=name, timing=timing,
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/component.py", line 361, in __init__
+    self.initialize()
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/act_dr6_cmbonly/act_dr6_cmbonly.py", line 44, in initialize
+    input_filename = os.path.join(self.data_folder, self.version,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 90, in join
+  File "<frozen genericpath>", line 152, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+
+=== FULL TRACEBACK ===
+[exception handler] ---------------------------------------
+
+Traceback (most recent call last):
+  File "<stdin>", line 67, in <module>
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/model.py", line 1365, in get_model
+    return Model(updated_info["params"], updated_info["likelihood"],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/model.py", line 247, in __init__
+    self.likelihood = LikelihoodCollection(info_likelihood, theory=self.theory,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/likelihood.py", line 276, in __init__
+    self.add_instance(name, like_class(info, packages_path=packages_path,
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/likelihoods/base_classes/InstallableLikelihood.py", line 74, in __init__
+    super().__init__(*args, **kwargs)
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/likelihood.py", line 94, in __init__
+    super().__init__(info, name=name, timing=timing,
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/theory.py", line 65, in __init__
+    super().__init__(info, name=name, timing=timing,
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/component.py", line 361, in __init__
+    self.initialize()
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/act_dr6_cmbonly/act_dr6_cmbonly.py", line 44, in initialize
+    input_filename = os.path.join(self.data_folder, self.version,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 90, in join
+  File "<frozen genericpath>", line 152, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+-------------------------------------------------------------
+

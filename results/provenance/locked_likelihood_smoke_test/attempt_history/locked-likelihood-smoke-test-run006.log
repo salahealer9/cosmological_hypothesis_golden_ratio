@@ -1,0 +1,42 @@
+[model] *WARNING* Ignored blocks/options: ['version']
+[prior] *WARNING* External prior 'cal_dip_prior' loaded. Mind that it might not be normalized!
+[camb] `camb` module loaded successfully from /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ load_rates::Loading effective Rate data (HI) 
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+
+ load_rates::Loading effective Rate data (HeI) 
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Number of redshift points: 40
+
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+Warning: The FITS format without the 'sacc_ordering' column is deprecated
+Assuming data rows are in the correct order as it was before version 1.0.
+[planck_2018_lowl.tt] Average evaluation time for planck_2018_lowl.TT: 0.000500791 s  (1 evaluations)
+[planck_2018_lowl.ee_sroll2] Average evaluation time for planck_2018_lowl.EE_sroll2: 0.000104309 s  (1 evaluations)
+[act_dr6_cmbonly.planckactcut] Average evaluation time for act_dr6_cmbonly.PlanckActCut: 0.0012563 s  (1 evaluations)
+[act_dr6_cmbonly.actdr6cmbonly] Average evaluation time for act_dr6_cmbonly.ACTDR6CMBonly: 0.00202427 s  (1 evaluations)
+[camb.transfers] Average evaluation time for camb.transfers: 6.75655 s  (1 evaluations)
+[camb] Average evaluation time for camb: 5.23366 s  (1 evaluations)
+Overall: PASS
+Output: /opt/cosmological_hypothesis_golden_ratio/results/provenance/locked_likelihood_smoke_test

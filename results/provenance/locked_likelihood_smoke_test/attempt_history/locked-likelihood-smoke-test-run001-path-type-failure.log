@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/opt/cosmological_hypothesis_golden_ratio/scripts/smoke_test_locked_likelihoods.py", line 411, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/scripts/smoke_test_locked_likelihoods.py", line 201, in main
+    info: dict[str, Any] = yaml_load_file(UPDATED_YAML)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/yaml.py", line 179, in yaml_load_file
+    return yaml_load(yaml_text, file_name=file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/yaml.py", line 130, in yaml_load
+    "'" + file_name + "'" if file_name else "")
+    ~~~~^~~~~~~~~~~
+TypeError: can only concatenate str (not "PosixPath") to str

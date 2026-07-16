@@ -1,0 +1,9 @@
+[model] *WARNING* Ignored blocks/options: ['version']
+[prior] *WARNING* External prior 'cal_dip_prior' loaded. Mind that it might not be normalized!
+[camb] `camb` module loaded successfully from /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb
+Warning: The FITS format without the 'sacc_ordering' column is deprecated
+Assuming data rows are in the correct order as it was before version 1.0.
+[model] *ERROR* Could not find whom to assign output parameters ['taurend'].
+Overall: FAIL
+Output: /opt/cosmological_hypothesis_golden_ratio/results/provenance/locked_likelihood_smoke_test
+Error: LoggedError: Could not find whom to assign output parameters ['taurend'].
