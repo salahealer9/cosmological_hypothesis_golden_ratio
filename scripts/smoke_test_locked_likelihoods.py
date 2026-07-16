@@ -23,9 +23,10 @@ import platform
 import subprocess
 import sys
 import time
-from importlib.metadata import version
+from importlib.metadata import distribution, version
 from pathlib import Path
 from typing import Any
+from urllib.parse import unquote, urlparse
 
 os.environ.setdefault("OMP_NUM_THREADS", "1")
 os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
@@ -44,6 +45,9 @@ EXPECTED_VERSIONS = {
     "arviz": "0.23.4",
     "mpi4py": "4.1.2",
 }
+
+EXPECTED_CAMB_COMMIT = "28e4036519155531f4ed9a4e1d8afb1579d2de11"
+EXPECTED_CAMB_SOURCE = Path("/opt/cosmology-software/CAMB-1.5.0-cosmorec")
 
 EXPECTED_LIKELIHOODS = {
     "planck_2018_lowl.TT",
@@ -91,6 +95,90 @@ def git(*args: str) -> str:
         cwd=REPO_ROOT,
         text=True,
     ).strip()
+
+
+def verify_camb_cosmorec_capability() -> dict[str, Any]:
+    """Reject a stock CAMB wheel before any model initialization."""
+    import camb
+
+    expected_source = Path(
+        os.environ.get("CAMB_COSMOREC_SOURCE_DIR", str(EXPECTED_CAMB_SOURCE))
+    ).resolve()
+    if not expected_source.is_dir():
+        raise RuntimeError(
+            f"Pinned CAMB CosmoRec source directory is missing: {expected_source}"
+        )
+
+    module_path = Path(camb.__file__).resolve()
+    params = camb.CAMBparams()
+    params.set_classes(recombination_model="CosmoRec")
+
+    raw = distribution("camb").read_text("direct_url.json")
+    if raw is None:
+        raise RuntimeError(
+            "CAMB has no direct_url.json; a stock or untracked installation "
+            "cannot pass the CosmoRec gate"
+        )
+    direct_url = json.loads(raw)
+    parsed = urlparse(str(direct_url.get("url", "")))
+    source_path = (
+        Path(unquote(parsed.path)).resolve()
+        if parsed.scheme == "file"
+        else None
+    )
+    editable = bool(direct_url.get("dir_info", {}).get("editable"))
+
+    commit_result = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=expected_source,
+        text=True,
+        capture_output=True,
+    )
+    installed_commit = (
+        commit_result.stdout.strip() if commit_result.returncode == 0 else ""
+    )
+
+    camblib = expected_source / "camb/camblib.so"
+    ldd_result = subprocess.run(
+        ["ldd", str(camblib)],
+        text=True,
+        capture_output=True,
+    ) if camblib.is_file() else None
+    libraries_resolved = bool(
+        ldd_result
+        and ldd_result.returncode == 0
+        and "not found" not in ldd_result.stdout
+        and "not found" not in ldd_result.stderr
+    )
+
+    checks = {
+        "metadata_version_1_5_0": version("camb") == "1.5.0",
+        "module_version_1_5_0": camb.__version__ == "1.5.0",
+        "module_inside_pinned_source": module_path.is_relative_to(expected_source),
+        "editable_source_path_matches": (
+            editable and source_path == expected_source
+        ),
+        "source_commit_matches": installed_commit == EXPECTED_CAMB_COMMIT,
+        "cosmorec_class_available": (
+            type(params.Recomb).__name__ == "CosmoRec"
+        ),
+        "camblib_exists": camblib.is_file(),
+        "linked_libraries_resolved": libraries_resolved,
+    }
+    if not all(checks.values()):
+        raise RuntimeError(f"CAMB CosmoRec capability gate failed: {checks}")
+
+    return {
+        "expected_source": str(expected_source),
+        "module_path": str(module_path),
+        "expected_commit": EXPECTED_CAMB_COMMIT,
+        "installed_commit": installed_commit,
+        "recombination_class": type(params.Recomb).__name__,
+        "direct_url": direct_url,
+        "camblib_sha256": sha256(camblib),
+        "checks": checks,
+        "numerical_spectra_computed": False,
+    }
 
 
 def read_header_and_last_row(path: Path) -> tuple[list[str], list[float], int]:
@@ -195,6 +283,8 @@ def main() -> int:
             f"Version mismatch: {version_checks}; installed={installed_versions}"
         )
 
+    camb_cosmorec = verify_camb_cosmorec_capability()
+
     header, final_row, row_number = read_header_and_last_row(POINT_CHAIN)
     row = dict(zip(header, final_row, strict=True))
 
@@ -273,6 +363,9 @@ def main() -> int:
         "installation_report_passed": True,
         "tracked_worktree_clean_before_run": True,
         "software_versions_match": all(version_checks.values()),
+        "camb_cosmorec_capability_passed": all(
+            camb_cosmorec["checks"].values()
+        ),
         "combined_yaml_has_exact_locked_likelihoods": (
             declared_likelihoods == EXPECTED_LIKELIHOODS
         ),
@@ -323,6 +416,7 @@ def main() -> int:
         },
         "software_versions": installed_versions,
         "software_version_checks": version_checks,
+        "camb_cosmorec": camb_cosmorec,
         "inputs": {
             "updated_yaml": str(UPDATED_YAML.relative_to(REPO_ROOT)),
             "updated_yaml_sha256": sha256(UPDATED_YAML),
@@ -369,6 +463,9 @@ def main() -> int:
         "No sampler was created, no MPI or MCMC process was started, no target "
         "statistic was computed, and no numerical parameter, likelihood, "
         "posterior, or derived values were recorded.",
+        "",
+        "CAMB 1.5.0 was verified as an editable build from the pinned source "
+        "commit with the CosmoRec class available before model initialization.",
         "",
         "## Likelihood components",
         "",
