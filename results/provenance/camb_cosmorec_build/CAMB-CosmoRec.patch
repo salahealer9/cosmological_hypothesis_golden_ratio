@@ -1,0 +1,9 @@
+--- /opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/Makefile_main.upstream	2026-07-16 15:31:42.323262255 +0000
++++ /opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/Makefile_main	2026-07-16 15:31:51.979252232 +0000
+@@ -1,3 +1,6 @@
++RECOMBINATION_FILES = recfast cosmorec
++COSMOREC_PATH = /opt/cosmology-software/CosmoRec.v2.0.3b
++
+ 
+ #Files containing classes to include
+ #e.g. change RECOMBINATION_FILES to "recfast cosmorec" to also support cosmorec

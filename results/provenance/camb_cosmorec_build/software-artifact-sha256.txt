@@ -1,0 +1,3 @@
+2afb82b5512f7158a0291d3a73c6520455f0e55957f2965dccc5eef82af8da1b  /opt/cosmology-software/CosmoRec.v2.0.3b.tar.gz
+4056f26c8783e3f8cea719c699b936ef4f0647e2530d047cbc584284e00769e8  /opt/cosmology-software/CosmoRec.v2.0.3b/libCosmoRec.a
+d3e6124423a3efd187fdf2915df6d4c2f75e1bbe88bb4ab7a28141902a99b484  /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb/camblib.so

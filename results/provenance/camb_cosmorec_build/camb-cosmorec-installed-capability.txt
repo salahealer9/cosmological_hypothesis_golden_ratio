@@ -1,0 +1,6 @@
+Metadata version: 1.5.0
+Module version: 1.5.0
+Imported from: /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb/__init__.py
+Expected source root: /opt/cosmology-software/CAMB-1.5.0-cosmorec
+Recombination class: CosmoRec
+Installed CAMB 1.5.0 + CosmoRec capability: PASS

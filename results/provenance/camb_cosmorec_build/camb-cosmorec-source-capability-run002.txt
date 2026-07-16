@@ -1,0 +1,4 @@
+CAMB module version: 1.5.0
+CAMB imported from: /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb/__init__.py
+Recombination class: CosmoRec
+CAMB 1.5.0 + CosmoRec source capability: PASS

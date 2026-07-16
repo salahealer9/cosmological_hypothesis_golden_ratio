@@ -1,0 +1,285 @@
+make -f Makefile.in DEV_DIR=./Development REC_BASE=./Rec_database all
+make[1]: Entering directory '/opt/cosmology-software/CosmoRec.v2.0.3b'
+cd ./Development/Cosmology/Recfast++; make CC=g++ CXXFLAGS='-Wall -pedantic -O2 -fPIC';
+make[2]: Entering directory '/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++'
+Producing object-file src/cosmology.Recfast.o
+g++ -Wall -pedantic -O2 -fPIC -D RECFASTPPPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++/\" -I./include -c src/cosmology.Recfast.cpp -o src/cosmology.Recfast.o
+Producing object-file src/evalode.Recfast.o
+g++ -Wall -pedantic -O2 -fPIC -D RECFASTPPPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++/\" -I./include -c src/evalode.Recfast.cpp -o src/evalode.Recfast.o
+Producing object-file src/recombination.Recfast.o
+g++ -Wall -pedantic -O2 -fPIC -D RECFASTPPPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++/\" -I./include -c src/recombination.Recfast.cpp -o src/recombination.Recfast.o
+Producing object-file src/ODE_solver.Recfast.o
+g++ -Wall -pedantic -O2 -fPIC -D RECFASTPPPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++/\" -I./include -c src/ODE_solver.Recfast.cpp -o src/ODE_solver.Recfast.o
+src/ODE_solver.Recfast.cpp: In function ‘int ODE_Solver_estimate_error_and_next_possible_step_size(int, double, double, double, double&, double, double, const ODE_solver_Solution&, const ODE_solver_Solution&, const ODE_solver_Solution&, const ODE_solver_Solution&, const ODE_solver_Solution&, const ODE_solver_Solution&, const ODE_solver_Solution&, int)’:
+src/ODE_solver.Recfast.cpp:702:18: warning: variable ‘max_err_time’ set but not used [-Wunused-but-set-variable]
+  702 |     int mflag=0, max_err_time=-1;
+      |                  ^~~~~~~~~~~~
+src/ODE_solver.Recfast.cpp: In function ‘int ODE_Solver_Solve_history(double, double, ODE_solver_Solution&)’:
+src/ODE_solver.Recfast.cpp:914:29: warning: variable ‘Dz_z_old’ set but not used [-Wunused-but-set-variable]
+  914 |     double zout=zs, zin=zs, Dz_z_old;
+      |                             ^~~~~~~~
+Producing object-file src/DM_annihilation.Recfast.o
+g++ -Wall -pedantic -O2 -fPIC -D RECFASTPPPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++/\" -I./include -c src/DM_annihilation.Recfast.cpp -o src/DM_annihilation.Recfast.o
+Producing object-file src/Rec_corrs_CT.Recfast.o
+g++ -Wall -pedantic -O2 -fPIC -D RECFASTPPPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++/\" -I./include -c src/Rec_corrs_CT.Recfast.cpp -o src/Rec_corrs_CT.Recfast.o
+Producing object-file main.o
+g++ -Wall -pedantic -O2 -fPIC -D RECFASTPPPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++/\" -I./include -c main.cpp -o main.o
+Linking...
+g++  ./src/cosmology.Recfast.o ./src/evalode.Recfast.o ./src/recombination.Recfast.o ./src/ODE_solver.Recfast.o ./src/DM_annihilation.Recfast.o ./src/Rec_corrs_CT.Recfast.o main.o -o Recfast++
+make[2]: Leaving directory '/opt/cosmology-software/CosmoRec.v2.0.3b/Development/Cosmology/Recfast++'
+Producing object-file Development/Simple_routines/File.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Simple_routines/File.cpp -o Development/Simple_routines/File.o
+Producing object-file Development/Simple_routines/routines.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Simple_routines/routines.cpp -o Development/Simple_routines/routines.o
+In file included from /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h:33,
+                 from /usr/include/c++/12/bits/allocator.h:46,
+                 from /usr/include/c++/12/string:41,
+                 from /usr/include/c++/12/bits/locale_classes.h:40,
+                 from /usr/include/c++/12/bits/ios_base.h:41,
+                 from /usr/include/c++/12/ios:42,
+                 from /usr/include/c++/12/ostream:38,
+                 from /usr/include/c++/12/iostream:39,
+                 from Development/Simple_routines/routines.cpp:13:
+In member function ‘void std::__new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = gsl_interp_accel*; _Args = {gsl_interp_accel* const&}; _Tp = gsl_interp_accel*]’,
+    inlined from ‘static void std::allocator_traits<std::allocator<_CharT> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = gsl_interp_accel*; _Args = {gsl_interp_accel* const&}; _Tp = gsl_interp_accel*]’ at /usr/include/c++/12/bits/alloc_traits.h:516:17,
+    inlined from ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = gsl_interp_accel*; _Alloc = std::allocator<gsl_interp_accel*>]’ at /usr/include/c++/12/bits/stl_vector.h:1281:30,
+    inlined from ‘int calc_spline_coeffies_JC(int, const double*, const double*, std::string)’ at Development/Simple_routines/routines.cpp:323:21:
+/usr/include/c++/12/bits/new_allocator.h:175:11: warning: ‘acc’ may be used uninitialized [-Wmaybe-uninitialized]
+  175 |         { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Development/Simple_routines/routines.cpp: In function ‘int calc_spline_coeffies_JC(int, const double*, const double*, std::string)’:
+Development/Simple_routines/routines.cpp:322:23: note: ‘acc’ declared here
+  322 |     gsl_interp_accel *acc;
+      |                       ^~~
+In file included from /usr/include/c++/12/vector:64,
+                 from Development/Simple_routines/routines.cpp:17:
+In member function ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = gsl_interp_accel*; _Alloc = std::allocator<gsl_interp_accel*>]’,
+    inlined from ‘int calc_spline_coeffies_JC(int, const double*, const double*, std::string)’ at Development/Simple_routines/routines.cpp:323:21:
+/usr/include/c++/12/bits/stl_vector.h:1287:28: warning: ‘acc’ may be used uninitialized [-Wmaybe-uninitialized]
+ 1287 |           _M_realloc_insert(end(), __x);
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+In file included from /usr/include/c++/12/vector:70:
+/usr/include/c++/12/bits/vector.tcc: In function ‘int calc_spline_coeffies_JC(int, const double*, const double*, std::string)’:
+/usr/include/c++/12/bits/vector.tcc:439:7: note: by argument 3 of type ‘gsl_interp_accel* const&’ to ‘void std::vector<_Tp, _Alloc>::_M_realloc_insert(iterator, _Args&& ...) [with _Args = {gsl_interp_accel* const&}; _Tp = gsl_interp_accel*; _Alloc = std::allocator<gsl_interp_accel*>]’ declared here
+  439 |       vector<_Tp, _Alloc>::
+      |       ^~~~~~~~~~~~~~~~~~~
+Development/Simple_routines/routines.cpp:322:23: note: ‘acc’ declared here
+  322 |     gsl_interp_accel *acc;
+      |                       ^~~
+In member function ‘void std::__new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = gsl_spline*; _Args = {gsl_spline* const&}; _Tp = gsl_spline*]’,
+    inlined from ‘static void std::allocator_traits<std::allocator<_CharT> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = gsl_spline*; _Args = {gsl_spline* const&}; _Tp = gsl_spline*]’ at /usr/include/c++/12/bits/alloc_traits.h:516:17,
+    inlined from ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = gsl_spline*; _Alloc = std::allocator<gsl_spline*>]’ at /usr/include/c++/12/bits/stl_vector.h:1281:30,
+    inlined from ‘int calc_spline_coeffies_JC(int, const double*, const double*, std::string)’ at Development/Simple_routines/routines.cpp:326:24:
+/usr/include/c++/12/bits/new_allocator.h:175:11: warning: ‘spline’ may be used uninitialized [-Wmaybe-uninitialized]
+  175 |         { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Development/Simple_routines/routines.cpp: In function ‘int calc_spline_coeffies_JC(int, const double*, const double*, std::string)’:
+Development/Simple_routines/routines.cpp:325:17: note: ‘spline’ declared here
+  325 |     gsl_spline *spline;
+      |                 ^~~~~~
+In member function ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = gsl_spline*; _Alloc = std::allocator<gsl_spline*>]’,
+    inlined from ‘int calc_spline_coeffies_JC(int, const double*, const double*, std::string)’ at Development/Simple_routines/routines.cpp:326:24:
+/usr/include/c++/12/bits/stl_vector.h:1287:28: warning: ‘spline’ may be used uninitialized [-Wmaybe-uninitialized]
+ 1287 |           _M_realloc_insert(end(), __x);
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/12/bits/vector.tcc: In function ‘int calc_spline_coeffies_JC(int, const double*, const double*, std::string)’:
+/usr/include/c++/12/bits/vector.tcc:439:7: note: by argument 3 of type ‘gsl_spline* const&’ to ‘void std::vector<_Tp, _Alloc>::_M_realloc_insert(iterator, _Args&& ...) [with _Args = {gsl_spline* const&}; _Tp = gsl_spline*; _Alloc = std::allocator<gsl_spline*>]’ declared here
+  439 |       vector<_Tp, _Alloc>::
+      |       ^~~~~~~~~~~~~~~~~~~
+Development/Simple_routines/routines.cpp:325:17: note: ‘spline’ declared here
+  325 |     gsl_spline *spline;
+      |                 ^~~~~~
+Producing object-file Development/Cosmology/Cosmos.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Cosmology/Cosmos.cpp -o Development/Cosmology/Cosmos.o
+Producing object-file Development/Integration/Patterson.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Integration/Patterson.cpp -o Development/Integration/Patterson.o
+Producing object-file Development/Integration/Integration_routines.GSL.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Integration/Integration_routines.GSL.cpp -o Development/Integration/Integration_routines.GSL.o
+Producing object-file Development/Integration/Chebyshev_Int.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Integration/Chebyshev_Int.cpp -o Development/Integration/Chebyshev_Int.o
+Producing object-file Development/ODE_PDE_Solver/ODE_solver_Rec.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/ODE_PDE_Solver/ODE_solver_Rec.cpp -o Development/ODE_PDE_Solver/ODE_solver_Rec.o
+Development/ODE_PDE_Solver/ODE_solver_Rec.cpp: In function ‘int ODE_solver_Rec::ODE_Solver_Solve_history(double, double, double, double, ODE_solver_Solution&, ODE_Solver_data&)’:
+Development/ODE_PDE_Solver/ODE_solver_Rec.cpp:1397:33: warning: variable ‘Dz_z_old’ set but not used [-Wunused-but-set-variable]
+ 1397 |         double zout=zs, zin=zs, Dz_z_old;
+      |                                 ^~~~~~~~
+Producing object-file Development/ODE_PDE_Solver/PDE_solver.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/ODE_PDE_Solver/PDE_solver.cpp -o Development/ODE_PDE_Solver/PDE_solver.o
+Producing object-file Development/Line_profiles/Voigtprofiles.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Line_profiles/Voigtprofiles.cpp -o Development/Line_profiles/Voigtprofiles.o
+Development/Line_profiles/Voigtprofiles.cpp: In member function ‘double Voigtprofile_Base::phi_wings(double, double)’:
+Development/Line_profiles/Voigtprofiles.cpp:110:19: warning: ISO C++17 does not allow ‘register’ storage class specifier [-Wregister]
+  110 |   register double x2=x*x, d=a*a/x2;
+      |                   ^~
+Development/Line_profiles/Voigtprofiles.cpp:110:27: warning: ISO C++17 does not allow ‘register’ storage class specifier [-Wregister]
+  110 |   register double x2=x*x, d=a*a/x2;
+      |                           ^
+Development/Line_profiles/Voigtprofiles.cpp:111:19: warning: ISO C++17 does not allow ‘register’ storage class specifier [-Wregister]
+  111 |   register double K0=1.0+(1.5+(15.0/4.0+105.0/8.0/x2)/x2)/x2;
+      |                   ^~
+Development/Line_profiles/Voigtprofiles.cpp:112:19: warning: ISO C++17 does not allow ‘register’ storage class specifier [-Wregister]
+  112 |   register double K1=1.0+(5.0+105.0/4.0/x2)/x2;
+      |                   ^~
+Development/Line_profiles/Voigtprofiles.cpp: In member function ‘double Voigtprofile_Base::dphi_dx_wings(double, double)’:
+Development/Line_profiles/Voigtprofiles.cpp:127:19: warning: ISO C++17 does not allow ‘register’ storage class specifier [-Wregister]
+  127 |   register double x2=x*x, a2=a*a;
+      |                   ^~
+Development/Line_profiles/Voigtprofiles.cpp:127:27: warning: ISO C++17 does not allow ‘register’ storage class specifier [-Wregister]
+  127 |   register double x2=x*x, a2=a*a;
+      |                           ^~
+Development/Line_profiles/Voigtprofiles.cpp: In member function ‘double Voigtprofile_Base::xi_Int_wings(double, double)’:
+Development/Line_profiles/Voigtprofiles.cpp:136:19: warning: ISO C++17 does not allow ‘register’ storage class specifier [-Wregister]
+  136 |   register double x2=x*x, a2=a*a;
+      |                   ^~
+Development/Line_profiles/Voigtprofiles.cpp:136:27: warning: ISO C++17 does not allow ‘register’ storage class specifier [-Wregister]
+  136 |   register double x2=x*x, a2=a*a;
+      |                           ^~
+Producing object-file Development/Line_profiles/HI_matrix_elements.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Line_profiles/HI_matrix_elements.cpp -o Development/Line_profiles/HI_matrix_elements.o
+Producing object-file Development/Line_profiles/Raman_profiles.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Line_profiles/Raman_profiles.cpp -o Development/Line_profiles/Raman_profiles.o
+Producing object-file Development/Line_profiles/nsnd_2gamma_profiles.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Line_profiles/nsnd_2gamma_profiles.cpp -o Development/Line_profiles/nsnd_2gamma_profiles.o
+Producing object-file Development/Line_profiles/HI_Transition_Data.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Line_profiles/HI_Transition_Data.cpp -o Development/Line_profiles/HI_Transition_Data.o
+Producing object-file Development/Hydrogenic/Oscillator_strength.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Hydrogenic/Oscillator_strength.cpp -o Development/Hydrogenic/Oscillator_strength.o
+Producing object-file Development/Hydrogenic/Photoionization_cross_section.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Hydrogenic/Photoionization_cross_section.cpp -o Development/Hydrogenic/Photoionization_cross_section.o
+Producing object-file Development/Hydrogenic/Rec_Phot_BB.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Hydrogenic/Rec_Phot_BB.cpp -o Development/Hydrogenic/Rec_Phot_BB.o
+Producing object-file Development/Hydrogenic/Atom.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Hydrogenic/Atom.cpp -o Development/Hydrogenic/Atom.o
+Producing object-file Development/Hydrogenic/Recombination_Integrals.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Hydrogenic/Recombination_Integrals.cpp -o Development/Hydrogenic/Recombination_Integrals.o
+Producing object-file Development/Hydrogenic/Quadrupole_lines_HI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Hydrogenic/Quadrupole_lines_HI.cpp -o Development/Hydrogenic/Quadrupole_lines_HI.o
+Producing object-file Development/Helium/HeI_Atom.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Helium/HeI_Atom.cpp -o Development/Helium/HeI_Atom.o
+Development/Helium/HeI_Atom.cpp: In function ‘void read_transition_inf_J(std::string, int, int, int, int, std::vector<Transition_Data_HeI_A>&, int)’:
+Development/Helium/HeI_Atom.cpp:145:25: warning: variable ‘line’ set but not used [-Wunused-but-set-variable]
+  145 |     int nv, sv, lv, jv, line, dont_write_down_again;
+      |                         ^~~~
+Development/Helium/HeI_Atom.cpp: In function ‘void read_transition_inf_J_non_j(std::string, int, int, int, int, std::vector<Transition_Data_HeI_A>&, int)’:
+Development/Helium/HeI_Atom.cpp:198:25: warning: variable ‘line’ set but not used [-Wunused-but-set-variable]
+  198 |     int nv, sv, lv, jv, line, dont_write_down_again;
+      |                         ^~~~
+Producing object-file Development/Recombination/Sobolev.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Recombination/Sobolev.cpp -o Development/Recombination/Sobolev.o
+Producing object-file Development/Recombination/Pesc.HI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Recombination/Pesc.HI.cpp -o Development/Recombination/Pesc.HI.o
+Producing object-file Development/Recombination/ODE_effective.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Recombination/ODE_effective.cpp -o Development/Recombination/ODE_effective.o
+Producing object-file Development/Recombination/ODEdef_Xi.HeI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Recombination/ODEdef_Xi.HeI.cpp -o Development/Recombination/ODEdef_Xi.HeI.o
+Development/Recombination/ODEdef_Xi.HeI.cpp: In function ‘double Recombination_calc_p_d(double, double, double, Gas_of_HeI_Atoms&)’:
+Development/Recombination/ODEdef_Xi.HeI.cpp:27:9: warning: variable ‘n’ set but not used [-Wunused-but-set-variable]
+   27 |     int n, l, s;
+      |         ^
+Development/Recombination/ODEdef_Xi.HeI.cpp:27:12: warning: variable ‘l’ set but not used [-Wunused-but-set-variable]
+   27 |     int n, l, s;
+      |            ^
+Development/Recombination/ODEdef_Xi.HeI.cpp:27:15: warning: variable ‘s’ set but not used [-Wunused-but-set-variable]
+   27 |     int n, l, s;
+      |               ^
+Development/Recombination/ODEdef_Xi.HeI.cpp:28:21: warning: variable ‘jp’ set but not used [-Wunused-but-set-variable]
+   28 |     int np, lp, sp, jp;
+      |                     ^~
+Development/Recombination/ODEdef_Xi.HeI.cpp: In function ‘double Recombination_calc_p_d_Singlet(int, int, double, double, double, Gas_of_HeI_Atoms&)’:
+Development/Recombination/ODEdef_Xi.HeI.cpp:110:9: warning: variable ‘n’ set but not used [-Wunused-but-set-variable]
+  110 |     int n, l, s;
+      |         ^
+Development/Recombination/ODEdef_Xi.HeI.cpp:110:12: warning: variable ‘l’ set but not used [-Wunused-but-set-variable]
+  110 |     int n, l, s;
+      |            ^
+Development/Recombination/ODEdef_Xi.HeI.cpp:110:15: warning: variable ‘s’ set but not used [-Wunused-but-set-variable]
+  110 |     int n, l, s;
+      |               ^
+Development/Recombination/ODEdef_Xi.HeI.cpp: In function ‘double Recombination_calc_p_d_level(int, int, int, int, double, double, double, Gas_of_HeI_Atoms&)’:
+Development/Recombination/ODEdef_Xi.HeI.cpp:177:9: warning: variable ‘n’ set but not used [-Wunused-but-set-variable]
+  177 |     int n, l, s;
+      |         ^
+Development/Recombination/ODEdef_Xi.HeI.cpp:177:12: warning: variable ‘l’ set but not used [-Wunused-but-set-variable]
+  177 |     int n, l, s;
+      |            ^
+Development/Recombination/ODEdef_Xi.HeI.cpp:177:15: warning: variable ‘s’ set but not used [-Wunused-but-set-variable]
+  177 |     int n, l, s;
+      |               ^
+Producing object-file Development/Compton_Kernel/Compton_Kernel.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Development/Compton_Kernel/Compton_Kernel.cpp -o Development/Compton_Kernel/Compton_Kernel.o
+Producing object-file PDE_Problem/define_PDE.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c PDE_Problem/define_PDE.cpp -o PDE_Problem/define_PDE.o
+Producing object-file PDE_Problem/Solve_PDEs.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c PDE_Problem/Solve_PDEs.cpp -o PDE_Problem/Solve_PDEs.o
+Producing object-file PDE_Problem/HI_pd_Rp_splines_effective.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c PDE_Problem/HI_pd_Rp_splines_effective.cpp -o PDE_Problem/HI_pd_Rp_splines_effective.o
+Producing object-file PDE_Problem/Load.Populations.HI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c PDE_Problem/Load.Populations.HI.cpp -o PDE_Problem/Load.Populations.HI.o
+Producing object-file Rec_database/Effective_Rates.HI/get_effective_rates.HI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Rec_database/Effective_Rates.HI/get_effective_rates.HI.cpp -o Rec_database/Effective_Rates.HI/get_effective_rates.HI.o
+Producing object-file Rec_database/Effective_Rates.HeI/get_effective_rates.HeI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c Rec_database/Effective_Rates.HeI/get_effective_rates.HeI.cpp -o Rec_database/Effective_Rates.HeI/get_effective_rates.HeI.o
+Producing object-file PDE_Problem_HeI/define_PDE_HeI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c PDE_Problem_HeI/define_PDE_HeI.cpp -o PDE_Problem_HeI/define_PDE_HeI.o
+Producing object-file PDE_Problem_HeI/Solve_PDEs_HeI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c PDE_Problem_HeI/Solve_PDEs_HeI.cpp -o PDE_Problem_HeI/Solve_PDEs_HeI.o
+Producing object-file PDE_Problem_HeI/HeI_pd_Rp_splines_effective.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c PDE_Problem_HeI/HeI_pd_Rp_splines_effective.cpp -o PDE_Problem_HeI/HeI_pd_Rp_splines_effective.o
+Producing object-file PDE_Problem_HeI/Load.Populations.HeI.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c PDE_Problem_HeI/Load.Populations.HeI.cpp -o PDE_Problem_HeI/Load.Populations.HeI.o
+Producing object-file CosmoRec.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c CosmoRec.cpp -o CosmoRec.o
+Producing object-file main.o
+g++ -Wall -pedantic -O2 -fPIC   -D COSMORECPATH=\"/opt/cosmology-software/CosmoRec.v2.0.3b/\" -D COSMOREC_BASE_PATH=\"./Rec_database/\" -I./Development/Definitions -I./Development/Recombination -I./Development/Integration -I./Development/Cosmology -I./Development/Cosmology/Recfast++/include -I./Development/Hydrogenic -I./Development/Line_profiles -I./Development/Helium -I./Development/Simple_routines -I./Development/ODE_PDE_Solver -I./PDE_Problem -I./PDE_Problem_HeI -I./Development/Compton_Kernel -I./Rec_database/Effective_Rates.HI -I./Rec_database/Effective_Rates.HeI -I/opt/local/include/ -I -I. -c main.cpp -o main.o
+
+ Linking CosmoRec binary
+
+g++  ./Development/Cosmology/Recfast++/src/recombination.Recfast.o ./Development/Cosmology/Recfast++/src/ODE_solver.Recfast.o ./Development/Cosmology/Recfast++/src/cosmology.Recfast.o ./Development/Cosmology/Recfast++/src/evalode.Recfast.o ./Development/Cosmology/Recfast++/src/DM_annihilation.Recfast.o ./Development/Cosmology/Recfast++/src/Rec_corrs_CT.Recfast.o ./Development/Simple_routines/File.o ./Development/Simple_routines/routines.o ./Development/Cosmology/Cosmos.o ./Development/Integration/Patterson.o ./Development/Integration/Integration_routines.GSL.o ./Development/Integration/Chebyshev_Int.o ./Development/ODE_PDE_Solver/ODE_solver_Rec.o ./Development/ODE_PDE_Solver/PDE_solver.o ./Development/Line_profiles/Voigtprofiles.o ./Development/Line_profiles/HI_matrix_elements.o ./Development/Line_profiles/Raman_profiles.o ./Development/Line_profiles/nsnd_2gamma_profiles.o ./Development/Line_profiles/HI_Transition_Data.o ./Development/Hydrogenic/Oscillator_strength.o ./Development/Hydrogenic/Photoionization_cross_section.o ./Development/Hydrogenic/Rec_Phot_BB.o ./Development/Hydrogenic/Atom.o ./Development/Hydrogenic/Recombination_Integrals.o ./Development/Hydrogenic/Quadrupole_lines_HI.o ./Development/Helium/HeI_Atom.o ./Development/Recombination/Sobolev.o ./Development/Recombination/Pesc.HI.o ./Development/Recombination/ODE_effective.o ./Development/Recombination/ODEdef_Xi.HeI.o ./Development/Compton_Kernel/Compton_Kernel.o ./PDE_Problem/define_PDE.o ./PDE_Problem/Solve_PDEs.o ./PDE_Problem/HI_pd_Rp_splines_effective.o ./PDE_Problem/Load.Populations.HI.o  ./Rec_database/Effective_Rates.HI/get_effective_rates.HI.o ./Rec_database/Effective_Rates.HeI/get_effective_rates.HeI.o ./PDE_Problem_HeI/define_PDE_HeI.o ./PDE_Problem_HeI/Solve_PDEs_HeI.o ./PDE_Problem_HeI/HeI_pd_Rp_splines_effective.o ./PDE_Problem_HeI/Load.Populations.HeI.o CosmoRec.o main.o -L/opt/local/lib/ -lgsl -lgslcblas   -lm  -o CosmoRec
+
+ Creating CosmoRec library
+
+ar rvs ./libCosmoRec.a Development/Cosmology/Recfast++/src/recombination.Recfast.o Development/Cosmology/Recfast++/src/ODE_solver.Recfast.o Development/Cosmology/Recfast++/src/cosmology.Recfast.o Development/Cosmology/Recfast++/src/evalode.Recfast.o Development/Cosmology/Recfast++/src/DM_annihilation.Recfast.o Development/Cosmology/Recfast++/src/Rec_corrs_CT.Recfast.o Development/Simple_routines/File.o Development/Simple_routines/routines.o Development/Cosmology/Cosmos.o Development/Integration/Patterson.o Development/Integration/Integration_routines.GSL.o Development/Integration/Chebyshev_Int.o Development/ODE_PDE_Solver/ODE_solver_Rec.o Development/ODE_PDE_Solver/PDE_solver.o Development/Line_profiles/Voigtprofiles.o Development/Line_profiles/HI_matrix_elements.o Development/Line_profiles/Raman_profiles.o Development/Line_profiles/nsnd_2gamma_profiles.o Development/Line_profiles/HI_Transition_Data.o Development/Hydrogenic/Oscillator_strength.o Development/Hydrogenic/Photoionization_cross_section.o Development/Hydrogenic/Rec_Phot_BB.o Development/Hydrogenic/Atom.o Development/Hydrogenic/Recombination_Integrals.o Development/Hydrogenic/Quadrupole_lines_HI.o Development/Helium/HeI_Atom.o Development/Recombination/Sobolev.o Development/Recombination/Pesc.HI.o Development/Recombination/ODE_effective.o Development/Recombination/ODEdef_Xi.HeI.o Development/Compton_Kernel/Compton_Kernel.o PDE_Problem/define_PDE.o PDE_Problem/Solve_PDEs.o PDE_Problem/HI_pd_Rp_splines_effective.o PDE_Problem/Load.Populations.HI.o Rec_database/Effective_Rates.HI/get_effective_rates.HI.o Rec_database/Effective_Rates.HeI/get_effective_rates.HeI.o PDE_Problem_HeI/define_PDE_HeI.o PDE_Problem_HeI/Solve_PDEs_HeI.o PDE_Problem_HeI/HeI_pd_Rp_splines_effective.o PDE_Problem_HeI/Load.Populations.HeI.o CosmoRec.o
+ar: creating ./libCosmoRec.a
+a - Development/Cosmology/Recfast++/src/recombination.Recfast.o
+a - Development/Cosmology/Recfast++/src/ODE_solver.Recfast.o
+a - Development/Cosmology/Recfast++/src/cosmology.Recfast.o
+a - Development/Cosmology/Recfast++/src/evalode.Recfast.o
+a - Development/Cosmology/Recfast++/src/DM_annihilation.Recfast.o
+a - Development/Cosmology/Recfast++/src/Rec_corrs_CT.Recfast.o
+a - Development/Simple_routines/File.o
+a - Development/Simple_routines/routines.o
+a - Development/Cosmology/Cosmos.o
+a - Development/Integration/Patterson.o
+a - Development/Integration/Integration_routines.GSL.o
+a - Development/Integration/Chebyshev_Int.o
+a - Development/ODE_PDE_Solver/ODE_solver_Rec.o
+a - Development/ODE_PDE_Solver/PDE_solver.o
+a - Development/Line_profiles/Voigtprofiles.o
+a - Development/Line_profiles/HI_matrix_elements.o
+a - Development/Line_profiles/Raman_profiles.o
+a - Development/Line_profiles/nsnd_2gamma_profiles.o
+a - Development/Line_profiles/HI_Transition_Data.o
+a - Development/Hydrogenic/Oscillator_strength.o
+a - Development/Hydrogenic/Photoionization_cross_section.o
+a - Development/Hydrogenic/Rec_Phot_BB.o
+a - Development/Hydrogenic/Atom.o
+a - Development/Hydrogenic/Recombination_Integrals.o
+a - Development/Hydrogenic/Quadrupole_lines_HI.o
+a - Development/Helium/HeI_Atom.o
+a - Development/Recombination/Sobolev.o
+a - Development/Recombination/Pesc.HI.o
+a - Development/Recombination/ODE_effective.o
+a - Development/Recombination/ODEdef_Xi.HeI.o
+a - Development/Compton_Kernel/Compton_Kernel.o
+a - PDE_Problem/define_PDE.o
+a - PDE_Problem/Solve_PDEs.o
+a - PDE_Problem/HI_pd_Rp_splines_effective.o
+a - PDE_Problem/Load.Populations.HI.o
+a - Rec_database/Effective_Rates.HI/get_effective_rates.HI.o
+a - Rec_database/Effective_Rates.HeI/get_effective_rates.HeI.o
+a - PDE_Problem_HeI/define_PDE_HeI.o
+a - PDE_Problem_HeI/Solve_PDEs_HeI.o
+a - PDE_Problem_HeI/HeI_pd_Rp_splines_effective.o
+a - PDE_Problem_HeI/Load.Populations.HeI.o
+a - CosmoRec.o
+make[1]: Leaving directory '/opt/cosmology-software/CosmoRec.v2.0.3b'

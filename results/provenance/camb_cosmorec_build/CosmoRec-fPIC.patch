@@ -1,0 +1,11 @@
+--- /opt/cosmology-software/CosmoRec.v2.0.3b/Makefile.in.upstream	2026-07-16 15:29:48.319339237 +0000
++++ /opt/cosmology-software/CosmoRec.v2.0.3b/Makefile.in	2026-07-16 15:40:27.338819305 +0000
+@@ -8,7 +8,7 @@
+ #===============================================================================
+ # compiler flags
+ #===============================================================================
+-CXXFLAGS = -Wall -pedantic -O2
++CXXFLAGS = -Wall -pedantic -O2 -fPIC
+ #CXXFLAGS = -Wall -pedantic -pg
+ 
+ #===============================================================================

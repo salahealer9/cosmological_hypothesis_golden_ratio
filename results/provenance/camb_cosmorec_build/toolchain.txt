@@ -1,0 +1,4 @@
+Python 3.11.2
+g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+GNU Fortran (Debian 12.2.0-14+deb12u1) 12.2.0
+GNU ld (GNU Binutils for Debian) 2.40

@@ -1,0 +1,8 @@
+metadata_version_1_5_0: PASS
+module_version_1_5_0: PASS
+module_inside_locked_source: PASS
+cosmorec_class_available: PASS
+editable_source_record_present: PASS
+module_path: /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb/__init__.py
+recombination_class: CosmoRec
+CAMB 1.5.0 + CosmoRec final capability gate: PASS

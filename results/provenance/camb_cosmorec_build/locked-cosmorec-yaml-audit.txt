@@ -1,0 +1,18 @@
+
+=== data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.minimize.updated.yaml ===
+16:      recombination_model: CosmoRec
+
+=== data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.updated.yaml ===
+16:      recombination_model: CosmoRec
+
+=== data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.minimize.updated.yaml ===
+16:      recombination_model: CosmoRec
+
+=== data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.updated.yaml ===
+16:      recombination_model: CosmoRec
+
+=== data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.minimize.updated.yaml ===
+16:      recombination_model: CosmoRec
+
+=== data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.updated.yaml ===
+16:      recombination_model: CosmoRec

@@ -1,0 +1,86 @@
+running make
+make -C Releaselib --no-print-directory -f../Makefile FORUTILS_SRC_DIR=.. libforutils.a
+cd /opt/cosmology-software/CosmoRec.v2.0.3b; make lib;
+make[1]: Entering directory '/opt/cosmology-software/CosmoRec.v2.0.3b'
+make -f Makefile.in DEV_DIR=./Development REC_BASE=./Rec_database lib
+make[2]: Entering directory '/opt/cosmology-software/CosmoRec.v2.0.3b'
+
+ Creating CosmoRec library
+
+ar rvs ./libCosmoRec.a Development/Cosmology/Recfast++/src/recombination.Recfast.o Development/Cosmology/Recfast++/src/ODE_solver.Recfast.o Development/Cosmology/Recfast++/src/cosmology.Recfast.o Development/Cosmology/Recfast++/src/evalode.Recfast.o Development/Cosmology/Recfast++/src/DM_annihilation.Recfast.o Development/Cosmology/Recfast++/src/Rec_corrs_CT.Recfast.o Development/Simple_routines/File.o Development/Simple_routines/routines.o Development/Cosmology/Cosmos.o Development/Integration/Patterson.o Development/Integration/Integration_routines.GSL.o Development/Integration/Chebyshev_Int.o Development/ODE_PDE_Solver/ODE_solver_Rec.o Development/ODE_PDE_Solver/PDE_solver.o Development/Line_profiles/Voigtprofiles.o Development/Line_profiles/HI_matrix_elements.o Development/Line_profiles/Raman_profiles.o Development/Line_profiles/nsnd_2gamma_profiles.o Development/Line_profiles/HI_Transition_Data.o Development/Hydrogenic/Oscillator_strength.o Development/Hydrogenic/Photoionization_cross_section.o Development/Hydrogenic/Rec_Phot_BB.o Development/Hydrogenic/Atom.o Development/Hydrogenic/Recombination_Integrals.o Development/Hydrogenic/Quadrupole_lines_HI.o Development/Helium/HeI_Atom.o Development/Recombination/Sobolev.o Development/Recombination/Pesc.HI.o Development/Recombination/ODE_effective.o Development/Recombination/ODEdef_Xi.HeI.o Development/Compton_Kernel/Compton_Kernel.o PDE_Problem/define_PDE.o PDE_Problem/Solve_PDEs.o PDE_Problem/HI_pd_Rp_splines_effective.o PDE_Problem/Load.Populations.HI.o Rec_database/Effective_Rates.HI/get_effective_rates.HI.o Rec_database/Effective_Rates.HeI/get_effective_rates.HeI.o PDE_Problem_HeI/define_PDE_HeI.o PDE_Problem_HeI/Solve_PDEs_HeI.o PDE_Problem_HeI/HeI_pd_Rp_splines_effective.o PDE_Problem_HeI/Load.Populations.HeI.o CosmoRec.o
+r - Development/Cosmology/Recfast++/src/recombination.Recfast.o
+r - Development/Cosmology/Recfast++/src/ODE_solver.Recfast.o
+r - Development/Cosmology/Recfast++/src/cosmology.Recfast.o
+r - Development/Cosmology/Recfast++/src/evalode.Recfast.o
+r - Development/Cosmology/Recfast++/src/DM_annihilation.Recfast.o
+r - Development/Cosmology/Recfast++/src/Rec_corrs_CT.Recfast.o
+r - Development/Simple_routines/File.o
+r - Development/Simple_routines/routines.o
+r - Development/Cosmology/Cosmos.o
+r - Development/Integration/Patterson.o
+r - Development/Integration/Integration_routines.GSL.o
+r - Development/Integration/Chebyshev_Int.o
+r - Development/ODE_PDE_Solver/ODE_solver_Rec.o
+r - Development/ODE_PDE_Solver/PDE_solver.o
+r - Development/Line_profiles/Voigtprofiles.o
+r - Development/Line_profiles/HI_matrix_elements.o
+r - Development/Line_profiles/Raman_profiles.o
+r - Development/Line_profiles/nsnd_2gamma_profiles.o
+r - Development/Line_profiles/HI_Transition_Data.o
+r - Development/Hydrogenic/Oscillator_strength.o
+r - Development/Hydrogenic/Photoionization_cross_section.o
+r - Development/Hydrogenic/Rec_Phot_BB.o
+r - Development/Hydrogenic/Atom.o
+r - Development/Hydrogenic/Recombination_Integrals.o
+r - Development/Hydrogenic/Quadrupole_lines_HI.o
+r - Development/Helium/HeI_Atom.o
+r - Development/Recombination/Sobolev.o
+r - Development/Recombination/Pesc.HI.o
+r - Development/Recombination/ODE_effective.o
+r - Development/Recombination/ODEdef_Xi.HeI.o
+r - Development/Compton_Kernel/Compton_Kernel.o
+r - PDE_Problem/define_PDE.o
+r - PDE_Problem/Solve_PDEs.o
+r - PDE_Problem/HI_pd_Rp_splines_effective.o
+r - PDE_Problem/Load.Populations.HI.o
+r - Rec_database/Effective_Rates.HI/get_effective_rates.HI.o
+r - Rec_database/Effective_Rates.HeI/get_effective_rates.HeI.o
+r - PDE_Problem_HeI/define_PDE_HeI.o
+r - PDE_Problem_HeI/Solve_PDEs_HeI.o
+r - PDE_Problem_HeI/HeI_pd_Rp_splines_effective.o
+r - PDE_Problem_HeI/Load.Populations.HeI.o
+r - CosmoRec.o
+make[2]: Leaving directory '/opt/cosmology-software/CosmoRec.v2.0.3b'
+make[1]: Leaving directory '/opt/cosmology-software/CosmoRec.v2.0.3b'
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../constants.f90 -o constants.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../config.f90 -o config.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../classes.f90 -o classes.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../MathUtils.f90 -o MathUtils.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../subroutines.f90 -o subroutines.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../DarkAge21cm.f90 -o DarkAge21cm.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../DarkEnergyInterface.f90 -o DarkEnergyInterface.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../SourceWindows.f90 -o SourceWindows.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../massive_neutrinos.f90 -o massive_neutrinos.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../model.f90 -o model.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../results.f90 -o results.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../bessels.f90 -o bessels.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../recfast.f90 -o recfast.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../cosmorec.f90 -o cosmorec.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../DarkEnergyFluid.f90 -o DarkEnergyFluid.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../DarkEnergyPPF.f90 -o DarkEnergyPPF.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../PowellMinimize.f90 -o PowellMinimize.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../DarkEnergyQuintessence.f90 -o DarkEnergyQuintessence.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../equations.f90 -o equations.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../reionization.f90 -o reionization.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../InitialPower.f90 -o InitialPower.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../halofit.f90 -o halofit.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../SecondOrderPK.f90 -o SecondOrderPK.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../lensing.f90 -o lensing.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../SeparableBispectrum.f90 -o SeparableBispectrum.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../cmbmain.f90 -o cmbmain.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../camb.f90 -o camb.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -c ../camb_python.f90 -o camb_python.o
+gfortran -shared -fpic -O3 -MMD -cpp -ffree-line-length-none -fmax-errors=4 -fopenmp -march=native -DCOSMOREC -DCOSMOREC -DCOSMOREC -JReleaselib -IReleaselib/ -I"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/"  \
+	Releaselib/constants.o Releaselib/config.o Releaselib/classes.o Releaselib/MathUtils.o Releaselib/subroutines.o Releaselib/DarkAge21cm.o Releaselib/DarkEnergyInterface.o Releaselib/SourceWindows.o Releaselib/massive_neutrinos.o Releaselib/model.o Releaselib/results.o Releaselib/bessels.o Releaselib/recfast.o Releaselib/cosmorec.o Releaselib/DarkEnergyFluid.o Releaselib/DarkEnergyPPF.o Releaselib/PowellMinimize.o Releaselib/DarkEnergyQuintessence.o Releaselib/equations.o Releaselib/reionization.o Releaselib/InitialPower.o Releaselib/halofit.o Releaselib/SecondOrderPK.o Releaselib/lensing.o Releaselib/SeparableBispectrum.o Releaselib/cmbmain.o Releaselib/camb.o Releaselib/camb_python.o  -L"/opt/cosmology-software/CAMB-1.5.0-cosmorec/fortran/../forutils/Releaselib/" -lforutils -L/opt/cosmology-software/CosmoRec.v2.0.3b -lCosmoRec -lgsl -lgslcblas -lstdc++ -o Releaselib/camblib.so
+cp Releaselib/camblib.so ../camb/
+Compiling source...
