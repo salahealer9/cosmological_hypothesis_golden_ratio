@@ -58,8 +58,17 @@ EXPECTED_LIKELIHOODS = {
 
 ACT_LIKELIHOOD_NAME = "act_dr6_cmbonly.ACTDR6CMBonly"
 EXPECTED_ACT_DATA_VERSION = "v1.0"
-EXPECTED_ACT_DATA_RELATIVE_PATH = Path(
-    "data/ACTDR6CMBonly/v1.0/dr6_data_cmbonly.fits"
+EXPECTED_ACT_INPUT_FILE = "dr6_data_cmbonly.fits"
+LEGACY_SERIALIZED_ACT_INPUT_FILE = "dr6_data_cmb_sacc_oct22.fits"
+ALLOWED_SERIALIZED_ACT_INPUT_FILES = {
+    None,
+    EXPECTED_ACT_INPUT_FILE,
+    LEGACY_SERIALIZED_ACT_INPUT_FILE,
+}
+EXPECTED_ACT_DATA_RELATIVE_PATH = (
+    Path("data/ACTDR6CMBonly")
+    / EXPECTED_ACT_DATA_VERSION
+    / EXPECTED_ACT_INPUT_FILE
 )
 
 REPO_ROOT = Path(
@@ -323,13 +332,21 @@ def main() -> int:
             f"{serialized_act_version!r}"
         )
 
-    # The pinned DR6-ACT-lite class uses ``version`` for its data subdirectory
-    # ("v1.0"), while Cobaya's serialized updated YAML can contain
-    # ``version: null`` as generic component metadata.  Passing that null value
-    # directly overrides the class default and makes initialization attempt
-    # os.path.join(..., None, ...). Restore the pinned data version explicitly
-    # in this runtime copy only; the source YAML remains untouched and hashed.
+    serialized_act_input_file = act_config.get("input_file")
+    if serialized_act_input_file not in ALLOWED_SERIALIZED_ACT_INPUT_FILES:
+        raise RuntimeError(
+            "Unexpected ACT DR6 input filename in locked updated YAML: "
+            f"{serialized_act_input_file!r}"
+        )
+
+    # The pinned public DR6-ACT-lite class uses the v1.0 data subdirectory and
+    # ``dr6_data_cmbonly.fits``. The released updated YAML serializes stale
+    # component metadata (``version: null`` and the pre-release filename
+    # ``dr6_data_cmb_sacc_oct22.fits``), which overrides the pinned class
+    # defaults when loaded verbatim. Normalize both fields in this runtime
+    # copy only; the source YAML remains untouched and hashed.
     act_config["version"] = EXPECTED_ACT_DATA_VERSION
+    act_config["input_file"] = EXPECTED_ACT_INPUT_FILE
 
     act_data_file = packages_path / EXPECTED_ACT_DATA_RELATIVE_PATH
     if not act_data_file.is_file():
@@ -407,6 +424,12 @@ def main() -> int:
         "runtime_act_data_version_is_v1_0": (
             act_config.get("version") == EXPECTED_ACT_DATA_VERSION
         ),
+        "serialized_act_input_file_is_allowed": (
+            serialized_act_input_file in ALLOWED_SERIALIZED_ACT_INPUT_FILES
+        ),
+        "runtime_act_input_file_is_pinned": (
+            act_config.get("input_file") == EXPECTED_ACT_INPUT_FILE
+        ),
         "locked_act_data_file_exists": act_data_file.is_file(),
         "model_initialized": initialization_seconds is not None,
         "one_evaluation_completed": evaluation_seconds is not None,
@@ -476,6 +499,13 @@ def main() -> int:
                 "expected_value": EXPECTED_ACT_DATA_VERSION,
                 "source_yaml_modified": False,
             },
+            "act_input_file": {
+                "serialized_updated_yaml_value": serialized_act_input_file,
+                "runtime_value": act_config.get("input_file"),
+                "expected_value": EXPECTED_ACT_INPUT_FILE,
+                "legacy_allowed_value": LEGACY_SERIALIZED_ACT_INPUT_FILE,
+                "source_yaml_modified": False,
+            },
             "act_data_file": {
                 "path": str(act_data_file),
                 "sha256": sha256(act_data_file),
@@ -507,9 +537,10 @@ def main() -> int:
         f"Overall status: **{'PASS' if overall_pass else 'FAIL'}**",
         "",
         "Exactly one serial posterior evaluation was requested using the locked "
-        "Planck+ACT-lite model. The serialized ACT data-version null value was "
-        "normalized in memory to the pinned package data release v1.0; the "
-        "source YAML was not modified.",
+        "Planck+ACT-lite model. The serialized ACT data-version null value and "
+        "legacy pre-release input filename were normalized in memory to the "
+        "pinned public package defaults (v1.0/dr6_data_cmbonly.fits); the source "
+        "YAML was not modified.",
         "",
         "No sampler was created, no MPI or MCMC process was started, no target "
         "statistic was computed, and no numerical parameter, likelihood, "
