@@ -1,0 +1,10 @@
+gpg: Signature made Thu Jul 16 17:40:17 2026 UTC
+gpg:                using RSA key D4EC014EEFCC90E619D2AA59A91239ABCF512130
+gpg: Good signature from "Salah-Eddin Gherbi (Discovery Harmonic quantization of the solar system) <salahealer@gmail.com>" [ultimate]
+gpg:                 aka "Salah-Eddin Gherbi (Scala Harmonica Harmonic Solar System Discovery) <salahealer@gmail.com>" [ultimate]
+object 9caddac692206d3145510c669ec60a33f56d6e51
+type commit
+tag v0.1.3-mcmc-extension-lock
+tagger Salah-Eddin Gherbi <salahealer@gmail.com> 1784223617 +0100
+
+Freeze MCMC extension execution lock

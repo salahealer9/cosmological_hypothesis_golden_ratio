@@ -1,0 +1,7 @@
+[earthgrid-python:15553] MCW rank 0 bound to socket 0[core 0[hwt 0-1]]: [BB/../../..]
+[earthgrid-python:15553] MCW rank 1 bound to socket 0[core 1[hwt 0-1]]: [../BB/../..]
+[earthgrid-python:15553] MCW rank 2 bound to socket 0[core 2[hwt 0-1]]: [../../BB/..]
+[earthgrid-python:15553] MCW rank 3 bound to socket 0[core 3[hwt 0-1]]: [../../../BB]
+MCMC extension preflight: PASS
+Dataset: planck_lcdm_camb
+Target stored rows per chain: 18397
