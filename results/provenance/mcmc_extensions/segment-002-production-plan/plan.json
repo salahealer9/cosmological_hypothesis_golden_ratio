@@ -1,0 +1,33 @@
+{
+  "status": "frozen_before_execution",
+  "segment_label": "segment-002",
+  "execution_mode": "sequential",
+  "concurrent_datasets_allowed": false,
+  "target_statistic_used_for_selection": false,
+  "datasets": {
+    "planck_lcdm_camb": {
+      "rows_before_per_chain": 18397,
+      "minimum_appended_rows_per_chain": 4500,
+      "target_rows_per_chain": 22897,
+      "estimated_hours": 5.71
+    },
+    "actlite_lcdm_camb": {
+      "rows_before_per_chain": 22027,
+      "minimum_appended_rows_per_chain": 4000,
+      "target_rows_per_chain": 26027,
+      "estimated_hours": 5.86
+    },
+    "p-actlite_lcdm_camb": {
+      "rows_before_per_chain": 22943,
+      "minimum_appended_rows_per_chain": 4000,
+      "target_rows_per_chain": 26943,
+      "estimated_hours": 5.70
+    }
+  },
+  "execution_order": [
+    "planck_lcdm_camb",
+    "actlite_lcdm_camb",
+    "p-actlite_lcdm_camb"
+  ],
+  "ess_gate_after_completion": true
+}
