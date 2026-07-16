@@ -1,0 +1,45 @@
+{
+  "aggregate": {
+    "geometric_speedup_threads_2_over_1": 1.1529536855231506,
+    "minimum_dataset_speedup_threads_2_over_1": 1.0974733860994708
+  },
+  "checks": {
+    "all_six_runs_passed": true,
+    "all_six_runs_present": true,
+    "no_target_statistic_computed": true,
+    "selected_threads_is_one_or_two": true
+  },
+  "created_utc": "2026-07-16T17:31:51.222672+00:00",
+  "overall_pass": true,
+  "per_dataset": {
+    "actlite_lcdm_camb": {
+      "threads_1_throughput": 0.7499959841934056,
+      "threads_2_over_threads_1_speedup": 1.152592025665637,
+      "threads_2_throughput": 0.8644393906625705
+    },
+    "p-actlite_lcdm_camb": {
+      "threads_1_throughput": 3.7847448315919743,
+      "threads_2_over_threads_1_speedup": 1.0974733860994708,
+      "threads_2_throughput": 4.153656725849715
+    },
+    "planck_lcdm_camb": {
+      "threads_1_throughput": 0.8051562499321794,
+      "threads_2_over_threads_1_speedup": 1.211618728716412,
+      "threads_2_throughput": 0.9755423919609008
+    }
+  },
+  "purpose": "target-blind MCMC thread-configuration selection",
+  "selected_threads_per_rank": 2,
+  "selection_reason": "two threads met both the aggregate and per-dataset speed rules",
+  "selection_rule": {
+    "and_each_dataset_speedup_at_least": 0.95,
+    "candidate_threads_per_rank": [
+      1,
+      2
+    ],
+    "choose_two_only_if_geometric_speedup_at_least": 1.05,
+    "mpi_ranks": 4,
+    "otherwise_choose": 1
+  },
+  "target_statistic_computed": false
+}

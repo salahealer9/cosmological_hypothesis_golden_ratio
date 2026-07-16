@@ -1,0 +1,125 @@
+=== dataset=planck_lcdm_camb threads=1 ===
+[earthgrid-python:14403] MCW rank 1 bound to socket 0[core 1[hwt 0-1]]: [../BB/../..]
+[earthgrid-python:14403] MCW rank 2 bound to socket 0[core 2[hwt 0-1]]: [../../BB/..]
+[earthgrid-python:14403] MCW rank 3 bound to socket 0[core 3[hwt 0-1]]: [../../../BB]
+[earthgrid-python:14403] MCW rank 0 bound to socket 0[core 0[hwt 0-1]]: [BB/../../..]
+[0 : prior] *WARNING* External prior 'cal_dip_prior' loaded. Mind that it might not be normalized!
+[0 : camb] `camb` module loaded successfully from /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ load_rates::Loading effective Rate data (HI) 
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+
+ load_rates::Loading effective Rate data (HI) 
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+
+ load_rates::Loading effective Rate data (HI) 
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+
+ load_rates::Loading effective Rate data (HI) 
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+
+ load_rates::Loading effective Rate data (HeI) 
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+
+ load_rates::Loading effective Rate data (HeI) 
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+
+ load_rates::Loading effective Rate data (HeI) 
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+
+ load_rates::Loading effective Rate data (HeI) 
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Number of redshift points: 40
+
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Number of redshift points: 40
+
+ Load_fcorr:: Number of redshift points: 40
+
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Number of redshift points: 40
+
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+Benchmark dataset=planck_lcdm_camb threads=1: PASS
+Output: /opt/cosmological_hypothesis_golden_ratio/results/provenance/mcmc_thread_benchmark/planck_lcdm_camb/threads_1/verification.json

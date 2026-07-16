@@ -1,0 +1,289 @@
+{
+  "checks": {
+    "all_evaluations_finite": true,
+    "each_rank_has_enough_logical_cpus": true,
+    "exact_likelihood_set": true,
+    "mpi_size_is_four": true,
+    "no_chain_file_modified": true,
+    "no_numerical_posterior_values_recorded": true,
+    "no_parameter_values_recorded": true,
+    "no_sampler_created": true,
+    "no_target_statistic_computed": true,
+    "rank_cpu_affinity_sets_are_disjoint": true,
+    "runtime_gates_passed": true,
+    "thread_environment_matches": true
+  },
+  "created_utc": "2026-07-16T17:31:35.843572+00:00",
+  "dataset": "p-actlite_lcdm_camb",
+  "inputs": {
+    "chains": [
+      {
+        "chain": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.1.txt",
+        "data_rows": 22843,
+        "file_size": 12792640,
+        "parameter_values_recorded": false,
+        "rank": 0,
+        "sha256_after": "b905edbae007f49e9bcd4c765232353a73d2b4d315820af05140e18711af62cb",
+        "sha256_before": "b905edbae007f49e9bcd4c765232353a73d2b4d315820af05140e18711af62cb",
+        "tail_rows_used": 4,
+        "unchanged": true
+      },
+      {
+        "chain": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.2.txt",
+        "data_rows": 22283,
+        "file_size": 12479040,
+        "parameter_values_recorded": false,
+        "rank": 1,
+        "sha256_after": "c1c31426921c7b3407dfa721e667aee7ad9df0222ac53b2bce2f3eefd65b9ea3",
+        "sha256_before": "c1c31426921c7b3407dfa721e667aee7ad9df0222ac53b2bce2f3eefd65b9ea3",
+        "tail_rows_used": 4,
+        "unchanged": true
+      },
+      {
+        "chain": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.3.txt",
+        "data_rows": 22828,
+        "file_size": 12784240,
+        "parameter_values_recorded": false,
+        "rank": 2,
+        "sha256_after": "8c34adcaf3c48dd699608a99816746636a3ca546d89f8d9b1cd4cc3165e426f4",
+        "sha256_before": "8c34adcaf3c48dd699608a99816746636a3ca546d89f8d9b1cd4cc3165e426f4",
+        "tail_rows_used": 4,
+        "unchanged": true
+      },
+      {
+        "chain": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.4.txt",
+        "data_rows": 22638,
+        "file_size": 12677840,
+        "parameter_values_recorded": false,
+        "rank": 3,
+        "sha256_after": "f1b73438bd1363002d040516a716634482c26bec9119ada0294f1da0c9eef0c5",
+        "sha256_before": "f1b73438bd1363002d040516a716634482c26bec9119ada0294f1da0c9eef0c5",
+        "tail_rows_used": 4,
+        "unchanged": true
+      }
+    ],
+    "runtime_template": "config/mcmc_extension_runtime_inputs/p-actlite_lcdm_camb.yaml",
+    "runtime_template_sha256": "2b963fb018954ed47111b6b88263e97f2aa4c9d676d690effb728674fc6f6e67"
+  },
+  "machine": {
+    "binding_model": "four MPI ranks mapped one per physical core; OpenMP places are hardware threads within each bound core",
+    "hostname": "earthgrid-python",
+    "logical_cpus": 8,
+    "python": "3.11.2 (main, May 12 2026, 05:17:27) [GCC 12.2.0]",
+    "rank_cpu_affinity": [
+      {
+        "enough_logical_cpus": true,
+        "logical_cpu_count": 2,
+        "logical_cpus": [
+          0,
+          4
+        ],
+        "rank": 0,
+        "requested_openmp_threads": 1
+      },
+      {
+        "enough_logical_cpus": true,
+        "logical_cpu_count": 2,
+        "logical_cpus": [
+          1,
+          5
+        ],
+        "rank": 1,
+        "requested_openmp_threads": 1
+      },
+      {
+        "enough_logical_cpus": true,
+        "logical_cpu_count": 2,
+        "logical_cpus": [
+          2,
+          6
+        ],
+        "rank": 2,
+        "requested_openmp_threads": 1
+      },
+      {
+        "enough_logical_cpus": true,
+        "logical_cpu_count": 2,
+        "logical_cpus": [
+          3,
+          7
+        ],
+        "rank": 3,
+        "requested_openmp_threads": 1
+      }
+    ]
+  },
+  "mpi_ranks": 4,
+  "numerical_likelihood_values_recorded": false,
+  "omp_threads_per_rank": 1,
+  "overall_pass": true,
+  "parameter_values_recorded": false,
+  "purpose": "target-blind four-rank CAMB threading benchmark",
+  "repository": {
+    "branch": "confirmatory-analysis",
+    "commit": "f5bd8e565f7c89a01b7069927476da852cbfdde3",
+    "root": "/opt/cosmological_hypothesis_golden_ratio"
+  },
+  "runtime_gate": {
+    "act_installation": {
+      "checks": {
+        "commit_matches": true,
+        "git_vcs_record": true,
+        "requested_revision_matches_or_unspecified": true
+      },
+      "direct_url": {
+        "url": "https://github.com/ACTCollaboration/DR6-ACT-lite.git",
+        "vcs_info": {
+          "commit_id": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+          "requested_revision": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+          "vcs": "git"
+        }
+      },
+      "distribution_name": "ACT-DR6-CMBonly",
+      "distribution_version": "1.0.0",
+      "expected_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+      "installed_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808"
+    },
+    "act_runtime_normalization": {
+      "act_likelihood_present": true,
+      "data_file": "/opt/cobaya-packages-act-dr6/data/ACTDR6CMBonly/v1.0/dr6_data_cmbonly.fits",
+      "data_file_sha256": "c887dc9178d81f5e5e0ce76eca0cd3c9f089056630ab78a1cc4bb28ff8751c29",
+      "runtime_input_file": "dr6_data_cmbonly.fits",
+      "runtime_version": "v1.0",
+      "serialized_input_file": "dr6_data_cmbonly.fits",
+      "serialized_version": "v1.0",
+      "source_info_modified": false
+    },
+    "camb_cosmorec": {
+      "camblib_sha256": "d3e6124423a3efd187fdf2915df6d4c2f75e1bbe88bb4ab7a28141902a99b484",
+      "checks": {
+        "camblib_exists": true,
+        "cosmorec_class_available": true,
+        "editable_source_path_matches": true,
+        "linked_libraries_resolved": true,
+        "metadata_version": true,
+        "module_inside_pinned_source": true,
+        "module_version": true,
+        "source_commit_matches": true
+      },
+      "direct_url": {
+        "dir_info": {
+          "editable": true
+        },
+        "url": "file:///opt/cosmology-software/CAMB-1.5.0-cosmorec"
+      },
+      "expected_commit": "28e4036519155531f4ed9a4e1d8afb1579d2de11",
+      "expected_source": "/opt/cosmology-software/CAMB-1.5.0-cosmorec",
+      "installed_commit": "28e4036519155531f4ed9a4e1d8afb1579d2de11",
+      "module_path": "/opt/cosmology-software/CAMB-1.5.0-cosmorec/camb/__init__.py",
+      "numerical_spectra_computed": false,
+      "recombination_class": "CosmoRec"
+    },
+    "packages": {
+      "checks": {
+        "arviz": true,
+        "camb": true,
+        "cobaya": true,
+        "getdist": true,
+        "mpi4py": true
+      },
+      "expected": {
+        "arviz": "0.23.4",
+        "camb": "1.5.0",
+        "cobaya": "3.5.4",
+        "getdist": "1.7.7",
+        "mpi4py": "4.1.2"
+      },
+      "installed": {
+        "arviz": "0.23.4",
+        "camb": "1.5.0",
+        "cobaya": "3.5.4",
+        "getdist": "1.7.7",
+        "mpi4py": "4.1.2"
+      }
+    },
+    "target_statistic_computed": false,
+    "taurend_capability": {
+      "already_installed": false,
+      "cambdata_field_present": true,
+      "changes_camb_calculation": false,
+      "changes_likelihood_calculation": false,
+      "cobaya_component": "cobaya.theories.camb.camb.CAMB",
+      "installed_source_file": "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/theories/camb/camb.py",
+      "installed_source_sha256": "2d1b2effee4ca35db4ed93f7b96b20e015b659098fd9b1f8e15512ffec6cd39f",
+      "parameter": "taurend",
+      "patched_method": "get_can_provide_params",
+      "process_local_only": true,
+      "source_file_modified": false
+    }
+  },
+  "target_statistic_computed": false,
+  "thread_gate": {
+    "actual": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OMP_PLACES": "threads",
+      "OMP_PROC_BIND": "close",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "checks": {
+      "MKL_NUM_THREADS": true,
+      "NUMEXPR_NUM_THREADS": true,
+      "OMP_NUM_THREADS": true,
+      "OMP_PLACES": true,
+      "OMP_PROC_BIND": true,
+      "OPENBLAS_NUM_THREADS": true
+    },
+    "expected": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OMP_PLACES": "threads",
+      "OMP_PROC_BIND": "close",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "timed_evaluations_per_rank": 3,
+  "timing_seconds": {
+    "initialization_by_rank": [
+      0.5600461079993693,
+      0.5595922880002036,
+      0.5573555489991122,
+      0.5535565089994634
+    ],
+    "initialization_max": 0.5600461079993693,
+    "local_evaluation_max": 3.16354751200015,
+    "local_evaluation_median": 0.003435939999690163,
+    "local_evaluations_by_rank": [
+      [
+        0.0034472700008336687,
+        0.003424609998546657,
+        0.003628479000326479
+      ],
+      [
+        0.0013877689998480491,
+        0.0035095290004392155,
+        0.0035102500005450565
+      ],
+      [
+        0.0015836799993849127,
+        3.16354751200015,
+        0.003083029001572868
+      ],
+      [
+        0.003288769999926444,
+        0.0034723190001386683,
+        0.0013625110004795715
+      ]
+    ],
+    "round_wall_times": [
+      0.0034472700008336687,
+      3.16354751200015,
+      0.003628479000326479
+    ],
+    "throughput_evaluations_per_second": 3.7847448315919743,
+    "timed_wall_total": 3.1706232610013103
+  },
+  "total_timed_evaluations": 12
+}
