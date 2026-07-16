@@ -198,7 +198,7 @@ def main() -> int:
     header, final_row, row_number = read_header_and_last_row(POINT_CHAIN)
     row = dict(zip(header, final_row, strict=True))
 
-    info: dict[str, Any] = yaml_load_file(UPDATED_YAML)
+    info: dict[str, Any] = yaml_load_file(str(UPDATED_YAML))
     info["packages_path"] = str(packages_path)
     info["output"] = None
     info["timing"] = True
