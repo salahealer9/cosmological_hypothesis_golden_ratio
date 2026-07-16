@@ -1,0 +1,96 @@
+# Frozen only after the target-blind four-rank threading benchmark.
+# Commit this file and create the signed tag named below before running MCMC.
+
+[lock]
+name = "mcmc_extension_execution_lock"
+version = "0.1.0"
+status = "frozen_before_mcmc_extension"
+date = "2026-07-16"
+tag = "v0.1.3-mcmc-extension-lock"
+base_benchmark_commit = "81a4cfe4112ebd9414c0df76072fef33f420b888"
+benchmark_verification = "results/provenance/mcmc_thread_benchmark/verification.json"
+benchmark_verification_sha256 = "2b7a80550c654b6f42fc46898c71c19b8d1c216a6ec5bb2e3f51cba350600ee6"
+base_preregistration_tag = "v0.1.0-preregistration-freeze"
+base_execution_lock_tag = "v0.1.1-confirmatory-execution-lock"
+base_chain_ingestion_tag = "v0.1.2-chain-ingestion-lock"
+
+[execution]
+mpi_ranks = 4
+selected_threads_per_rank = 2
+openblas_threads = 1
+mkl_threads = 1
+numexpr_threads = 1
+omp_proc_bind = "close"
+omp_places = "threads"
+minimum_rows_per_segment = 100
+maximum_rows_per_segment = 100000
+target_rows_rule = "max_current_stored_rows_plus_requested_minimum_growth"
+resume = true
+force = false
+allow_changes = true
+allow_changes_scope = "enumerated runtime compatibility fields and finite-segment sampler controls only"
+Rminus1_stop = 0.0
+Rminus1_cl_stop = 0.0
+output_every = "60s"
+append_only_required = true
+expected_numbered_chains = 4
+
+[runtime_compatibility]
+cobaya = "3.5.4"
+camb = "1.5.0"
+cosmorec = "2.0.3b"
+camb_commit = "28e4036519155531f4ed9a4e1d8afb1579d2de11"
+act_lite_commit = "880eacb40d66722eb1c32d7b5621e91662b4d808"
+act_data_version = "v1.0"
+act_input_file = "dr6_data_cmbonly.fits"
+derived_capability_shim = "CAMBdata.taurend advertisement only"
+source_yaml_modified = false
+installed_cobaya_source_modified = false
+
+[selection_rule]
+candidate_threads_per_rank = [1, 2]
+minimum_geometric_speedup_for_two = 1.05
+minimum_each_dataset_speedup_for_two = 0.95
+otherwise_select = "one thread per rank"
+
+[script_hashes]
+"config/mcmc_extension_runtime_inputs/actlite_lcdm_camb.yaml" = "0e5ef3c8e759403fa45bb0e66720dddef8b63ee85618eff1152d6892dc377b5c"
+"config/mcmc_extension_runtime_inputs/p-actlite_lcdm_camb.yaml" = "2b963fb018954ed47111b6b88263e97f2aa4c9d676d690effb728674fc6f6e67"
+"config/mcmc_extension_runtime_inputs/planck_lcdm_camb.yaml" = "e712a99cb164f92ff6b91e630c3fb64d36c46577675c6ec6633c1d2f8a2f24bd"
+"scripts/benchmark_mcmc_threading.py" = "ada1b8367fe6e71a95081f13f03ae641ffb9c553ba6ab22be22426d75cb0e2e7"
+"scripts/finalize_mcmc_extension_lock.py" = "b9dfa39927270cbb94577f622b8aef68297e14328d34f942b2d404735aaaf5db"
+"scripts/locked_cobaya_runtime.py" = "09535ed4760b87a859baae32b8d8d44e4f2d53b378a5b82a276e85fb913616a8"
+"scripts/run_locked_mcmc_segment.sh" = "8d0704de51a6e532db2e2ede3fec4c780baf192ea533599f9c303751320d11be"
+"scripts/run_mcmc_extension.py" = "c8828a5bb7a63fb82408422f9247524d3e3f7822a0e21447cca365a8f9a8486f"
+"scripts/run_mcmc_thread_benchmark.sh" = "005b94aeeb17dacd7d1d7b7c50fbb000c6612628e388cd0edb47b8e1e3c98c51"
+"scripts/summarize_mcmc_thread_benchmark.py" = "924cb90ab90040b066be9622240dbd8168e9ce096e85cf02328ad054edda67f9"
+
+[datasets.planck_lcdm_camb]
+directory = "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb"
+prefix = "planck-camb-lcdm"
+runtime_template = "config/mcmc_extension_runtime_inputs/planck_lcdm_camb.yaml"
+likelihoods = [
+  "planck_2018_lowl.TT",
+  "planck_2018_lowl.EE_sroll2",
+  "act_dr6_cmbonly.PlanckActCut",
+]
+
+[datasets.actlite_lcdm_camb]
+directory = "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb"
+prefix = "act-camb-lcdm"
+runtime_template = "config/mcmc_extension_runtime_inputs/actlite_lcdm_camb.yaml"
+likelihoods = [
+  "planck_2018_lowl.EE_sroll2",
+  "act_dr6_cmbonly.ACTDR6CMBonly",
+]
+
+[datasets.p-actlite_lcdm_camb]
+directory = "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb"
+prefix = "p-act-camb-lcdm"
+runtime_template = "config/mcmc_extension_runtime_inputs/p-actlite_lcdm_camb.yaml"
+likelihoods = [
+  "planck_2018_lowl.TT",
+  "planck_2018_lowl.EE_sroll2",
+  "act_dr6_cmbonly.PlanckActCut",
+  "act_dr6_cmbonly.ACTDR6CMBonly",
+]
