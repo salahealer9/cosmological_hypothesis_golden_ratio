@@ -1,0 +1,50 @@
+{
+  "asset_checksum_status": 0,
+  "camb_evaluated": false,
+  "components": {
+    "act_dr6_cmbonly": {
+      "absolute_path": "/opt/cobaya-packages-act-dr6/data/ACTDR6CMBonly",
+      "directory_exists": true,
+      "file_count": 1,
+      "nonempty": true,
+      "relative_path": "data/ACTDR6CMBonly",
+      "total_bytes": 9581760
+    },
+    "planck_2018_lowl_EE_sroll2": {
+      "absolute_path": "/opt/cobaya-packages-act-dr6/data/planck_sroll2_lowE_native",
+      "directory_exists": true,
+      "file_count": 2,
+      "nonempty": true,
+      "relative_path": "data/planck_sroll2_lowE_native",
+      "total_bytes": 2187002
+    },
+    "planck_2018_lowl_TT": {
+      "absolute_path": "/opt/cobaya-packages-act-dr6/data/planck_2018_lowT_native",
+      "directory_exists": true,
+      "file_count": 6,
+      "nonempty": true,
+      "relative_path": "data/planck_2018_lowT_native",
+      "total_bytes": 14160810
+    },
+    "planck_act_cut": {
+      "absolute_path": "/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native",
+      "directory_exists": true,
+      "file_count": 7,
+      "nonempty": true,
+      "relative_path": "data/planck_2018_pliklite_native",
+      "total_bytes": 3262145
+    }
+  },
+  "install_exit_status": 0,
+  "likelihood_data_installed": true,
+  "likelihood_evaluated": false,
+  "likelihood_initialized": false,
+  "mcmc_started": false,
+  "mpi_started": false,
+  "overall_pass": true,
+  "packages_path": "/opt/cobaya-packages-act-dr6",
+  "purpose": "locked likelihood-data installation and asset verification",
+  "repository_commit": "572b3c742c1a71f10d4c10c8c6a53bd4c7d12cff",
+  "successful_component_installation_checks": 4,
+  "target_statistic_computed": false
+}

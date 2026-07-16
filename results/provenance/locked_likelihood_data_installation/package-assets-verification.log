@@ -1,0 +1,16 @@
+./data/ACTDR6CMBonly/v1.0/dr6_data_cmbonly.fits: OK
+./data/planck_2018_lowT_native/cl2x_1.txt: OK
+./data/planck_2018_lowT_native/cl2x_2.txt: OK
+./data/planck_2018_lowT_native/cov.txt: OK
+./data/planck_2018_lowT_native/mu.txt: OK
+./data/planck_2018_lowT_native/mu_sigma.txt: OK
+./data/planck_2018_lowT_native/version.dat: OK
+./data/planck_2018_pliklite_native/blmax.dat: OK
+./data/planck_2018_pliklite_native/blmin.dat: OK
+./data/planck_2018_pliklite_native/bweight.dat: OK
+./data/planck_2018_pliklite_native/c_matrix_plik_v22.dat: OK
+./data/planck_2018_pliklite_native/cl_cmb_plik_v22.dat: OK
+./data/planck_2018_pliklite_native/plik_lite_v22.dataset: OK
+./data/planck_2018_pliklite_native/version.dat: OK
+./data/planck_sroll2_lowE_native/sroll2_prob_table.txt: OK
+./data/planck_sroll2_lowE_native/version.dat: OK

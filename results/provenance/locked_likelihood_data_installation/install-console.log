@@ -1,0 +1,64 @@
+[install] Installing external packages at '/opt/cobaya-packages-act-dr6'
+[install] The installation path has been written into the global config file: /home/salahealer_gmail_com/.config/cobaya/config.yaml
+
+================================================================================
+act_dr6_cmbonly
+================================================================================
+
+[install] Checking if dependencies have already been installed...
+[install] Check found no existing installation
+[install] (If you expected this to be already installed, re-run `cobaya-install` with --debug to get more verbose output.)
+[install] Installing...
+[act_dr6_cmbonly] Downloading likelihood data file: https://portal.nersc.gov/project/act/dr6_data//dr6_data_cmbonly.tar.gz...
+[act_dr6_cmbonly] Downloaded filename dr6_data_cmbonly.tar.gz
+[act_dr6_cmbonly] Likelihood data downloaded and uncompressed correctly.
+[install] Successfully installed! Let's check it...
+[install] Installation check successful.
+
+================================================================================
+act_dr6_cmbonly.PlanckActCut
+================================================================================
+
+[install] Checking if dependencies have already been installed...
+[install] Check found no existing installation
+[install] (If you expected this to be already installed, re-run `cobaya-install` with --debug to get more verbose output.)
+[install] Installing...
+[act_dr6_cmbonly.PlanckActCut] Downloading CobayaSampler/planck_native_data data...
+[act_dr6_cmbonly.PlanckActCut] Downloaded filename plik_lite_2018_AL.zip
+[act_dr6_cmbonly.PlanckActCut] plik_lite_2018_AL.zip from planck_native_data v1 downloaded and decompressed correctly.
+[install] Successfully installed! Let's check it...
+[install] Installation check successful.
+
+================================================================================
+planck_2018_lowl.TT
+================================================================================
+
+[install] Checking if dependencies have already been installed...
+[install] Check found no existing installation
+[install] (If you expected this to be already installed, re-run `cobaya-install` with --debug to get more verbose output.)
+[install] Installing...
+[planck_2018_lowl.TT] Downloading CobayaSampler/planck_native_data data...
+[planck_2018_lowl.TT] Downloaded filename planck_2018_lowT.zip
+[planck_2018_lowl.TT] planck_2018_lowT.zip from planck_native_data v1 downloaded and decompressed correctly.
+[install] Successfully installed! Let's check it...
+[install] Installation check successful.
+
+================================================================================
+planck_2018_lowl.EE_sroll2
+================================================================================
+
+[install] Checking if dependencies have already been installed...
+[install] Check found no existing installation
+[install] (If you expected this to be already installed, re-run `cobaya-install` with --debug to get more verbose output.)
+[install] Installing...
+[planck_2018_lowl.EE_sroll2] Downloading CobayaSampler/planck_native_data data...
+[planck_2018_lowl.EE_sroll2] Downloaded filename planck_sroll2_lowE.zip
+[planck_2018_lowl.EE_sroll2] planck_sroll2_lowE.zip from planck_native_data v1 downloaded and decompressed correctly.
+[install] Successfully installed! Let's check it...
+[install] Installation check successful.
+
+================================================================================
+* Summary * 
+================================================================================
+
+[install] All requested components' dependencies correctly installed at /opt/cobaya-packages-act-dr6

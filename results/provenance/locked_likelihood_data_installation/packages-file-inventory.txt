@@ -1,0 +1,15 @@
+/opt/cobaya-packages-act-dr6/data/planck_2018_lowT_native/cl2x_1.txt	6225000 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_lowT_native/cl2x_2.txt	6341136 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_lowT_native/cov.txt	1582091 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_lowT_native/mu.txt	6356 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_lowT_native/mu_sigma.txt	6225 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_lowT_native/version.dat	2 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native/blmax.dat	16125 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native/blmin.dat	16125 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native/bweight.dat	185925 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native/c_matrix_plik_v22.dat	3006160 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native/cl_cmb_plik_v22.dat	37393 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native/plik_lite_v22.dataset	415 bytes
+/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native/version.dat	2 bytes
+/opt/cobaya-packages-act-dr6/data/planck_sroll2_lowE_native/sroll2_prob_table.txt	2187000 bytes
+/opt/cobaya-packages-act-dr6/data/planck_sroll2_lowE_native/version.dat	2 bytes

@@ -1,0 +1,8 @@
+/opt/cobaya-packages-act-dr6
+/opt/cobaya-packages-act-dr6/code
+/opt/cobaya-packages-act-dr6/data
+/opt/cobaya-packages-act-dr6/data/ACTDR6CMBonly
+/opt/cobaya-packages-act-dr6/data/ACTDR6CMBonly/v1.0
+/opt/cobaya-packages-act-dr6/data/planck_2018_lowT_native
+/opt/cobaya-packages-act-dr6/data/planck_2018_pliklite_native
+/opt/cobaya-packages-act-dr6/data/planck_sroll2_lowE_native
