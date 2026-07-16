@@ -1,0 +1,261 @@
+[earthgrid-python:23525] MCW rank 0 bound to socket 0[core 0[hwt 0-1]]: [BB/../../..]
+[earthgrid-python:23525] MCW rank 1 bound to socket 0[core 1[hwt 0-1]]: [../BB/../..]
+[earthgrid-python:23525] MCW rank 2 bound to socket 0[core 2[hwt 0-1]]: [../../BB/..]
+[earthgrid-python:23525] MCW rank 3 bound to socket 0[core 3[hwt 0-1]]: [../../../BB]
+[0 : output] Output to be read-from/written-into folder '/opt/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb', with prefix 'p-act-camb-lcdm'
+[0 : output] Found existing info files with the requested output prefix: '/opt/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm'
+[0 : output] Let's try to resume/load.
+[0 : output] Found an old sample. Resuming.
+[0 : prior] *WARNING* External prior 'cal_dip_prior' loaded. Mind that it might not be normalized!
+[0 : camb] `camb` module loaded successfully from /opt/cosmology-software/CAMB-1.5.0-cosmorec/camb
+Warning: The FITS format without the 'sacc_ordering' column is deprecated
+Assuming data rows are in the correct order as it was before version 1.0.
+Warning: The FITS format without the 'sacc_ordering' column is deprecated
+Assuming data rows are in the correct order as it was before version 1.0.
+Warning: The FITS format without the 'sacc_ordering' column is deprecated
+Assuming data rows are in the correct order as it was before version 1.0.
+Warning: The FITS format without the 'sacc_ordering' column is deprecated
+Assuming data rows are in the correct order as it was before version 1.0.
+[0 : mcmc] Resuming from previous sample!
+[3 : samplecollection] Loaded 22638 sample points from '/opt/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.4.txt'
+[2 : samplecollection] Loaded 22828 sample points from '/opt/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.3.txt'
+[0 : samplecollection] Loaded 22843 sample points from '/opt/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.1.txt'
+[1 : samplecollection] Loaded 22283 sample points from '/opt/cosmological_hypothesis_golden_ratio/data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.2.txt'
+[0 : mcmc] Initial point: ombh2:0.02250719, omch2:0.1206286, cosmomc_theta:0.01040919, logA:3.058259, ns:0.9697622, tau:0.05662955, A_planck:1.005039, P_act:1.001473
+[1 : mcmc] Initial point: ombh2:0.02245188, omch2:0.1206895, cosmomc_theta:0.01040677, logA:3.073015, ns:0.9665784, tau:0.06552255, A_planck:1.003064, P_act:1.006414
+[2 : mcmc] Initial point: ombh2:0.02258119, omch2:0.1195191, cosmomc_theta:0.01040481, logA:3.068847, ns:0.9684649, tau:0.06907789, A_planck:0.9976259, P_act:1.001349
+[3 : mcmc] Initial point: ombh2:0.02240446, omch2:0.1200642, cosmomc_theta:0.01040681, logA:3.071972, ns:0.9684884, tau:0.06916013, A_planck:0.9994016, P_act:0.9988647
+[0 : mcmc] *WARNING* Parameter blocking manually/previously fixed: speeds will not be measured.
+[0 : mcmc] Oversampling with factors:
+[0 : mcmc] *  1 : ['ombh2', 'omch2', 'cosmomc_theta', 'tau']
+[0 : mcmc] *  1 : ['logA', 'ns']
+[0 : mcmc] * 23 : ['A_planck']
+[0 : mcmc] * 32 : ['P_act']
+[0 : mcmc] Covariance matrix from previous sample.
+[0 : mcmc] Sampling!
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || You are entering CosmoRec v2.0.3 beta (batch mode). Several initializations will be executed now.
+ ========================================================================================================== 
+
+ load_rates::Loading effective Rate data (HI) 
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+
+ load_rates::Loading effective Rate data (HI) 
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+
+ load_rates::Loading effective Rate data (HI) 
+
+ load_rates::Loading effective Rate data (HI) 
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+ resolved level # 0 :: 2 0 HI_index= 1
+ resolved level # 1 :: 2 1 HI_index= 2
+ resolved level # 2 :: 3 0 HI_index= 3
+ resolved level # 3 :: 3 1 HI_index= 4
+ resolved level # 4 :: 3 2 HI_index= 5
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 5 Tg-points: 500
+
+
+ load_rates::Loading effective Rate data (HeI) 
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+
+ load_rates::Loading effective Rate data (HeI) 
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+
+ load_rates::Loading effective Rate data (HeI) 
+
+ load_rates::Loading effective Rate data (HeI) 
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+ resolved level # 0 :: 2 0 s= 0 j= 0 HeI_index= 1
+ resolved level # 1 :: 2 1 s= 0 j= 1 HeI_index= 2
+ resolved level # 2 :: 2 0 s= 1 j= 1 HeI_index= 3
+ resolved level # 3 :: 2 1 s= 1 j= 1 HeI_index= 5
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+ load_rates::finished. # of resolved states: 4 Tg-points: 500
+
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Number of redshift points: 40
+
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Number of redshift points: 40
+
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Number of redshift points: 40
+
+ Load_fcorr:: Loading correction factor for DPesc due to HI :
+ /opt/cosmology-software/CosmoRec.v2.0.3b/./Development/Recombination/Data.fcorr/f.corr.dat
+ Load_fcorr:: Number of redshift points: 40
+
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+
+ ========================================================================================================== 
+ || The first run was successful. Will now switch to 'silent' mode.
+ ========================================================================================================== 
+[0 : mcmc] Progress @ 2026-07-16 19:46:52 : 1 steps taken, and 22843 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:46:52 : 1 steps taken, and 22283 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:46:52 : 1 steps taken, and 22638 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:46:52 : 1 steps taken, and 22828 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:47:57 : 76 steps taken, and 22837 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:47:57 : 90 steps taken, and 22293 accepted.
+[0 : mcmc] Progress @ 2026-07-16 19:47:59 : 107 steps taken, and 22856 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:48:00 : 108 steps taken, and 22650 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:48:58 : 189 steps taken, and 22306 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:48:58 : 189 steps taken, and 22851 accepted.
+[0 : mcmc] Progress @ 2026-07-16 19:49:03 : 211 steps taken, and 22868 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:49:07 : 199 steps taken, and 22661 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:49:59 : 277 steps taken, and 22317 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:50:02 : 288 steps taken, and 22863 accepted.
+[0 : mcmc] Progress @ 2026-07-16 19:50:06 : 301 steps taken, and 22879 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:50:08 : 298 steps taken, and 22673 accepted.
+[3 : mcmc] Learn + convergence test @ 22680 samples accepted.
+[3 : mcmc] Ready to check convergence and learn a new proposal covmat (waiting for the rest...)
+[1 : mcmc] Progress @ 2026-07-16 19:51:03 : 381 steps taken, and 22329 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:51:09 : 389 steps taken, and 22875 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:51:12 : 390 steps taken, and 22684 accepted.
+[0 : mcmc] Progress @ 2026-07-16 19:51:12 : 400 steps taken, and 22890 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:52:04 : 486 steps taken, and 22342 accepted.
+[0 : mcmc] Progress @ 2026-07-16 19:52:12 : 507 steps taken, and 22904 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:52:13 : 509 steps taken, and 22891 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:52:13 : 489 steps taken, and 22696 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:53:08 : 571 steps taken, and 22352 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:53:14 : 578 steps taken, and 22708 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:53:14 : 584 steps taken, and 22900 accepted.
+[0 : mcmc] Progress @ 2026-07-16 19:53:16 : 600 steps taken, and 22915 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:54:12 : 686 steps taken, and 22367 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:54:17 : 676 steps taken, and 22719 accepted.
+[0 : mcmc] Progress @ 2026-07-16 19:54:18 : 691 steps taken, and 22926 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:54:18 : 686 steps taken, and 22913 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:55:18 : 786 steps taken, and 22733 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:55:19 : 792 steps taken, and 22380 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:55:19 : 782 steps taken, and 22925 accepted.
+[0 : mcmc] Progress @ 2026-07-16 19:55:24 : 805 steps taken, and 22940 accepted.
+[0 : mcmc] Reached maximum number of accepted steps allowed (22943). Stopping.
+[3 : mcmc] Progress @ 2026-07-16 19:56:19 : 881 steps taken, and 22746 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:56:20 : 892 steps taken, and 22392 accepted.
+[2 : mcmc] Progress @ 2026-07-16 19:56:22 : 887 steps taken, and 22938 accepted.
+[2 : mcmc] Reached maximum number of accepted steps allowed (22943). Stopping.
+[1 : mcmc] Learn + convergence test @ 22400 samples accepted.
+[1 : mcmc] Ready to check convergence and learn a new proposal covmat (waiting for the rest...)
+[3 : mcmc] Progress @ 2026-07-16 19:57:21 : 986 steps taken, and 22758 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:57:22 : 997 steps taken, and 22405 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:58:23 : 1077 steps taken, and 22415 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:58:24 : 1092 steps taken, and 22772 accepted.
+[1 : mcmc] Progress @ 2026-07-16 19:59:23 : 1196 steps taken, and 22429 accepted.
+[3 : mcmc] Progress @ 2026-07-16 19:59:26 : 1183 steps taken, and 22783 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:00:26 : 1271 steps taken, and 22439 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:00:34 : 1289 steps taken, and 22797 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:01:31 : 1357 steps taken, and 22449 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:01:34 : 1392 steps taken, and 22809 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:02:36 : 1474 steps taken, and 22819 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:02:37 : 1483 steps taken, and 22465 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:03:36 : 1576 steps taken, and 22832 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:03:37 : 1585 steps taken, and 22478 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:04:38 : 1682 steps taken, and 22490 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:04:41 : 1655 steps taken, and 22841 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:05:40 : 1785 steps taken, and 22503 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:05:41 : 1787 steps taken, and 22856 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:06:46 : 1888 steps taken, and 22516 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:06:47 : 1882 steps taken, and 22868 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:07:49 : 2002 steps taken, and 22528 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:07:52 : 1972 steps taken, and 22880 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:08:54 : 2109 steps taken, and 22541 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:08:57 : 2088 steps taken, and 22894 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:09:57 : 2187 steps taken, and 22551 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:10:05 : 2199 steps taken, and 22908 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:10:58 : 2294 steps taken, and 22564 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:11:07 : 2277 steps taken, and 22918 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:12:03 : 2392 steps taken, and 22577 accepted.
+[3 : mcmc] Progress @ 2026-07-16 20:12:10 : 2410 steps taken, and 22933 accepted.
+[3 : mcmc] Reached maximum number of accepted steps allowed (22943). Stopping.
+[1 : mcmc] Progress @ 2026-07-16 20:13:09 : 2484 steps taken, and 22588 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:14:14 : 2575 steps taken, and 22600 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:15:14 : 2688 steps taken, and 22614 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:16:20 : 2784 steps taken, and 22626 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:17:25 : 2899 steps taken, and 22640 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:18:25 : 2996 steps taken, and 22652 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:19:26 : 3078 steps taken, and 22663 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:20:28 : 3209 steps taken, and 22679 accepted.
+[1 : mcmc] Learn + convergence test @ 22680 samples accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:21:28 : 3290 steps taken, and 22689 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:22:34 : 3405 steps taken, and 22703 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:23:39 : 3487 steps taken, and 22713 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:24:39 : 3599 steps taken, and 22726 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:25:45 : 3682 steps taken, and 22737 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:26:53 : 3796 steps taken, and 22751 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:28:01 : 3905 steps taken, and 22765 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:29:05 : 4022 steps taken, and 22778 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:30:08 : 4137 steps taken, and 22792 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:31:10 : 4213 steps taken, and 22800 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:32:18 : 4330 steps taken, and 22814 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:33:22 : 4440 steps taken, and 22827 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:34:30 : 4538 steps taken, and 22839 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:35:35 : 4639 steps taken, and 22852 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:36:43 : 4720 steps taken, and 22861 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:37:48 : 4867 steps taken, and 22879 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:38:53 : 4956 steps taken, and 22891 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:39:55 : 5073 steps taken, and 22905 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:41:00 : 5175 steps taken, and 22918 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:42:02 : 5260 steps taken, and 22928 accepted.
+[1 : mcmc] Progress @ 2026-07-16 20:43:10 : 5369 steps taken, and 22942 accepted.
+[1 : mcmc] Reached maximum number of accepted steps allowed (22943). Stopping.
+[0 : mcmc] Sampling complete after 91772 accepted steps.
+MCMC extension segment: PASS
+Provenance: /opt/cosmological_hypothesis_golden_ratio/results/provenance/mcmc_extensions/p-actlite_lcdm_camb/segment-001
