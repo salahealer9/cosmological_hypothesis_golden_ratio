@@ -16,6 +16,7 @@ golden-ratio target, or record numerical posterior/likelihood/derived values.
 from __future__ import annotations
 
 import hashlib
+import inspect
 import json
 import math
 import os
@@ -110,6 +111,73 @@ def git(*args: str) -> str:
         cwd=REPO_ROOT,
         text=True,
     ).strip()
+
+
+def install_cobaya_taurend_capability_shim() -> dict[str, Any]:
+    """
+    Advertise CAMBdata.taurend to Cobaya's dependency resolver.
+
+    Vanilla Cobaya 3.5.4 can extract arbitrary CAMB derived fields in
+    ``CAMB._get_derived`` but its ``get_can_provide_params`` method does not
+    advertise the CAMBdata field ``taurend``. The released updated YAML asks
+    for this derived output, so dependency resolution otherwise fails before
+    any calculation. This process-local shim changes only capability
+    advertisement; it does not alter CAMB, its inputs, spectra, likelihoods,
+    or the numerical value returned for ``taurend``.
+    """
+    import camb
+    from cobaya.theories.camb.camb import CAMB as CobayaCAMB
+
+    cambdata_fields = {
+        field[0]
+        for field in camb.CAMBdata._fields_
+        if field
+    }
+    if "taurend" not in cambdata_fields:
+        raise RuntimeError(
+            "Pinned CAMBdata does not expose the required taurend field"
+        )
+
+    original = CobayaCAMB.get_can_provide_params
+    if getattr(original, "_golden_ratio_taurend_shim", False):
+        raise RuntimeError("Cobaya taurend capability shim is already installed")
+
+    source_file_raw = inspect.getsourcefile(CobayaCAMB)
+    if source_file_raw is None:
+        raise RuntimeError("Could not locate the installed Cobaya CAMB source")
+    source_file = Path(source_file_raw).resolve()
+    if not source_file.is_file():
+        raise RuntimeError(
+            f"Installed Cobaya CAMB source does not exist: {source_file}"
+        )
+
+    def patched_get_can_provide_params(self):
+        names = set(original(self))
+        names.add("taurend")
+        return names
+
+    patched_get_can_provide_params.__name__ = (
+        original.__name__ + "_with_taurend"
+    )
+    patched_get_can_provide_params.__doc__ = (
+        "Process-local compatibility shim adding CAMBdata.taurend."
+    )
+    patched_get_can_provide_params._golden_ratio_taurend_shim = True
+    CobayaCAMB.get_can_provide_params = patched_get_can_provide_params
+
+    return {
+        "parameter": "taurend",
+        "cobaya_component": "cobaya.theories.camb.camb.CAMB",
+        "patched_method": "get_can_provide_params",
+        "installed_source_file": str(source_file),
+        "installed_source_sha256": sha256(source_file),
+        "cambdata_field_present": True,
+        "process_local_only": True,
+        "source_file_modified": False,
+        "changes_camb_calculation": False,
+        "changes_likelihood_calculation": False,
+        "records_numerical_taurend_value": False,
+    }
 
 
 def verify_camb_cosmorec_capability() -> dict[str, Any]:
@@ -352,6 +420,8 @@ def main() -> int:
     if not act_data_file.is_file():
         raise RuntimeError(f"Missing locked ACT DR6 data file: {act_data_file}")
 
+    cobaya_taurend_shim = install_cobaya_taurend_capability_shim()
+
     safe_mkdir(OUTPUT_DIR)
 
     model = None
@@ -431,6 +501,13 @@ def main() -> int:
             act_config.get("input_file") == EXPECTED_ACT_INPUT_FILE
         ),
         "locked_act_data_file_exists": act_data_file.is_file(),
+        "cambdata_taurend_field_present": (
+            cobaya_taurend_shim["cambdata_field_present"]
+        ),
+        "cobaya_taurend_capability_shim_installed": True,
+        "cobaya_source_file_unmodified": (
+            cobaya_taurend_shim["source_file_modified"] is False
+        ),
         "model_initialized": initialization_seconds is not None,
         "one_evaluation_completed": evaluation_seconds is not None,
         "returned_exact_locked_likelihoods": bool(
@@ -479,6 +556,7 @@ def main() -> int:
         "software_versions": installed_versions,
         "software_version_checks": version_checks,
         "camb_cosmorec": camb_cosmorec,
+        "cobaya_taurend_capability_shim": cobaya_taurend_shim,
         "inputs": {
             "updated_yaml": str(UPDATED_YAML.relative_to(REPO_ROOT)),
             "updated_yaml_sha256": sha256(UPDATED_YAML),
@@ -539,8 +617,10 @@ def main() -> int:
         "Exactly one serial posterior evaluation was requested using the locked "
         "Planck+ACT-lite model. The serialized ACT data-version null value and "
         "legacy pre-release input filename were normalized in memory to the "
-        "pinned public package defaults (v1.0/dr6_data_cmbonly.fits); the source "
-        "YAML was not modified.",
+        "pinned public package defaults (v1.0/dr6_data_cmbonly.fits). A "
+        "process-local Cobaya compatibility shim advertised the existing "
+        "CAMBdata.taurend field requested by the released YAML. Neither source "
+        "YAML nor installed Cobaya source was modified.",
         "",
         "No sampler was created, no MPI or MCMC process was started, no target "
         "statistic was computed, and no numerical parameter, likelihood, "
