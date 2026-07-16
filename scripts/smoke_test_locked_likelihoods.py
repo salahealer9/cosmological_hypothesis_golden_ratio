@@ -56,6 +56,12 @@ EXPECTED_LIKELIHOODS = {
     "act_dr6_cmbonly.ACTDR6CMBonly",
 }
 
+ACT_LIKELIHOOD_NAME = "act_dr6_cmbonly.ACTDR6CMBonly"
+EXPECTED_ACT_DATA_VERSION = "v1.0"
+EXPECTED_ACT_DATA_RELATIVE_PATH = Path(
+    "data/ACTDR6CMBonly/v1.0/dr6_data_cmbonly.fits"
+)
+
 REPO_ROOT = Path(
     subprocess.check_output(
         ["git", "rev-parse", "--show-toplevel"],
@@ -295,13 +301,39 @@ def main() -> int:
     for key in ("sampler", "resume", "force", "debug", "test"):
         info.pop(key, None)
 
-    declared_likelihoods = set((info.get("likelihood") or {}).keys())
+    likelihood_info = info.get("likelihood") or {}
+    declared_likelihoods = set(likelihood_info.keys())
     if declared_likelihoods != EXPECTED_LIKELIHOODS:
         raise RuntimeError(
             "Locked combined YAML likelihood set mismatch: "
             f"declared={sorted(declared_likelihoods)}, "
             f"expected={sorted(EXPECTED_LIKELIHOODS)}"
         )
+
+    act_config = likelihood_info.get(ACT_LIKELIHOOD_NAME)
+    if not isinstance(act_config, dict):
+        raise RuntimeError(
+            f"{ACT_LIKELIHOOD_NAME} configuration is not a dictionary"
+        )
+
+    serialized_act_version = act_config.get("version")
+    if serialized_act_version not in (None, EXPECTED_ACT_DATA_VERSION):
+        raise RuntimeError(
+            "Unexpected ACT DR6 data version in locked updated YAML: "
+            f"{serialized_act_version!r}"
+        )
+
+    # The pinned DR6-ACT-lite class uses ``version`` for its data subdirectory
+    # ("v1.0"), while Cobaya's serialized updated YAML can contain
+    # ``version: null`` as generic component metadata.  Passing that null value
+    # directly overrides the class default and makes initialization attempt
+    # os.path.join(..., None, ...). Restore the pinned data version explicitly
+    # in this runtime copy only; the source YAML remains untouched and hashed.
+    act_config["version"] = EXPECTED_ACT_DATA_VERSION
+
+    act_data_file = packages_path / EXPECTED_ACT_DATA_RELATIVE_PATH
+    if not act_data_file.is_file():
+        raise RuntimeError(f"Missing locked ACT DR6 data file: {act_data_file}")
 
     safe_mkdir(OUTPUT_DIR)
 
@@ -369,6 +401,13 @@ def main() -> int:
         "combined_yaml_has_exact_locked_likelihoods": (
             declared_likelihoods == EXPECTED_LIKELIHOODS
         ),
+        "serialized_act_version_is_null_or_v1_0": (
+            serialized_act_version in (None, EXPECTED_ACT_DATA_VERSION)
+        ),
+        "runtime_act_data_version_is_v1_0": (
+            act_config.get("version") == EXPECTED_ACT_DATA_VERSION
+        ),
+        "locked_act_data_file_exists": act_data_file.is_file(),
         "model_initialized": initialization_seconds is not None,
         "one_evaluation_completed": evaluation_seconds is not None,
         "returned_exact_locked_likelihoods": bool(
@@ -431,6 +470,16 @@ def main() -> int:
             "declared_names": sorted(declared_likelihoods),
             "returned_names": returned_likelihood_names,
             "finite_by_name": finite_likelihoods,
+            "act_data_version": {
+                "serialized_updated_yaml_value": serialized_act_version,
+                "runtime_value": act_config.get("version"),
+                "expected_value": EXPECTED_ACT_DATA_VERSION,
+                "source_yaml_modified": False,
+            },
+            "act_data_file": {
+                "path": str(act_data_file),
+                "sha256": sha256(act_data_file),
+            },
             "numerical_values_recorded": False,
         },
         "timing_seconds": {
@@ -458,7 +507,9 @@ def main() -> int:
         f"Overall status: **{'PASS' if overall_pass else 'FAIL'}**",
         "",
         "Exactly one serial posterior evaluation was requested using the locked "
-        "Planck+ACT-lite model.",
+        "Planck+ACT-lite model. The serialized ACT data-version null value was "
+        "normalized in memory to the pinned package data release v1.0; the "
+        "source YAML was not modified.",
         "",
         "No sampler was created, no MPI or MCMC process was started, no target "
         "statistic was computed, and no numerical parameter, likelihood, "
