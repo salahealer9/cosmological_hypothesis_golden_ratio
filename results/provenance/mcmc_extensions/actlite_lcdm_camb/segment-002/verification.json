@@ -1,0 +1,416 @@
+{
+  "after": {
+    "chains": [
+      {
+        "append_only": true,
+        "appended_rows_total": 4122,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.1.txt",
+        "current_rows": 26027,
+        "current_sha256": "8157e177bfbebec67e91ad37c1d78ed19f62315fae76996188dd9e51f096b9bd",
+        "number": 1,
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.1.txt",
+        "source_rows": 21905,
+        "source_sha256": "f754d38426b8470ae7194cd9f2f081db672bfd2c3e2028d7d710f1c3694c2f4b"
+      },
+      {
+        "append_only": true,
+        "appended_rows_total": 4180,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.2.txt",
+        "current_rows": 26027,
+        "current_sha256": "226a0d8f0ff5fbb4995eeeeaf4c34e0a514af346b8d2381bb880b01e15aa2e61",
+        "number": 2,
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.2.txt",
+        "source_rows": 21847,
+        "source_sha256": "91fa32b8e3b3ab7310d9e19fa2b63be00c1b209f8f68cab1b02010a01d105838"
+      },
+      {
+        "append_only": true,
+        "appended_rows_total": 4100,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.3.txt",
+        "current_rows": 26027,
+        "current_sha256": "77edec446329398647f795220a76fb07181e370d87b629299db27a94ace9b87a",
+        "number": 3,
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.3.txt",
+        "source_rows": 21927,
+        "source_sha256": "a4dd7ad979c26db35faa7750e50b57b5a3fae99b21068fcfa493bb54ec8bfc8b"
+      },
+      {
+        "append_only": true,
+        "appended_rows_total": 4279,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.4.txt",
+        "current_rows": 26027,
+        "current_sha256": "8968c0b180a24903390a582b50a133c2f4b72940df3bdee6db0b48c7eaa1c08f",
+        "number": 4,
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.4.txt",
+        "source_rows": 21748,
+        "source_sha256": "37159e359bd9b12b5170dbbb2383e50789951b3c0a0fe127afe84e2cb47132d1"
+      }
+    ],
+    "checkpoint": {
+      "Rminus1_last": 0.009636162714652539,
+      "burn_in": 0,
+      "converged": false,
+      "mpi_size": 4,
+      "path": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.checkpoint",
+      "sha256": "3dbfabc12dd1d50df0bf40347de8974cf061c3340fa815348dfe234861079fa3"
+    },
+    "dataset": "actlite_lcdm_camb",
+    "directory": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb",
+    "prefix": "act-camb-lcdm"
+  },
+  "before": {
+    "chains": [
+      {
+        "append_only": true,
+        "appended_rows_total": 122,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.1.txt",
+        "current_rows": 22027,
+        "current_sha256": "5507fd8fd1f4220f6737f9c6aab7b51cbe21eccf25563d08c477bc001e3648ff",
+        "number": 1,
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.1.txt",
+        "source_rows": 21905,
+        "source_sha256": "f754d38426b8470ae7194cd9f2f081db672bfd2c3e2028d7d710f1c3694c2f4b"
+      },
+      {
+        "append_only": true,
+        "appended_rows_total": 180,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.2.txt",
+        "current_rows": 22027,
+        "current_sha256": "fffb102da29944596b86615a62a3419c7da3e1b48f90d56fe1ddc5ddb16b73a6",
+        "number": 2,
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.2.txt",
+        "source_rows": 21847,
+        "source_sha256": "91fa32b8e3b3ab7310d9e19fa2b63be00c1b209f8f68cab1b02010a01d105838"
+      },
+      {
+        "append_only": true,
+        "appended_rows_total": 100,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.3.txt",
+        "current_rows": 22027,
+        "current_sha256": "ce9b3049730d0dfcf0ade8140a596525659b23d50621151240cd6278cb649e96",
+        "number": 3,
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.3.txt",
+        "source_rows": 21927,
+        "source_sha256": "a4dd7ad979c26db35faa7750e50b57b5a3fae99b21068fcfa493bb54ec8bfc8b"
+      },
+      {
+        "append_only": true,
+        "appended_rows_total": 279,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.4.txt",
+        "current_rows": 22027,
+        "current_sha256": "f3a7034cd88b64c38fea9e8440c3295c121d5b9a4634a736bbf2b70c2da5db5e",
+        "number": 4,
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.4.txt",
+        "source_rows": 21748,
+        "source_sha256": "37159e359bd9b12b5170dbbb2383e50789951b3c0a0fe127afe84e2cb47132d1"
+      }
+    ],
+    "checkpoint": {
+      "Rminus1_last": 0.011515223577829668,
+      "burn_in": 0,
+      "converged": false,
+      "mpi_size": 4,
+      "path": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.checkpoint",
+      "sha256": "7eef6debe6912720e6e5b007f20c170417c62f301a13e11c5b9fc9dbe92b4e8c"
+    },
+    "dataset": "actlite_lcdm_camb",
+    "directory": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb",
+    "prefix": "act-camb-lcdm"
+  },
+  "checks": {
+    "all_chains_grew_by_requested_minimum": true,
+    "all_chains_reached_target_rows": true,
+    "all_chains_remain_extensions_of_original_release": true,
+    "all_pre_segment_files_are_prefixes": true,
+    "all_ranks_completed_without_error": true,
+    "checkpoint_mpi_size_four": true,
+    "checkpoint_not_converged": true,
+    "four_mpi_ranks": true,
+    "no_target_statistic_computed": true
+  },
+  "dataset": "actlite_lcdm_camb",
+  "elapsed_seconds": 20824.477035133,
+  "ended_utc": "2026-07-17T08:36:39.916427+00:00",
+  "growth": [
+    {
+      "number": 1,
+      "pre_segment_file_is_prefix": true,
+      "rows_after": 26027,
+      "rows_appended_this_segment": 4000,
+      "rows_before": 22027,
+      "sha256_after": "8157e177bfbebec67e91ad37c1d78ed19f62315fae76996188dd9e51f096b9bd",
+      "sha256_before": "5507fd8fd1f4220f6737f9c6aab7b51cbe21eccf25563d08c477bc001e3648ff"
+    },
+    {
+      "number": 2,
+      "pre_segment_file_is_prefix": true,
+      "rows_after": 26027,
+      "rows_appended_this_segment": 4000,
+      "rows_before": 22027,
+      "sha256_after": "226a0d8f0ff5fbb4995eeeeaf4c34e0a514af346b8d2381bb880b01e15aa2e61",
+      "sha256_before": "fffb102da29944596b86615a62a3419c7da3e1b48f90d56fe1ddc5ddb16b73a6"
+    },
+    {
+      "number": 3,
+      "pre_segment_file_is_prefix": true,
+      "rows_after": 26027,
+      "rows_appended_this_segment": 4000,
+      "rows_before": 22027,
+      "sha256_after": "77edec446329398647f795220a76fb07181e370d87b629299db27a94ace9b87a",
+      "sha256_before": "ce9b3049730d0dfcf0ade8140a596525659b23d50621151240cd6278cb649e96"
+    },
+    {
+      "number": 4,
+      "pre_segment_file_is_prefix": true,
+      "rows_after": 26027,
+      "rows_appended_this_segment": 4000,
+      "rows_before": 22027,
+      "sha256_after": "8968c0b180a24903390a582b50a133c2f4b72940df3bdee6db0b48c7eaa1c08f",
+      "sha256_before": "f3a7034cd88b64c38fea9e8440c3295c121d5b9a4634a736bbf2b70c2da5db5e"
+    }
+  ],
+  "lock_gate": {
+    "changed_since_lock": [
+      "CITATION.cff",
+      "README.md",
+      "results/provenance/mcmc_extension_preflight_v013/REPORT.md",
+      "results/provenance/mcmc_extension_preflight_v013/checksums.txt",
+      "results/provenance/mcmc_extension_preflight_v013/lock-tag-commit.txt",
+      "results/provenance/mcmc_extension_preflight_v013/mcmc-extension-preflight-actlite_lcdm_camb.log",
+      "results/provenance/mcmc_extension_preflight_v013/mcmc-extension-preflight-p-actlite_lcdm_camb.log",
+      "results/provenance/mcmc_extension_preflight_v013/mcmc-extension-preflight-planck_lcdm_camb.log",
+      "results/provenance/mcmc_extension_preflight_v013/repository-commit.txt",
+      "results/provenance/mcmc_extension_preflight_v013/repository-status.txt",
+      "results/provenance/mcmc_extension_preflight_v013/seed-integrity-status.txt",
+      "results/provenance/mcmc_extension_preflight_v013/seed-integrity.log",
+      "results/provenance/mcmc_extension_preflight_v013/tag-verification.txt",
+      "results/provenance/mcmc_extensions/actlite_lcdm_camb/segment-001/REPORT.md",
+      "results/provenance/mcmc_extensions/actlite_lcdm_camb/segment-001/checksums.txt",
+      "results/provenance/mcmc_extensions/actlite_lcdm_camb/segment-001/console.log",
+      "results/provenance/mcmc_extensions/actlite_lcdm_camb/segment-001/exit-status.txt",
+      "results/provenance/mcmc_extensions/actlite_lcdm_camb/segment-001/verification.json",
+      "results/provenance/mcmc_extensions/p-actlite_lcdm_camb/segment-001/REPORT.md",
+      "results/provenance/mcmc_extensions/p-actlite_lcdm_camb/segment-001/checksums.txt",
+      "results/provenance/mcmc_extensions/p-actlite_lcdm_camb/segment-001/console.log",
+      "results/provenance/mcmc_extensions/p-actlite_lcdm_camb/segment-001/exit-status.txt",
+      "results/provenance/mcmc_extensions/p-actlite_lcdm_camb/segment-001/verification.json",
+      "results/provenance/mcmc_extensions/planck_lcdm_camb/segment-001/REPORT.md",
+      "results/provenance/mcmc_extensions/planck_lcdm_camb/segment-001/checksums.txt",
+      "results/provenance/mcmc_extensions/planck_lcdm_camb/segment-001/console.log",
+      "results/provenance/mcmc_extensions/planck_lcdm_camb/segment-001/exit-status.txt",
+      "results/provenance/mcmc_extensions/planck_lcdm_camb/segment-001/verification.json",
+      "results/provenance/mcmc_extensions/segment-002-production-plan/REPORT.md",
+      "results/provenance/mcmc_extensions/segment-002-production-plan/checksums.txt",
+      "results/provenance/mcmc_extensions/segment-002-production-plan/parent-commit.txt",
+      "results/provenance/mcmc_extensions/segment-002-production-plan/plan.json"
+    ],
+    "critical_changes_since_lock": [],
+    "head": "795a6769a3801f6887e0ff48380b2632cac0115b",
+    "lock": {
+      "datasets": {
+        "actlite_lcdm_camb": {
+          "directory": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb",
+          "likelihoods": [
+            "planck_2018_lowl.EE_sroll2",
+            "act_dr6_cmbonly.ACTDR6CMBonly"
+          ],
+          "prefix": "act-camb-lcdm",
+          "runtime_template": "config/mcmc_extension_runtime_inputs/actlite_lcdm_camb.yaml"
+        },
+        "p-actlite_lcdm_camb": {
+          "directory": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb",
+          "likelihoods": [
+            "planck_2018_lowl.TT",
+            "planck_2018_lowl.EE_sroll2",
+            "act_dr6_cmbonly.PlanckActCut",
+            "act_dr6_cmbonly.ACTDR6CMBonly"
+          ],
+          "prefix": "p-act-camb-lcdm",
+          "runtime_template": "config/mcmc_extension_runtime_inputs/p-actlite_lcdm_camb.yaml"
+        },
+        "planck_lcdm_camb": {
+          "directory": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb",
+          "likelihoods": [
+            "planck_2018_lowl.TT",
+            "planck_2018_lowl.EE_sroll2",
+            "act_dr6_cmbonly.PlanckActCut"
+          ],
+          "prefix": "planck-camb-lcdm",
+          "runtime_template": "config/mcmc_extension_runtime_inputs/planck_lcdm_camb.yaml"
+        }
+      },
+      "execution": {
+        "Rminus1_cl_stop": 0.0,
+        "Rminus1_stop": 0.0,
+        "allow_changes": true,
+        "allow_changes_scope": "enumerated runtime compatibility fields and finite-segment sampler controls only",
+        "append_only_required": true,
+        "expected_numbered_chains": 4,
+        "force": false,
+        "maximum_rows_per_segment": 100000,
+        "minimum_rows_per_segment": 100,
+        "mkl_threads": 1,
+        "mpi_ranks": 4,
+        "numexpr_threads": 1,
+        "omp_places": "threads",
+        "omp_proc_bind": "close",
+        "openblas_threads": 1,
+        "output_every": "60s",
+        "resume": true,
+        "selected_threads_per_rank": 2,
+        "target_rows_rule": "max_current_stored_rows_plus_requested_minimum_growth"
+      },
+      "lock": {
+        "base_benchmark_commit": "81a4cfe4112ebd9414c0df76072fef33f420b888",
+        "base_chain_ingestion_tag": "v0.1.2-chain-ingestion-lock",
+        "base_execution_lock_tag": "v0.1.1-confirmatory-execution-lock",
+        "base_preregistration_tag": "v0.1.0-preregistration-freeze",
+        "benchmark_verification": "results/provenance/mcmc_thread_benchmark/verification.json",
+        "benchmark_verification_sha256": "2b7a80550c654b6f42fc46898c71c19b8d1c216a6ec5bb2e3f51cba350600ee6",
+        "date": "2026-07-16",
+        "name": "mcmc_extension_execution_lock",
+        "status": "frozen_before_mcmc_extension",
+        "tag": "v0.1.3-mcmc-extension-lock",
+        "version": "0.1.0"
+      },
+      "runtime_compatibility": {
+        "act_data_version": "v1.0",
+        "act_input_file": "dr6_data_cmbonly.fits",
+        "act_lite_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+        "camb": "1.5.0",
+        "camb_commit": "28e4036519155531f4ed9a4e1d8afb1579d2de11",
+        "cobaya": "3.5.4",
+        "cosmorec": "2.0.3b",
+        "derived_capability_shim": "CAMBdata.taurend advertisement only",
+        "installed_cobaya_source_modified": false,
+        "source_yaml_modified": false
+      },
+      "script_hashes": {
+        "config/mcmc_extension_runtime_inputs/actlite_lcdm_camb.yaml": "0e5ef3c8e759403fa45bb0e66720dddef8b63ee85618eff1152d6892dc377b5c",
+        "config/mcmc_extension_runtime_inputs/p-actlite_lcdm_camb.yaml": "2b963fb018954ed47111b6b88263e97f2aa4c9d676d690effb728674fc6f6e67",
+        "config/mcmc_extension_runtime_inputs/planck_lcdm_camb.yaml": "e712a99cb164f92ff6b91e630c3fb64d36c46577675c6ec6633c1d2f8a2f24bd",
+        "scripts/benchmark_mcmc_threading.py": "ada1b8367fe6e71a95081f13f03ae641ffb9c553ba6ab22be22426d75cb0e2e7",
+        "scripts/finalize_mcmc_extension_lock.py": "b9dfa39927270cbb94577f622b8aef68297e14328d34f942b2d404735aaaf5db",
+        "scripts/locked_cobaya_runtime.py": "09535ed4760b87a859baae32b8d8d44e4f2d53b378a5b82a276e85fb913616a8",
+        "scripts/run_locked_mcmc_segment.sh": "8d0704de51a6e532db2e2ede3fec4c780baf192ea533599f9c303751320d11be",
+        "scripts/run_mcmc_extension.py": "c8828a5bb7a63fb82408422f9247524d3e3f7822a0e21447cca365a8f9a8486f",
+        "scripts/run_mcmc_thread_benchmark.sh": "005b94aeeb17dacd7d1d7b7c50fbb000c6612628e388cd0edb47b8e1e3c98c51",
+        "scripts/summarize_mcmc_thread_benchmark.py": "924cb90ab90040b066be9622240dbd8168e9ce096e85cf02328ad054edda67f9"
+      },
+      "selection_rule": {
+        "candidate_threads_per_rank": [
+          1,
+          2
+        ],
+        "minimum_each_dataset_speedup_for_two": 0.95,
+        "minimum_geometric_speedup_for_two": 1.05,
+        "otherwise_select": "one thread per rank"
+      }
+    },
+    "selected_threads_per_rank": 2,
+    "tag": "v0.1.3-mcmc-extension-lock",
+    "tag_commit": "9caddac692206d3145510c669ec60a33f56d6e51"
+  },
+  "minimum_appended_rows_requested": 4000,
+  "overall_pass": true,
+  "posterior_summary_computed": false,
+  "purpose": "finite append-only MCMC extension segment",
+  "runtime_gate": {
+    "act_installation": {
+      "checks": {
+        "commit_matches": true,
+        "git_vcs_record": true,
+        "requested_revision_matches_or_unspecified": true
+      },
+      "direct_url": {
+        "url": "https://github.com/ACTCollaboration/DR6-ACT-lite.git",
+        "vcs_info": {
+          "commit_id": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+          "requested_revision": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+          "vcs": "git"
+        }
+      },
+      "distribution_name": "ACT-DR6-CMBonly",
+      "distribution_version": "1.0.0",
+      "expected_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+      "installed_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808"
+    },
+    "act_runtime_normalization": {
+      "act_likelihood_present": true,
+      "data_file": "/opt/cobaya-packages-act-dr6/data/ACTDR6CMBonly/v1.0/dr6_data_cmbonly.fits",
+      "data_file_sha256": "c887dc9178d81f5e5e0ce76eca0cd3c9f089056630ab78a1cc4bb28ff8751c29",
+      "runtime_input_file": "dr6_data_cmbonly.fits",
+      "runtime_version": "v1.0",
+      "serialized_input_file": "dr6_data_cmbonly.fits",
+      "serialized_version": "v1.0",
+      "source_info_modified": false
+    },
+    "camb_cosmorec": {
+      "camblib_sha256": "d3e6124423a3efd187fdf2915df6d4c2f75e1bbe88bb4ab7a28141902a99b484",
+      "checks": {
+        "camblib_exists": true,
+        "cosmorec_class_available": true,
+        "editable_source_path_matches": true,
+        "linked_libraries_resolved": true,
+        "metadata_version": true,
+        "module_inside_pinned_source": true,
+        "module_version": true,
+        "source_commit_matches": true
+      },
+      "direct_url": {
+        "dir_info": {
+          "editable": true
+        },
+        "url": "file:///opt/cosmology-software/CAMB-1.5.0-cosmorec"
+      },
+      "expected_commit": "28e4036519155531f4ed9a4e1d8afb1579d2de11",
+      "expected_source": "/opt/cosmology-software/CAMB-1.5.0-cosmorec",
+      "installed_commit": "28e4036519155531f4ed9a4e1d8afb1579d2de11",
+      "module_path": "/opt/cosmology-software/CAMB-1.5.0-cosmorec/camb/__init__.py",
+      "numerical_spectra_computed": false,
+      "recombination_class": "CosmoRec"
+    },
+    "packages": {
+      "checks": {
+        "arviz": true,
+        "camb": true,
+        "cobaya": true,
+        "getdist": true,
+        "mpi4py": true
+      },
+      "expected": {
+        "arviz": "0.23.4",
+        "camb": "1.5.0",
+        "cobaya": "3.5.4",
+        "getdist": "1.7.7",
+        "mpi4py": "4.1.2"
+      },
+      "installed": {
+        "arviz": "0.23.4",
+        "camb": "1.5.0",
+        "cobaya": "3.5.4",
+        "getdist": "1.7.7",
+        "mpi4py": "4.1.2"
+      }
+    },
+    "target_statistic_computed": false,
+    "taurend_capability": {
+      "already_installed": false,
+      "cambdata_field_present": true,
+      "changes_camb_calculation": false,
+      "changes_likelihood_calculation": false,
+      "cobaya_component": "cobaya.theories.camb.camb.CAMB",
+      "installed_source_file": "/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/cobaya/theories/camb/camb.py",
+      "installed_source_sha256": "2d1b2effee4ca35db4ed93f7b96b20e015b659098fd9b1f8e15512ffec6cd39f",
+      "parameter": "taurend",
+      "patched_method": "get_can_provide_params",
+      "process_local_only": true,
+      "source_file_modified": false
+    }
+  },
+  "scientific_verdict_computed": false,
+  "segment_label": "segment-002",
+  "started_utc": "2026-07-17T02:49:35.439389+00:00",
+  "target_rows": 26027,
+  "target_statistic_computed": false
+}
