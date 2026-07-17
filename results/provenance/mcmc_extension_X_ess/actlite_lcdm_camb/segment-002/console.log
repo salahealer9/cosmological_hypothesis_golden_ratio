@@ -1,0 +1,8 @@
+Overall: FAIL
+Dataset: actlite_lcdm_camb
+Segment: segment-002
+GetDist R-1(X): 0.0009626059923370511
+Rank R-hat(X): 1.000981622262943
+Bulk ESS(X): 2277.59783085754
+Tail ESS(X): 3132.1082124953896
+Output: results/provenance/mcmc_extension_X_ess/actlite_lcdm_camb/segment-002

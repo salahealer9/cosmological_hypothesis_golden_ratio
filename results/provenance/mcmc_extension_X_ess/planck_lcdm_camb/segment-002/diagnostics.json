@@ -1,0 +1,191 @@
+{
+  "chain_integrity": {
+    "chains": [
+      {
+        "appended_rows": 5130,
+        "chain_grew": true,
+        "chain_number": 1,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.1.txt",
+        "current_is_append_only_extension": true,
+        "current_rows": 22897,
+        "current_sha256": "697a7b14d3c19894613d1c5d99df1f3c393e4734e79be3fcaff0b81cc09a9759",
+        "seed_map_source_sha256": "c3de343e4fcb66984a1c85eb477f1b1ad4bda45bb7d3efeda9620c5c81adb4ba",
+        "source": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.1.txt",
+        "source_hash_matches_seed_map": true,
+        "source_rows": 17767,
+        "source_sha256": "c3de343e4fcb66984a1c85eb477f1b1ad4bda45bb7d3efeda9620c5c81adb4ba"
+      },
+      {
+        "appended_rows": 4662,
+        "chain_grew": true,
+        "chain_number": 2,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.2.txt",
+        "current_is_append_only_extension": true,
+        "current_rows": 22897,
+        "current_sha256": "8d863bf92a7613036f2e3343ccfe7be53946075b489dfc7e44fe0642140d8725",
+        "seed_map_source_sha256": "574f831ba89875a15592384d8b86f0a68b319620113899cb060db8587fbb1cc7",
+        "source": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.2.txt",
+        "source_hash_matches_seed_map": true,
+        "source_rows": 18235,
+        "source_sha256": "574f831ba89875a15592384d8b86f0a68b319620113899cb060db8587fbb1cc7"
+      },
+      {
+        "appended_rows": 4657,
+        "chain_grew": true,
+        "chain_number": 3,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.3.txt",
+        "current_is_append_only_extension": true,
+        "current_rows": 22897,
+        "current_sha256": "0b39a9592fe02692ce1a73425249dc252dd6dfc3b56bdf663977d5bfc3e4c43a",
+        "seed_map_source_sha256": "0bd1500fc3a01075ecf94ca86e49735ed651edcf3a7aaefb78ddc96f6986d976",
+        "source": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.3.txt",
+        "source_hash_matches_seed_map": true,
+        "source_rows": 18240,
+        "source_sha256": "0bd1500fc3a01075ecf94ca86e49735ed651edcf3a7aaefb78ddc96f6986d976"
+      },
+      {
+        "appended_rows": 4600,
+        "chain_grew": true,
+        "chain_number": 4,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.4.txt",
+        "current_is_append_only_extension": true,
+        "current_rows": 22897,
+        "current_sha256": "be834913a66dc25dd4911f170062fa617f3e560f86bcd736cb27c36ed9e3481f",
+        "seed_map_source_sha256": "55332c918f4b8530067e4df65760c13043b2ed9c661ede018320d84123681757",
+        "source": "data/derived/act_dr6_02/chains/planck_lcdm_camb/planck_lcdm_camb/planck_lcdm_camb.4.txt",
+        "source_hash_matches_seed_map": true,
+        "source_rows": 18297,
+        "source_sha256": "55332c918f4b8530067e4df65760c13043b2ed9c661ede018320d84123681757"
+      }
+    ],
+    "checks": {
+      "all_current_chains_are_append_only_extensions": true,
+      "all_four_chains_grew": true,
+      "all_source_hashes_match_seed_map": true,
+      "chain_files_unchanged_during_diagnostic": true,
+      "exactly_four_numbered_chains": true
+    },
+    "pass": true
+  },
+  "checks": {
+    "all_checks": false,
+    "chain_integrity": true,
+    "derived_X_convergence": false,
+    "no_MCMC_started_by_this_script": true,
+    "no_per_sample_X_values_written": true,
+    "no_posterior_location_summary_written": true,
+    "no_target_comparison_performed": true,
+    "software_versions": true,
+    "technical_validation": true
+  },
+  "created_utc": "2026-07-17T14:39:50.974271+00:00",
+  "dataset": "planck_lcdm_camb",
+  "derived_X_convergence": {
+    "aligned_draws_per_chain": 17241,
+    "bulk_ESS_X": 2500.873018180362,
+    "checks": {
+      "bulk_ESS_X": false,
+      "getdist_R_minus_1_X": true,
+      "minimum_retained_weight_ESS": true,
+      "rank_normalized_split_Rhat_X": true,
+      "tail_ESS_X": false
+    },
+    "expanded_draw_lengths": [
+      17277,
+      17289,
+      17280,
+      17241
+    ],
+    "getdist_R_minus_1_X": 0.00028057415166843157,
+    "pass": false,
+    "rank_Rhat_X": 1.0017088355616757,
+    "retained_weight_ESS": 59727.62340295071,
+    "tail_ESS_X": 2969.377527981299,
+    "thresholds": {
+      "bulk_ESS_X_min": 10000.0,
+      "getdist_R_minus_1_max": 0.01,
+      "rank_Rhat_max": 1.01,
+      "retained_weight_ESS_min": 10000.0,
+      "tail_ESS_X_min": 10000.0
+    }
+  },
+  "disclosure_boundary": "Technical convergence diagnostics only. No posterior location, target comparison, predictive calculation, evidence calculation, or scientific verdict is present.",
+  "inputs": {
+    "chain_directory": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb",
+    "chain_ingestion_lock": "config/chain_ingestion_lock.toml",
+    "chain_ingestion_lock_sha256": "e081aba66f479852b9e271c7b175e1504f834d0d9bfd8aa0637c46c2a49346fc",
+    "output_prefix": "planck-camb-lcdm",
+    "primary_burn_fraction": 0.3,
+    "seed_map": "results/provenance/mcmc_extension_seed_map.json",
+    "seed_map_sha256": "712b9357cce807edf06c942993fbb8a6ead9a93a27ab39c7c6fbc594bdc7c367"
+  },
+  "overall_pass": false,
+  "phase": "post-segment derived-X technical convergence gate",
+  "repository": {
+    "branch": "confirmatory-analysis",
+    "commit": "e6bf0dd6c246c57dfc6a8ceb0c72db9a156f8cfd",
+    "root": "/opt/cosmological_hypothesis_golden_ratio",
+    "tracked_worktree_clean_before_output": true
+  },
+  "retained_chain_rows": [
+    {
+      "chain_number": 1,
+      "maximum_integer_weight_error": 0.0,
+      "original_rows": 22897,
+      "removed_rows": 6869,
+      "retained_rows": 16028,
+      "transform_seconds": 13.658807532003266
+    },
+    {
+      "chain_number": 2,
+      "maximum_integer_weight_error": 0.0,
+      "original_rows": 22897,
+      "removed_rows": 6869,
+      "retained_rows": 16028,
+      "transform_seconds": 13.65673419200175
+    },
+    {
+      "chain_number": 3,
+      "maximum_integer_weight_error": 0.0,
+      "original_rows": 22897,
+      "removed_rows": 6869,
+      "retained_rows": 16028,
+      "transform_seconds": 13.722001248010201
+    },
+    {
+      "chain_number": 4,
+      "maximum_integer_weight_error": 0.0,
+      "original_rows": 22897,
+      "removed_rows": 6869,
+      "retained_rows": 16028,
+      "transform_seconds": 13.569170946997474
+    }
+  ],
+  "segment_label": "segment-002",
+  "software": {
+    "arviz": "0.23.4",
+    "camb": "1.5.0",
+    "cobaya": "3.5.4",
+    "getdist": "1.7.7",
+    "mpi4py": "4.1.2",
+    "python": "3.11.2"
+  },
+  "technical_validation": {
+    "checks": {
+      "closure": true,
+      "finite_derived_values": true,
+      "physical_Omega_Lambda": true,
+      "positive_age": true
+    },
+    "maximum_allowed_closure_error": 1e-10,
+    "maximum_closure_error": 3.3306690738754696e-16,
+    "pass": true
+  },
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "wall_seconds": 54.92673575799563
+}

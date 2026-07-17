@@ -1,0 +1,29 @@
+ -log(Like) = 369.3785273440434
+  chi-sq    = 738.7570546880868
+
+    1  2.249754018e-02   ombh2                                 \Omega_\mathrm{b}h^2
+    2  1.191918509e-01   omch2                                 \Omega_\mathrm{c}h^2
+    3  1.040754494e-02   cosmomc_theta                         \theta_\mathrm{MC}
+    4  3.055451340e+00   logA                                  \log(10^{10} A_\mathrm{s})
+    6  9.711681806e-01   ns                                    n_\mathrm{s}
+    7  6.013004225e-02   tau                                   \tau_\mathrm{reio}
+   17  1.000970418e+00   A_planck                              A_{\rm planck}
+   19  1.002238754e+00   P_act                                 p_{\rm ACT}
+
+
+    5  2.123076565e-09   As                                    A_\mathrm{s}
+    8  6.767354479e+01   H0                                    H_0
+    9  1.040965128e+00   thetastar                             \theta_\star
+   10  8.142798681e-01   sigma8                                \sigma_8
+   11  2.459100771e-01   YHe                                   Y_\mathrm{He}
+   12  8.223237393e+00   zrei                                  z_\mathrm{reio}
+   13  6.004008853e+02   taurend                               \tau_\mathrm{rec}
+   14  1.089668929e+03   zstar                                 z_\star
+   15  1.445551991e+02   rstar                                 r_{s,\star}
+   16  1.060164852e+03   zdrag                                 z_d
+   18  1.000970418e+00   A_act                                 A_{\rm ACT}
+   20  6.341822245e+02   chi2__CMB                             \chi^2_\mathrm{CMB}
+   21  2.234134557e+01   chi2__planck_2018_lowl.TT             \chi^2_{\rm planck\ 2018\ lowl.TT}
+   22  3.904892933e+02   chi2__planck_2018_lowl.EE_sroll2      \chi^2_{\rm planck\ 2018\ lowl.EE\ sroll2}
+   23  2.213515856e+02   chi2__act_dr6_cmbonly.PlanckActCut    \chi^2_{\rm act\ dr6\ cmbonly.PlanckActCut}
+   24  1.573757956e+02   chi2__act_dr6_cmbonly.ACTDR6CMBonly   \chi^2_{\rm act\ dr6\ cmbonly.ACTDR6CMBonly}

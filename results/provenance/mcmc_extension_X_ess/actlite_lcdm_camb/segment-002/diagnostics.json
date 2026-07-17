@@ -1,0 +1,191 @@
+{
+  "chain_integrity": {
+    "chains": [
+      {
+        "appended_rows": 4122,
+        "chain_grew": true,
+        "chain_number": 1,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.1.txt",
+        "current_is_append_only_extension": true,
+        "current_rows": 26027,
+        "current_sha256": "8157e177bfbebec67e91ad37c1d78ed19f62315fae76996188dd9e51f096b9bd",
+        "seed_map_source_sha256": "f754d38426b8470ae7194cd9f2f081db672bfd2c3e2028d7d710f1c3694c2f4b",
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.1.txt",
+        "source_hash_matches_seed_map": true,
+        "source_rows": 21905,
+        "source_sha256": "f754d38426b8470ae7194cd9f2f081db672bfd2c3e2028d7d710f1c3694c2f4b"
+      },
+      {
+        "appended_rows": 4180,
+        "chain_grew": true,
+        "chain_number": 2,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.2.txt",
+        "current_is_append_only_extension": true,
+        "current_rows": 26027,
+        "current_sha256": "226a0d8f0ff5fbb4995eeeeaf4c34e0a514af346b8d2381bb880b01e15aa2e61",
+        "seed_map_source_sha256": "91fa32b8e3b3ab7310d9e19fa2b63be00c1b209f8f68cab1b02010a01d105838",
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.2.txt",
+        "source_hash_matches_seed_map": true,
+        "source_rows": 21847,
+        "source_sha256": "91fa32b8e3b3ab7310d9e19fa2b63be00c1b209f8f68cab1b02010a01d105838"
+      },
+      {
+        "appended_rows": 4100,
+        "chain_grew": true,
+        "chain_number": 3,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.3.txt",
+        "current_is_append_only_extension": true,
+        "current_rows": 26027,
+        "current_sha256": "77edec446329398647f795220a76fb07181e370d87b629299db27a94ace9b87a",
+        "seed_map_source_sha256": "a4dd7ad979c26db35faa7750e50b57b5a3fae99b21068fcfa493bb54ec8bfc8b",
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.3.txt",
+        "source_hash_matches_seed_map": true,
+        "source_rows": 21927,
+        "source_sha256": "a4dd7ad979c26db35faa7750e50b57b5a3fae99b21068fcfa493bb54ec8bfc8b"
+      },
+      {
+        "appended_rows": 4279,
+        "chain_grew": true,
+        "chain_number": 4,
+        "current": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.4.txt",
+        "current_is_append_only_extension": true,
+        "current_rows": 26027,
+        "current_sha256": "8968c0b180a24903390a582b50a133c2f4b72940df3bdee6db0b48c7eaa1c08f",
+        "seed_map_source_sha256": "37159e359bd9b12b5170dbbb2383e50789951b3c0a0fe127afe84e2cb47132d1",
+        "source": "data/derived/act_dr6_02/chains/actlite_lcdm_camb/actlite_lcdm_camb/actlite_lcdm_camb.4.txt",
+        "source_hash_matches_seed_map": true,
+        "source_rows": 21748,
+        "source_sha256": "37159e359bd9b12b5170dbbb2383e50789951b3c0a0fe127afe84e2cb47132d1"
+      }
+    ],
+    "checks": {
+      "all_current_chains_are_append_only_extensions": true,
+      "all_four_chains_grew": true,
+      "all_source_hashes_match_seed_map": true,
+      "chain_files_unchanged_during_diagnostic": true,
+      "exactly_four_numbered_chains": true
+    },
+    "pass": true
+  },
+  "checks": {
+    "all_checks": false,
+    "chain_integrity": true,
+    "derived_X_convergence": false,
+    "no_MCMC_started_by_this_script": true,
+    "no_per_sample_X_values_written": true,
+    "no_posterior_location_summary_written": true,
+    "no_target_comparison_performed": true,
+    "software_versions": true,
+    "technical_validation": true
+  },
+  "created_utc": "2026-07-17T14:40:54.114624+00:00",
+  "dataset": "actlite_lcdm_camb",
+  "derived_X_convergence": {
+    "aligned_draws_per_chain": 19119,
+    "bulk_ESS_X": 2277.59783085754,
+    "checks": {
+      "bulk_ESS_X": false,
+      "getdist_R_minus_1_X": true,
+      "minimum_retained_weight_ESS": true,
+      "rank_normalized_split_Rhat_X": true,
+      "tail_ESS_X": false
+    },
+    "expanded_draw_lengths": [
+      19129,
+      19148,
+      19119,
+      19153
+    ],
+    "getdist_R_minus_1_X": 0.0009626059923370511,
+    "pass": false,
+    "rank_Rhat_X": 1.000981622262943,
+    "retained_weight_ESS": 69498.3028049576,
+    "tail_ESS_X": 3132.1082124953896,
+    "thresholds": {
+      "bulk_ESS_X_min": 10000.0,
+      "getdist_R_minus_1_max": 0.01,
+      "rank_Rhat_max": 1.01,
+      "retained_weight_ESS_min": 10000.0,
+      "tail_ESS_X_min": 10000.0
+    }
+  },
+  "disclosure_boundary": "Technical convergence diagnostics only. No posterior location, target comparison, predictive calculation, evidence calculation, or scientific verdict is present.",
+  "inputs": {
+    "chain_directory": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb",
+    "chain_ingestion_lock": "config/chain_ingestion_lock.toml",
+    "chain_ingestion_lock_sha256": "e081aba66f479852b9e271c7b175e1504f834d0d9bfd8aa0637c46c2a49346fc",
+    "output_prefix": "act-camb-lcdm",
+    "primary_burn_fraction": 0.3,
+    "seed_map": "results/provenance/mcmc_extension_seed_map.json",
+    "seed_map_sha256": "712b9357cce807edf06c942993fbb8a6ead9a93a27ab39c7c6fbc594bdc7c367"
+  },
+  "overall_pass": false,
+  "phase": "post-segment derived-X technical convergence gate",
+  "repository": {
+    "branch": "confirmatory-analysis",
+    "commit": "e6bf0dd6c246c57dfc6a8ceb0c72db9a156f8cfd",
+    "root": "/opt/cosmological_hypothesis_golden_ratio",
+    "tracked_worktree_clean_before_output": true
+  },
+  "retained_chain_rows": [
+    {
+      "chain_number": 1,
+      "maximum_integer_weight_error": 0.0,
+      "original_rows": 26027,
+      "removed_rows": 7808,
+      "retained_rows": 18219,
+      "transform_seconds": 15.406337856999016
+    },
+    {
+      "chain_number": 2,
+      "maximum_integer_weight_error": 0.0,
+      "original_rows": 26027,
+      "removed_rows": 7808,
+      "retained_rows": 18219,
+      "transform_seconds": 15.346744770999067
+    },
+    {
+      "chain_number": 3,
+      "maximum_integer_weight_error": 0.0,
+      "original_rows": 26027,
+      "removed_rows": 7808,
+      "retained_rows": 18219,
+      "transform_seconds": 15.373947308995412
+    },
+    {
+      "chain_number": 4,
+      "maximum_integer_weight_error": 0.0,
+      "original_rows": 26027,
+      "removed_rows": 7808,
+      "retained_rows": 18219,
+      "transform_seconds": 15.35568030999275
+    }
+  ],
+  "segment_label": "segment-002",
+  "software": {
+    "arviz": "0.23.4",
+    "camb": "1.5.0",
+    "cobaya": "3.5.4",
+    "getdist": "1.7.7",
+    "mpi4py": "4.1.2",
+    "python": "3.11.2"
+  },
+  "technical_validation": {
+    "checks": {
+      "closure": true,
+      "finite_derived_values": true,
+      "physical_Omega_Lambda": true,
+      "positive_age": true
+    },
+    "maximum_allowed_closure_error": 1e-10,
+    "maximum_closure_error": 3.3306690738754696e-16,
+    "pass": true
+  },
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "wall_seconds": 61.8367009430076
+}

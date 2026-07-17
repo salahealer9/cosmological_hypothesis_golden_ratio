@@ -1,0 +1,13 @@
+/opt/cosmological_hypothesis_golden_ratio/.venv-mcmc/lib/python3.11/site-packages/arviz/__init__.py:50: FutureWarning: 
+ArviZ is undergoing a major refactor to improve flexibility and extensibility while maintaining a user-friendly interface.
+Some upcoming changes may be backward incompatible.
+For details and migration guidance, visit: https://python.arviz.org/en/latest/user_guide/migration_guide.html
+  warn(
+Overall: FAIL
+Dataset: planck_lcdm_camb
+Segment: segment-002
+GetDist R-1(X): 0.00028057415166843157
+Rank R-hat(X): 1.0017088355616757
+Bulk ESS(X): 2500.873018180362
+Tail ESS(X): 2969.377527981299
+Output: results/provenance/mcmc_extension_X_ess/planck_lcdm_camb/segment-002

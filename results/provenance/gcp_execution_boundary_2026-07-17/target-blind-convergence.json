@@ -1,0 +1,35 @@
+{
+  "datasets": {
+    "actlite_lcdm_camb": {
+      "bulk_ESS_X": 2277.59783085754,
+      "getdist_R_minus_1_X": 0.0009626059923370511,
+      "overall_pass": false,
+      "rank_Rhat_X": 1.000981622262943,
+      "tail_ESS_X": 3132.1082124953896
+    },
+    "p-actlite_lcdm_camb": {
+      "bulk_ESS_X": 1962.6118071935994,
+      "getdist_R_minus_1_X": 0.0017358104542401767,
+      "overall_pass": false,
+      "rank_Rhat_X": 1.0024207881169616,
+      "tail_ESS_X": 3358.80347764107
+    },
+    "planck_lcdm_camb": {
+      "bulk_ESS_X": 2500.873018180362,
+      "getdist_R_minus_1_X": 0.00028057415166843157,
+      "overall_pass": false,
+      "rank_Rhat_X": 1.0017088355616757,
+      "tail_ESS_X": 2969.377527981299
+    }
+  },
+  "scientific_verdict_computed": false,
+  "status": "original_confirmatory_gate_not_reached",
+  "target_location_computed": false,
+  "target_residual_computed": false,
+  "thresholds": {
+    "bulk_ESS_min": 10000,
+    "getdist_R_minus_1_max": 0.01,
+    "rank_Rhat_max": 1.01,
+    "tail_ESS_min": 10000
+  }
+}

@@ -1,0 +1,53 @@
+commit e6bf0dd6c246c57dfc6a8ceb0c72db9a156f8cfd
+gpg: Signature made Fri Jul 17 14:35:16 2026 UTC
+gpg:                using RSA key D4EC014EEFCC90E619D2AA59A91239ABCF512130
+gpg: Good signature from "Salah-Eddin Gherbi (Discovery Harmonic quantization of the solar system) <salahealer@gmail.com>" [ultimate]
+gpg:                 aka "Salah-Eddin Gherbi (Scala Harmonica Harmonic Solar System Discovery) <salahealer@gmail.com>" [ultimate]
+Author: Salah-Eddin Gherbi <salahealer@gmail.com>
+Date:   Fri Jul 17 15:35:16 2026 +0100
+
+    Record segment-002 production extensions
+
+commit 795a6769a3801f6887e0ff48380b2632cac0115b
+gpg: Signature made Thu Jul 16 20:57:22 2026 UTC
+gpg:                using RSA key D4EC014EEFCC90E619D2AA59A91239ABCF512130
+gpg: Good signature from "Salah-Eddin Gherbi (Discovery Harmonic quantization of the solar system) <salahealer@gmail.com>" [ultimate]
+gpg:                 aka "Salah-Eddin Gherbi (Scala Harmonica Harmonic Solar System Discovery) <salahealer@gmail.com>" [ultimate]
+Author: Salah-Eddin Gherbi <salahealer@gmail.com>
+Date:   Thu Jul 16 21:57:22 2026 +0100
+
+    Freeze segment-002 production extension plan
+
+commit 5099d2680a0f75d80ac18352685a4fd692ffff54
+gpg: Signature made Thu Jul 16 20:50:21 2026 UTC
+gpg:                using RSA key D4EC014EEFCC90E619D2AA59A91239ABCF512130
+gpg: Good signature from "Salah-Eddin Gherbi (Discovery Harmonic quantization of the solar system) <salahealer@gmail.com>" [ultimate]
+gpg:                 aka "Salah-Eddin Gherbi (Scala Harmonica Harmonic Solar System Discovery) <salahealer@gmail.com>" [ultimate]
+Author: Salah-Eddin Gherbi <salahealer@gmail.com>
+Date:   Thu Jul 16 21:50:21 2026 +0100
+
+    Record ACT and combined pilot extensions
+
+commit 4b93ccdd48162bb0002e53921f4a5e3d91e94993
+gpg: Signature made Thu Jul 16 19:15:56 2026 UTC
+gpg:                using RSA key D4EC014EEFCC90E619D2AA59A91239ABCF512130
+gpg: Good signature from "Salah-Eddin Gherbi (Discovery Harmonic quantization of the solar system) <salahealer@gmail.com>" [ultimate]
+gpg:                 aka "Salah-Eddin Gherbi (Scala Harmonica Harmonic Solar System Discovery) <salahealer@gmail.com>" [ultimate]
+Author: Salah-Eddin Gherbi <salahealer@gmail.com>
+Date:   Thu Jul 16 20:15:56 2026 +0100
+
+    Record v0.1.3 preflight and Planck pilot extension
+
+commit 3c78a8c3391ea1d721cb4c7184c2c6a7c838d5db
+gpg: Signature made Thu Jul 16 18:15:51 2026 UTC
+gpg:                using RSA key D4EC014EEFCC90E619D2AA59A91239ABCF512130
+gpg: Good signature from "Salah-Eddin Gherbi (Discovery Harmonic quantization of the solar system) <salahealer@gmail.com>" [ultimate]
+gpg:                 aka "Salah-Eddin Gherbi (Scala Harmonica Harmonic Solar System Discovery) <salahealer@gmail.com>" [ultimate]
+Author: Salah-Eddin Gherbi <salahealer@gmail.com>
+Date:   Thu Jul 16 19:15:51 2026 +0100
+
+    Update README.md and CITATION.cff with v0.1.3 DOI
+    
+    - Add v0.1.3-mcmc-extension-lock to frozen analysis boundaries
+    - Add context sentence for MCMC extension lock
+    - Update CITATION.cff with version DOI: 10.5281/zenodo.21400103

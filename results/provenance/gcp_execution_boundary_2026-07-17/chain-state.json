@@ -1,0 +1,105 @@
+{
+  "created_utc": "2026-07-17T15:09:36.757439+00:00",
+  "datasets": {
+    "actlite_lcdm_camb": {
+      "chains": [
+        {
+          "bytes": 12571524,
+          "chain": 1,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.1.txt",
+          "rows": 26027,
+          "sha256": "8157e177bfbebec67e91ad37c1d78ed19f62315fae76996188dd9e51f096b9bd"
+        },
+        {
+          "bytes": 12571524,
+          "chain": 2,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.2.txt",
+          "rows": 26027,
+          "sha256": "226a0d8f0ff5fbb4995eeeeaf4c34e0a514af346b8d2381bb880b01e15aa2e61"
+        },
+        {
+          "bytes": 12571524,
+          "chain": 3,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.3.txt",
+          "rows": 26027,
+          "sha256": "77edec446329398647f795220a76fb07181e370d87b629299db27a94ace9b87a"
+        },
+        {
+          "bytes": 12571524,
+          "chain": 4,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/actlite_lcdm_camb/act-camb-lcdm.4.txt",
+          "rows": 26027,
+          "sha256": "8968c0b180a24903390a582b50a133c2f4b72940df3bdee6db0b48c7eaa1c08f"
+        }
+      ],
+      "rows_per_chain": 26027
+    },
+    "p-actlite_lcdm_camb": {
+      "chains": [
+        {
+          "bytes": 15088640,
+          "chain": 1,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.1.txt",
+          "rows": 26943,
+          "sha256": "3aa85835052a9ac067dbad249a7054e5d3c655af8ab1b7fc8d9b497cbbfb0c0d"
+        },
+        {
+          "bytes": 15088640,
+          "chain": 2,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.2.txt",
+          "rows": 26943,
+          "sha256": "cff54f0356e15781f2ff0f28491d16cf3859c58e6aabd1057cc04f4b0353feea"
+        },
+        {
+          "bytes": 15088640,
+          "chain": 3,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.3.txt",
+          "rows": 26943,
+          "sha256": "a6f8e3f3a3c5fe0c251c48d3a9c8da6b4942461c9a61bb2c5db29cf2abeb7275"
+        },
+        {
+          "bytes": 15088640,
+          "chain": 4,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/p-actlite_lcdm_camb/p-act-camb-lcdm.4.txt",
+          "rows": 26943,
+          "sha256": "82072c2c121300e5b9b376f83b625df7cb2ce3aaa4de60e535a716e028e88a4a"
+        }
+      ],
+      "rows_per_chain": 26943
+    },
+    "planck_lcdm_camb": {
+      "chains": [
+        {
+          "bytes": 11265816,
+          "chain": 1,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.1.txt",
+          "rows": 22897,
+          "sha256": "697a7b14d3c19894613d1c5d99df1f3c393e4734e79be3fcaff0b81cc09a9759"
+        },
+        {
+          "bytes": 11265816,
+          "chain": 2,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.2.txt",
+          "rows": 22897,
+          "sha256": "8d863bf92a7613036f2e3343ccfe7be53946075b489dfc7e44fe0642140d8725"
+        },
+        {
+          "bytes": 11265816,
+          "chain": 3,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.3.txt",
+          "rows": 22897,
+          "sha256": "0b39a9592fe02692ce1a73425249dc252dd6dfc3b56bdf663977d5bfc3e4c43a"
+        },
+        {
+          "bytes": 11265816,
+          "chain": 4,
+          "path": "data/derived/act_dr6_02/mcmc_extension_seed/planck_lcdm_camb/planck-camb-lcdm.4.txt",
+          "rows": 22897,
+          "sha256": "be834913a66dc25dd4911f170062fa617f3e560f86bcd736cb27c36ed9e3481f"
+        }
+      ],
+      "rows_per_chain": 22897
+    }
+  },
+  "status": "sealed_before_hardware_migration"
+}

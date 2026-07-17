@@ -1,0 +1,26 @@
+ -log(Like) = 473.5829552713344
+  chi-sq    = 947.1659105426688
+
+    1  2.235747963e-02   ombh2                                \Omega_\mathrm{b}h^2
+    2  1.200842364e-01   omch2                                \Omega_\mathrm{c}h^2
+    3  1.040870559e-02   cosmomc_theta                        \theta_\mathrm{MC}
+    4  3.050927619e+00   logA                                 \log(10^{10} A_\mathrm{s})
+    6  9.649912175e-01   ns                                   n_\mathrm{s}
+    7  5.706541358e-02   tau                                  \tau_\mathrm{reio}
+   17  1.001098966e+00   A_planck                             A_{\rm planck}
+
+
+    5  2.113494050e-09   As                                   A_\mathrm{s}
+    8  6.728350373e+01   H0                                   H_0
+    9  1.041087339e+00   thetastar                            \theta_\star
+   10  8.141721530e-01   sigma8                               \sigma_8
+   11  2.458501390e-01   YHe                                  Y_\mathrm{He}
+   12  7.966827067e+00   zrei                                 z_\mathrm{reio}
+   13  5.993545679e+02   taurend                              \tau_\mathrm{rec}
+   14  1.089933181e+03   zstar                                z_\star
+   15  1.444306710e+02   rstar                                r_{s,\star}
+   16  1.059917244e+03   zdrag                                z_d
+   18  9.967184428e+02   chi2__CMB                            \chi^2_\mathrm{CMB}
+   19  2.342114295e+01   chi2__planck_2018_lowl.TT            \chi^2_{\rm planck\ 2018\ lowl.TT}
+   20  3.900168657e+02   chi2__planck_2018_lowl.EE_sroll2     \chi^2_{\rm planck\ 2018\ lowl.EE\ sroll2}
+   21  5.832804342e+02   chi2__act_dr6_cmbonly.PlanckActCut   \chi^2_{\rm act\ dr6\ cmbonly.PlanckActCut}

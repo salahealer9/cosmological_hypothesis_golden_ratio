@@ -1,0 +1,26 @@
+ -log(Like) = 244.50586795677745
+  chi-sq    = 489.0117359135549
+
+    1  2.259958397e-02   ombh2                                 \Omega_\mathrm{b}h^2
+    2  1.238182387e-01   omch2                                 \Omega_\mathrm{c}h^2
+    3  1.040586569e-02   cosmomc_theta                         \theta_\mathrm{MC}
+    4  3.052587555e+00   logA                                  \log(10^{10} A_\mathrm{s})
+    6  9.651935007e-01   ns                                    n_\mathrm{s}
+    7  5.525514346e-02   tau                                   \tau_\mathrm{reio}
+   17  1.000207160e+00   A_act                                 A_{\rm ACT}
+   18  9.998707449e-01   P_act                                 p_{\rm ACT}
+
+
+    5  2.117005228e-09   As                                    A_\mathrm{s}
+    8  6.611072915e+01   H0                                    H_0
+    9  1.040772418e+00   thetastar                             \theta_\star
+   10  8.257557017e-01   sigma8                                \sigma_8
+   11  2.459538038e-01   YHe                                   Y_\mathrm{He}
+   12  7.788503937e+00   zrei                                  z_\mathrm{reio}
+   13  5.934071734e+02   taurend                               \tau_\mathrm{rec}
+   14  1.089952545e+03   zstar                                 z_\star
+   15  1.432972753e+02   rstar                                 r_{s,\star}
+   16  1.060740650e+03   zdrag                                 z_d
+   19  3.899481194e+02   chi2__CMB                             \chi^2_\mathrm{CMB}
+   20  3.899481194e+02   chi2__planck_2018_lowl.EE_sroll2      \chi^2_{\rm planck\ 2018\ lowl.EE\ sroll2}
+   21  1.519644481e+02   chi2__act_dr6_cmbonly.ACTDR6CMBonly   \chi^2_{\rm act\ dr6\ cmbonly.ACTDR6CMBonly}
