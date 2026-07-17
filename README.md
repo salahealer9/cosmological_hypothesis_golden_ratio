@@ -68,6 +68,18 @@ v0.1.3-mcmc-extension-lock
 
 The MCMC extension lock records the validated 4×2 MPI/OpenMP configuration, the benchmark speedup of 15.30%, and the runtime compatibility rules for the ACT data, ensuring that all chain extensions begin from a consistent, reproducible execution state.
 
+### 5. GCP execution boundary before hardware migration
+
+The GCP execution state was sealed after completing the target-blind `segment-002` MCMC extensions and their convergence diagnostics, before any Hetzner provisioning, benchmarking, or additional sampling, under:
+
+```text
+v0.1.4-gcp-execution-boundary
+```
+
+- **Version DOI:** [10.5281/zenodo.21416279](https://doi.org/10.5281/zenodo.21416279)
+
+The GCP boundary records the exact chain states, checksums, row counts, and target-blind convergence diagnostics at the point where the original 10,000-ESS confirmatory gate was not yet reached. All frozen tags remain immutable; all subsequent work proceeds on the separate `confirmatory-analysis` branch.
+
 - **Concept DOI:** [10.5281/zenodo.21322456](https://doi.org/10.5281/zenodo.21322456)
 
 The concept DOI resolves to the evolving project record. Both frozen tags remain immutable; all subsequent confirmatory work proceeds on the separate `confirmatory-analysis` branch.
@@ -167,14 +179,16 @@ See [`references.bib`](references.bib) and [`docs/SOURCE_PROVENANCE.md`](docs/SO
 
 ## Citation
 
-For the latest frozen MCMC extension execution lock, cite:
+For the latest frozen GCP execution boundary, cite:
 
-> Gherbi, S.-E. (2026). *Golden-Ratio Cosmological Hypothesis* (Version v0.1.3-mcmc-extension-lock). Zenodo. https://doi.org/10.5281/zenodo.21400103
+> Gherbi, S.-E. (2026). *Golden-Ratio Cosmological Hypothesis* (Version v0.1.4-gcp-execution-boundary). Zenodo. https://doi.org/10.5281/zenodo.21416279
 
 For the earlier releases, cite the appropriate version DOI:
+- MCMC extension lock (v0.1.3): `10.5281/zenodo.21400103`
 - Chain ingestion lock (v0.1.2): `10.5281/zenodo.21325129`
 - Confirmatory execution lock (v0.1.1): `10.5281/zenodo.21324108`
 - Preregistration freeze (v0.1.0): `10.5281/zenodo.21322457`
+- Concept DOI (all versions): `10.5281/zenodo.21322456`
 
 Citation metadata is also provided in [`CITATION.cff`](CITATION.cff). Use the concept DOI `10.5281/zenodo.21322456` when citing the evolving project across releases.
 

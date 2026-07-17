@@ -6,10 +6,13 @@ authors:
   - family-names: "Gherbi"
     given-names: "Salah-Eddin"
     orcid: "https://orcid.org/0009-0005-4017-1095"
-version: "v0.1.3-mcmc-extension-lock"
-date-released: 2026-07-16
-doi: "10.5281/zenodo.21400103"
+version: "v0.1.4-gcp-execution-boundary"
+date-released: 2026-07-17
+doi: "10.5281/zenodo.21416279"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21416279"
+    description: "Version DOI for the immutable v0.1.4 GCP execution boundary"
   - type: doi
     value: "10.5281/zenodo.21400103"
     description: "Version DOI for the immutable v0.1.3 MCMC extension lock"
